@@ -1,0 +1,75 @@
+.nav-initial {
+  transition: all 1s allow-discrete;
+  animation: ease-in-out;
+  opacity: 1;
+  transform: scaleX(1);
+  @starting-style {
+    opacity: 0;
+    transform: scaleX(0.5);
+  }
+  & a {
+    transition: all 1s allow-discrete;
+    animation: ease-in;
+    opacity: 1;
+    transform: scaleX(1);
+    @starting-style {
+      opacity: 0;
+      transform: scaleX(0.5) rotate(90deg);
+    }
+  }
+}
+.header-initial {
+  transition: all 1s allow-discrete;
+  animation: ease-in-out;
+  opacity: 1;
+
+  @starting-style {
+    opacity: 0.7;
+  }
+}
+.entry-angle {
+  transition: all 1s allow-discrete;
+  animation: ease-in-out;
+  opacity: 1;
+  transform: rotate(0deg);
+  @starting-style {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+@keyframes ease-in-out-touch {
+  0% {
+    opacity: 0;
+    transform:  scale(0.8) translateX(0);
+  
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2) translateX(450px);
+  }
+
+}
+
+.user-touch-initial {
+  transition: all 1s allow-discrete;
+  animation: ease-in-out-touch 11s ease-in-out infinite;
+  opacity: 1;
+  transform: scale(1);
+
+  transform: translateX(200px);
+ 
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.5);
+   
+  }
+}

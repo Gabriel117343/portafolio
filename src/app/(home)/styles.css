@@ -1,0 +1,26 @@
+.initial-image-background {
+ mask-image: radial-gradient(
+    circle at center,
+    red 60%,
+    transparent
+  ), linear-gradient(
+    black 60%,
+    transparent
+  );
+ 
+  z-index: 10;
+}
+.stick-animated {
+
+  rotate: 0deg;
+
+  transition: all 1s allow-discrete;
+  animation: ease-in-out;
+  opacity: 1;
+
+  @starting-style {
+
+    opacity: 0;
+    rotate: 180deg;
+  }
+}
