@@ -27,8 +27,8 @@ export const About: React.FC = () => (
 
     <div className="relative max-w-3xl mx-auto space-y-6 text-gray-200">
       <p>
-        Soy <strong>Ingeniero en Informática</strong> con más de 6 meses de
-        experiencia dedicados al desarrollo Front-End profesional. Combino mis
+        Soy <strong>Ingeniero en Informática</strong> con más de 2 años de
+        experiencia (de manera autonoma) dedicados al desarrollo Front-End profesional. Combino mis
         conocimientos en <em>hardware y software</em> con un enfoque en{" "}
         <strong>código limpio</strong> y buenas prácticas (SOLID, patrones de
         diseño). Mi stack incluye <strong>React 19</strong>,{" "}

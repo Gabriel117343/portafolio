@@ -1,8 +1,9 @@
 // src/components/Technologies.tsx
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 import { IconCloud } from "@components/magicui/icon-cloud";
+import { type Tsvgprops } from '@ui/svg/types'
 import Link from "next/link";
 import {
   HtmlSvg,
@@ -30,7 +31,7 @@ import {
 
 interface Tech {
   label: string;
-  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  Icon: FC<Tsvgprops>;
 }
 
 const TECHS: Tech[] = [
@@ -135,7 +136,7 @@ export const Technologies: React.FC = () => {
                 cursor-crosshair
                 `}
                 />
-                <span className="text-xs text-gray-200 group-hover/technologi:font-semibold duration-200   transition-all ">
+                <span className="text-xs text-gray-200 group-hover/technologi:font-semibold duration-200  text-center transition-all ">
                   {label}
                 </span>
               </div>

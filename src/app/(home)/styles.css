@@ -1,4 +1,6 @@
 .initial-image-background {
+  width: 100vw;
+  overflow: hidden;
  mask-image: radial-gradient(
     circle at center,
     red 60%,
@@ -23,4 +25,22 @@
     opacity: 0;
     rotate: 180deg;
   }
+}
+@keyframes space-float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-2px, -4px);
+  }
+  50% {
+    transform: translate(3px, 2px);
+  }
+  75% {
+    transform: translate(-1px, 4px);
+  }
+}
+
+.space-float {
+  animation: space-float 8s ease-in-out infinite alternate;
 }

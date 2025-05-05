@@ -15,11 +15,11 @@ const Home = () => {
   return (
     <>
     
-      <div className="w-full group/initial-image overflow-hidden  @container/first">
+      <div className="w-full group/initial-image overflow-x-hidden  @container/first">
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
           <Ripple />
         </div>
-        <div className="absolute top-0 left-0 right-0 -z-1 mask-conic-180 initial-image-background  max-h-[700px] overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 mask-conic-180 initial-image-background  max-h-[700px] overflow-hidden space-float -mt-1">
           <Image
             src={PlanetaAsteroidesImg}
             alt="fondo de desarrollo web"
