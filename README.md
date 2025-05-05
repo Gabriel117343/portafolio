@@ -1,6 +1,6 @@
 # Portafolio de Gabriel Soliz
 
-![Captura del Portafolio](TU_LINK_DE_IMAGEN_AQUÍ)
+<img src="https://github.com/user-attachments/assets/3ef82996-b5a9-496d-9802-075ea195cb22" alt="Screenshot Portafolio" width="800px" />
 
 Este es mi portafolio personal, en constante desarrollo, donde muestro mis proyectos y habilidades.
 
