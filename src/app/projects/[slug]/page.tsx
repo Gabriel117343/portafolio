@@ -14,7 +14,7 @@ import { MouseMoveSvg } from "@ui/svg/MouseMoveSvg";
 import { LineAbout } from "@components/views/lineAbout";
 
 interface Props {
-  params: { slug: Slugs };
+  params: Promise<{ slug: Slugs }>;
 }
 
 const ProjectDetail = async ({ params }: Props) => {
