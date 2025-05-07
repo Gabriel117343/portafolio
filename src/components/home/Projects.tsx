@@ -56,6 +56,7 @@ export const Projects: React.FC = () => {
                   <Image
                     src={firstImage}
                     alt={altText}
+                    placeholder="blur"
                     className="object-cover transition-transform duration-500  ease-in-out group-hover/block:scale-105"
                   />
                 </Lens>

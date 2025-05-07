@@ -239,7 +239,7 @@ const ProjectDetail = async ({ params }: Props) => {
               {project.videoDemostration?.description}
             </p>
             <HeroVideoDialog
-              className="dark:block"
+              className="dark:block w-full"
               animationStyle="top-in-bottom-out"
               videoSrc={project.videoDemostration.src}
               thumbnailSrc={project.videoDemostration.thumbnail}

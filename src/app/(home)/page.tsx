@@ -17,12 +17,15 @@ const Home = () => {
     <>
       <div className="w-full group/initial-image overflow-x-hidden  @container/first">
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
-          <Ripple />
+          <Ripple/>
         </div>
         <div className="absolute top-0 left-0 right-0 mask-conic-180 initial-image-background  max-h-[700px] overflow-hidden space-float -mt-1">
           <Image
             src={PlanetaAsteroidesImg}
             alt="fondo de desarrollo web"
+            priority={true}
+            placeholder="blur"
+        
             className="object-cover opacity-80 w-full  group-hover/initial-image:contrast-100 contrast-125 group-hover/initial-image:scale-105 transition-all duration-1000 ease-in-out "
           />
         </div>

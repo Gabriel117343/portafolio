@@ -25,6 +25,7 @@
       "@public/*": ["./public/*"],
       "@lib/*": ["./src/lib/*"],
       "@constants/*": ["./src/constants/*"],
+      "@app/*": ["./src/app/*"]
 
     }
   },

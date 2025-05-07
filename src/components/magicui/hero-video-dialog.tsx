@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -87,17 +88,17 @@ export default function HeroVideoDialog({
   return (
     <div className={cn("relative", className)}>
       <div
-        className="group relative cursor-pointer"
+        className="group relative cursor-pointer border rounded-md overflow-hidden shadow-lg transition-all duration-200 ease-out hover:border-gray-200/100 border-gray-200/70 hover:shadow-xl"
         onClick={() => setIsVideoOpen(true)}
       >
-        <img
+        <Image
           src={thumbnailSrc}
           alt={thumbnailAlt}
           width={1920}
           height={1080}
           className="w-full rounded-md border shadow-lg transition-all duration-200 ease-out group-hover:brightness-[0.8]"
         />
-        <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
+        <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100 ">
           <div className="flex size-28 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">
             <div
               className={`relative flex size-20 scale-100 items-center justify-center rounded-full bg-gradient-to-b from-primary/30 to-primary shadow-md transition-all duration-200 ease-out group-hover:scale-[1.2]`}

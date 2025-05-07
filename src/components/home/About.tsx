@@ -38,6 +38,7 @@ export const About: React.FC = () => {
         <Image
           src={notebookCodigoFondo}
           alt="fondo de desarrollo web"
+          placeholder="blur"
           className="object-cover w-full h-full  group-hover/initial-image:contrast-100 contrast-125  group-hover/initial-image:scale-105 transition-all duration-1000 mask-x-from-80% mask-x-to-90%  ease-in-out blur-[2px]"
         />
       </div>
@@ -50,6 +51,7 @@ export const About: React.FC = () => {
         <div className="float-right overflow-hidden rounded-2xl mask-alpha  mask-b-from-50% mask-b-to-transparent border border-gray-500 box-shadow-2xl  w-[150px] md:w-[190px] lg:w-[200px] mb-4">
           <Image
             src={profileImage}
+            placeholder="blur"
             className=" object-contain aspect-square "
             alt="fondo de desarrollo web"
           />
