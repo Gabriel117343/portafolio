@@ -10,7 +10,7 @@ export const LineAbout = () => {
     <>
       <div ref={ref} className="flex justify-center mb-8 ">
         {inView && (
-          <div className="h-1 w-16 starting:opacity-0 starting:translate-y-2/5 starting:scale-50 transition-all duration-1000 ease-in-out bg-cyan-400 rounded-full " />
+          <div className="h-1 w-16 starting:opacity-0 starting:translate-y-2/5 starting:scale-50 transition-all duration-1000 ease-in-out bg-cyan-400/80 rounded-full " />
         )}
       </div>
     </>

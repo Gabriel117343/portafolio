@@ -36,7 +36,7 @@ type Date = `${number}${number}-${number}${number}-${number}${number}`;
 
 // Ya sea que la arquitectura sea FrontEnd y BackEnd o una sola imagen general, se puede usar el mismo tipo de dato para ambos casos.
 
-type SourceCode = `https://github.com/${string}`;
+type SourceCode = `https://github.com/${string}` | "";
 
 export interface Architecture {
   frontEndImage?: { label: string; description?: string; src: StaticImageData };
@@ -55,7 +55,8 @@ export interface Project {
     Icon: React.FC<{ className?: string }>;
     showInOverview: boolean;
   }[];
-  videoUrl?: string;
+  // Si se añade un video mostrativo y es un video de youtube usar la página https://youtube-thumbnail-grabber.com/ para extraer el tumbnails del video o miniature.
+  videoDemostration?: { src: string; thumbnail: string; description?: string };
   dateFrom?: Date;
   dateTo?: Date;
   details: {
@@ -130,7 +131,12 @@ export const projects: Project[] = [
       },
     ],
 
-    videoUrl: "",
+    videoDemostration: {
+      src: "https://www.youtube.com/watch?v=foL1yFlUQRc",
+      thumbnail: "https://img.youtube.com/vi/foL1yFlUQRc/maxresdefault.jpg",
+      description:
+        "Video experimental, no tiene  nada que ver con el proyecto, pero es un video de prueba para mostrar como se vería un video en la vista de detalle del proyecto.",
+    },
     architecture: {
       generalImage: {
         label: "Arquitectura del Sistema SICA",
@@ -139,8 +145,8 @@ export const projects: Project[] = [
         src: SicaGeneralAchitecutre,
       },
     },
-    sourceCode: "https://github.com/",
-    liveDemo: "asdf",
+    sourceCode: "",
+    liveDemo: "",
   },
   // …más proyectos…
 ];

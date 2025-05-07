@@ -34,11 +34,11 @@ export const About: React.FC = () => {
         pointer-events-none
       "
       />
-      <div className="absolute inset-0 opacity-50 group-hover/about:opacity-60 transition ease-in-out duration-300 pointer-events-none translate-x-3/5 code-in-move overflow-hidden invisible md:visible">
+      <div className="absolute inset-0 opacity-50 group-hover/about:opacity-60 transition ease-in-out duration-300 pointer-events-none translate-x-3/5 code-in-move overflow-hidden h-full">
         <Image
           src={notebookCodigoFondo}
           alt="fondo de desarrollo web"
-          className="object-cover w-full  group-hover/initial-image:contrast-100 contrast-125  group-hover/initial-image:scale-105 transition-all duration-1000 mask-x-from-80% mask-x-to-90%  ease-in-out blur-[2px]"
+          className="object-cover w-full h-full  group-hover/initial-image:contrast-100 contrast-125  group-hover/initial-image:scale-105 transition-all duration-1000 mask-x-from-80% mask-x-to-90%  ease-in-out blur-[2px]"
         />
       </div>
 
@@ -81,7 +81,11 @@ export const About: React.FC = () => {
           profesional exige <strong>ciertos sacrificios</strong> y trabajo en
           equipo para alcanzar metas de alto impacto. Disfruto colaborar en
           entornos ágiles, resolver retos complejos y siempre aportar valor con
-          creatividad e innovación.
+          creatividad e innovación, utilizando las últimas tecnologías que el
+          mercado ofrece y no{" "}
+          <strong className="italic font-normal">
+            limitándome a lo pasado.
+          </strong>
         </p>
       </article>
     </section>

@@ -7,6 +7,12 @@ import { ZoomSvg } from "@ui/svg/ZoomSvg";
 import { GitHubSvg } from "@ui/svg/Technologies";
 import { LiveWebSvg } from "@ui/svg/LiveWebSvg";
 
+import HeroVideoDialog from "@components/magicui/hero-video-dialog";
+import { Lens } from "@components/magicui/lens";
+import { MouseMoveSvg } from "@ui/svg/MouseMoveSvg";
+
+import { LineAbout } from "@components/views/lineAbout";
+
 interface Props {
   params: { slug: Slugs };
 }
@@ -112,18 +118,28 @@ const ProjectDetail = async ({ params }: Props) => {
               <div className="absolute left-0 top-0 z-40 ms-5 mt-5 opacity-60 group-hover/architecture:opacity-90 group-hover/architecture:scale-105 transition-opacity duration-300 ease-in-out">
                 <ZoomSvg className="w-8 h-8 text-gray-300" />
               </div>
-              <ZoomableImage
-                src={project.architecture.generalImage.src}
-                alt={project.architecture.generalImage.label}
-                classNameContainer="relative w-full min-h-[500px] rounded-lg overflow-auto shadow-lg"
-              />
+              <div className="absolute left-0 bottom-0 z-40 ms-5 mt-5 opacity-60 group-hover/architecture:opacity-90 group-hover/architecture:scale-105 transition-opacity duration-300 ease-in-out -translate-y-14">
+                <MouseMoveSvg className="w-10 h-10 text-gray-300 animate-bounce" />
+              </div>
+              <Lens
+                lensColor="por algun motivo el agregar texto aquí causa un lensSize del 100%"
+                ariaLabel="lente"
+                lensSize={600}
+                zoomFactor={1.5}
+              >
+                <ZoomableImage
+                  src={project.architecture.generalImage.src}
+                  alt={project.architecture.generalImage.label}
+                  classNameContainer="relative w-full min-h-[500px] rounded-lg overflow-auto shadow-lg"
+                />
+              </Lens>
 
               <span className="mt-2 text-gray-400">
                 {project.architecture.generalImage.label}
               </span>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 lg:gap-16">
               {project.architecture.frontEndImage && (
                 <div className="flex flex-col items-center">
                   <div className="relative w-full min-h-[500px] rounded-lg overflow-hidden shadow-lg">
@@ -162,7 +178,7 @@ const ProjectDetail = async ({ params }: Props) => {
       {/* Enlaces al código y demo */}
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-white">Enlaces</h2>
-        <div className="flex flex-wrap gap-6">
+        <div className="flex flex-wrap gap-6 md:gap-12 lg:gap-16">
           {/* Enlace al código fuente */}
           {project.sourceCode ? (
             <a
@@ -175,9 +191,12 @@ const ProjectDetail = async ({ params }: Props) => {
               <span>Código en GitHub</span>
             </a>
           ) : (
-            <div className="flex items-center gap-2 text-gray-500">
+            <div className="flex items-center gap-2 text-gray-500 relative">
               <GitHubSvg className="size-6 md:size-7 opacity-50" />
-              <span>Repositorio privado</span>
+              <span>Repositorio privado </span>
+              <small className="absolute text-nowrap translate-y-6 italic text-gray-400/90 text-xs">
+                puedes pedirme una vista previa contactandome
+              </small>
             </div>
           )}
 
@@ -209,15 +228,28 @@ const ProjectDetail = async ({ params }: Props) => {
       </div>
 
       {/* Vídeo (opcional) */}
-      {project.videoUrl && (
-        <div className="mt-8 aspect-video">
-          <iframe
-            src={project.videoUrl}
-            title={project.title}
-            allow="fullscreen"
-            className="w-full h-full rounded-lg"
-          />
-        </div>
+      {project.videoDemostration && (
+        <>
+          <LineAbout />
+          <article className="w-full flex flex-col items-center gap-4 mt-8">
+            <h3 className="text-2xl font-semibold text-white">
+              Demostración del proyecto
+            </h3>
+            <p className="font-inter text-gray-200">
+              {project.videoDemostration?.description}
+            </p>
+            <HeroVideoDialog
+              className="dark:block"
+              animationStyle="top-in-bottom-out"
+              videoSrc={project.videoDemostration.src}
+              thumbnailSrc={project.videoDemostration.thumbnail}
+              thumbnailAlt={
+                project.videoDemostration?.description ??
+                "Video de demostración del proyecto"
+              }
+            />
+          </article>
+        </>
       )}
     </section>
   );
