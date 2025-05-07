@@ -15,7 +15,7 @@ import { Header } from "@components/Header";
 export const metadata: Metadata = {
   title: {
     default: "Portafolio Gabriel Soliz",
-    template: "%s | Portafolio",
+    template: "%s | Portafolio Gabriel Soliz",
   },
   description:
     "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, Typescript, Tailwind CSS 4. Desarrollador de aplicaciones web modernas y escalables.",

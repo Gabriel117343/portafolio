@@ -85,24 +85,24 @@ export const Technologies: React.FC = () => {
       ref={containerRef}
       className={`
         w-full max-w-4xl mx-auto px-4 mt-4 py-8 relative z-30
-        transition-all duration-900 ease-out
+        transition-all duration-900 ease-out group/technologies
         ${containerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-15"}
       `}
     >
-      <Link href="#technologies">
-        <h3 className="text-base md:text-2xl lg:text-3xl font-bold text-white text-center mb-6 opacity-90">
+      <div className="flex justify-center  mb-6 ">
+        <Link href="#technologies">
           <SparklesText
             sparklesCount={3}
             colors={{ first: "#2E86AB", second: "#A5F3FC" }}
-            className="inline"
+            className="inline text-[19px]  @3xs/technologies:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-centeropacity-85 group-hover/technologies:opacity-95 transition-all duration-500 ease-in-out text-prett"
           >
             Tecnologías y Herramientas
           </SparklesText>
-        </h3>
-      </Link>
-
+        </Link>
+      </div>
       <p className="text-gray-300 text-center mb-4 text-xs sm:text-sm md:text-base lg:text-lg font-open-sans">
-        Estas son algunas de las tecnologías que manejo y utilizo en mis proyectos.
+        Estas son algunas de las tecnologías que manejo y utilizo en mis
+        proyectos.
       </p>
 
       <div ref={textRef} className="min-h-[1em] mb-4">
@@ -126,16 +126,19 @@ export const Technologies: React.FC = () => {
         </div>
 
         {/* grid de iconos */}
-        <div ref={gridRef} className={`relative z-10`} >
+        <div ref={gridRef} className={`relative z-10`}>
           {gridInView && (
-            <article className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-4 items-center justify-items-center ">
+            <article className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-3 lg:gap-4 items-center justify-items-center ">
               {TECHS.map(({ label, Icon }, idx) => {
                 const rotateClass =
                   Math.random() > 0.5
                     ? "group-hover/tech:rotate-6"
                     : "group-hover/tech:-rotate-6";
                 return (
-                  <div key={idx} className="flex flex-col items-center space-y-1 group/tech">
+                  <div
+                    key={idx}
+                    className="flex flex-col items-center space-y-1 group/tech"
+                  >
                     <Icon
                       className={`
                         size-8 md:size-10 lg:size-11 xl:size-12
