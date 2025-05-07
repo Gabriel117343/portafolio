@@ -1,0 +1,25 @@
+import React from "react";
+import { type Tsvgprops } from "./types";
+export const ZoomSvg: React.FC<Tsvgprops> = ({
+  width = "24px",
+  height = "24px",
+  fill = "currentColor",
+  className,
+  ...props
+}) => {
+  return (
+    <svg
+      fill={fill}
+      className={`transition-colors duration-1000 ${className}`}
+      width={width}
+      aria-label="Angle Icon"
+      height={height}
+      enableBackground="new 0 0 512 512"
+      viewBox="0 0 512 512"
+      xmlSpace="preserve"
+      {...props}
+    >
+      <path d="M325.8,0C223,0,139.6,83.4,139.6,186.2c0,33.5,9,64.8,24.4,92L0,442.2l23.3,46.5L69.8,512l164-164 c27.2,15.5,58.5,24.4,92,24.4C428.6,372.4,512,289,512,186.2S428.6,0,325.8,0z M325.8,314.2c-70.7,0-128-57.3-128-128 c0-70.7,57.3-128,128-128c70.7,0,128,57.3,128,128C453.8,256.9,396.5,314.2,325.8,314.2z M349.1,116.4h-46.5v46.5H256v46.5h46.5V256 h46.5v-46.5h46.5v-46.5h-46.5V116.4z" />
+    </svg>
+  );
+};

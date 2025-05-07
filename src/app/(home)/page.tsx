@@ -1,20 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import { About } from "@/components/home/About";
-import webDesignImg from "@public/images/fondo-web.jpg";
-import notebookImg from "@public/images/fondo-notebook.png";
+
 import PlanetaAsteroidesImg from "@public/images/planeta-asteroides-fondo.jpg";
 import { Ripple } from "@components/magicui/ripple";
-import { ArrowBottomSvg } from '@ui/svg/ArrowBottomSvg'
+import { ArrowBottomSvg } from "@ui/svg/ArrowBottomSvg";
 
 import { Technologies } from "@/components/home/Technologies";
 import Image from "next/image";
+import { SpecialText } from "@components/views/specialText";
 import "./styles.css";
+import { Projects } from '@components/home/Projects'
 
 const Home = () => {
   return (
     <>
-    
       <div className="w-full group/initial-image overflow-x-hidden  @container/first">
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
           <Ripple />
@@ -38,27 +38,30 @@ const Home = () => {
               </p>
             </h1>
             <h2 className="font-open-sans text-2xl text-[10px] @xs:text-xs @sm:text-sm @md:text-lg @lg:text-xl @xl:text-2xl font-semibold text-gray-200">
-              Ingeniero en Informática, Desarrollador Front End |
+              Ingeniero en Informática,{" "}
+              <SpecialText
+                texts={["Desarrollador Front End", "Especialista en React"]}
+              />{" "}
+              |
             </h2>
           </div>
         </section>
       </div>
       <Technologies />
       <div className="w-full flex flex-col justify-center items-center gap-6 mt-8 mb-16 group">
-      <Link
-          href="#about"
-          className="text-gray-200 font-semibold text-lg hover:text-cyan-400 transition duration-300"
-        >
-          Desliza para saber más
+        <Link href="#about">
+          <p className="text-sm text-gray-200 d hover:text-cyan-400 transition duration-300 font-semibold md:text-lg ">
+            {" "}
+            Desliza para saber más
+          </p>
         </Link>
-      <div className="animate-bounce duration-1000 ease-in-out opacity-60 group-hover:opacity-80">
-   
-      <ArrowBottomSvg className="size-10"/>
+        <div className="animate-bounce duration-1000 ease-in-out opacity-60 group-hover:opacity-80">
+          <ArrowBottomSvg className="size-8 md:size-10" />
+        </div>
       </div>
-      
-      </div>
-    
+
       <About />
+      <Projects />
     </>
   );
 };

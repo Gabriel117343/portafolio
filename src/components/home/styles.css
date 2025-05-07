@@ -1,0 +1,29 @@
+@keyframes code-in-move {
+  0%,
+  100% {
+
+    scale: 1;
+  }
+  25% {
+    transform: translateX(-15px) ;
+    scale: 1.03;
+  }
+  50% {
+    transform: translateX(-30px);
+    scale: 1.05;
+  }
+  75% {
+    transform: translateX(-25px);
+    scale: 1.07;
+  }
+}
+
+.code-in-move {
+
+  
+  & img {
+
+    animation: code-in-move 20s ease-in-out infinite alternate;
+   
+  }
+}

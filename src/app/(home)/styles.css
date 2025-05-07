@@ -1,19 +1,10 @@
 .initial-image-background {
-  width: 100vw;
-  overflow: hidden;
- mask-image: radial-gradient(
-    circle at center,
-    red 60%,
-    transparent
-  ), linear-gradient(
-    black 60%,
-    transparent
-  );
- 
+  mask-image: radial-gradient(circle at center, red 60%, transparent),
+    linear-gradient(black 60%, transparent);
+
   z-index: 10;
 }
 .stick-animated {
-
   rotate: 0deg;
 
   transition: all 1s allow-discrete;
@@ -21,26 +12,43 @@
   opacity: 1;
 
   @starting-style {
-
     opacity: 0;
     rotate: 180deg;
   }
 }
 @keyframes space-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0);
+    scale: 1;
   }
   25% {
     transform: translate(-2px, -4px);
+    scale: 1.03;
   }
   50% {
     transform: translate(3px, 2px);
+    scale: 1.05;
   }
   75% {
     transform: translate(-1px, 4px);
+    scale: 1.02;
   }
 }
 
 .space-float {
-  animation: space-float 8s ease-in-out infinite alternate;
+  transition: all 15.5s allow-discrete;
+  animation: ease-out;
+  filter: contrast(1);
+  opacity: 1;
+  scale: 1;
+  @starting-style {
+    scale: 2;
+    filter: contrast(1.5);
+    opacity: 0.7;
+  }
+
+  & img {
+    animation: space-float 8s ease-in-out infinite alternate;
+  }
 }

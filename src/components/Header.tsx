@@ -15,11 +15,11 @@ export const Header = () => {
   const activeClass = "text-amber-100";
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#expertise", label: "Experiencia" },
-    { href: "#projects", label: "Proyectos" },
-    { href: "#about", label: "Sobre mí" },
-    { href: "#contact", label: "Contacto" },
+    { href: "/#home", label: "Home" },
+    { href: "/#expertise", label: "Experiencia" },
+    { href: "/#projects", label: "Proyectos" },
+    { href: "/#about", label: "Sobre mí" },
+    { href: "/#contact", label: "Contacto" },
   ];
 
   return (

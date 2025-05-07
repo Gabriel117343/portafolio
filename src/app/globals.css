@@ -14,6 +14,7 @@
   --font-montserrat: var(--font-montserrat);
   --font-open-sans: var(--font-open-sans);
   --font-owslad: var(--font-oswal);
+  --font-inter: var(--font-inter);
 }
 
 @theme inline {

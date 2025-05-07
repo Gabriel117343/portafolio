@@ -1,9 +1,8 @@
-// src/components/Technologies.tsx
 "use client";
 
 import React, { FC } from "react";
 import { IconCloud } from "@components/magicui/icon-cloud";
-import { type Tsvgprops } from '@ui/svg/types'
+import { type Tsvgprops } from "@ui/svg/types";
 import Link from "next/link";
 import {
   HtmlSvg,
@@ -21,14 +20,16 @@ import {
   PythonSvg,
   NextJsIcon,
   DjangoSvg,
-  SqlSvg, 
+  SqlSvg,
   ViteSvg,
   JwtSvg,
-   NetlifySvg,
-   VercelSvg,
-   VisualStudioCodeSvg
+  NetlifySvg,
+  VercelSvg,
+  VisualStudioCodeSvg,
 } from "@ui/svg/Technologies";
-
+import { SparklesText } from "@/components/magicui/sparkles-text";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { useInView } from "react-intersection-observer";
 interface Tech {
   label: string;
   Icon: FC<Tsvgprops>;
@@ -57,32 +58,41 @@ const TECHS: Tech[] = [
   { label: "Netlify", Icon: NetlifySvg },
   { label: "Vercel", Icon: VercelSvg },
   { label: "Visual Studio Code", Icon: VisualStudioCodeSvg },
-  
 ];
+const cloudIcons = TECHS.map((tech, i) => (
+  <tech.Icon key={i} width={60} height={60} />
+));
 
 export const Technologies: React.FC = () => {
-  // Prepara los iconos para la nube
-  const cloudIcons = TECHS.map((tech, i) => (
-    <tech.Icon key={i} width={60} height={60} className="text-cyan-400" />
-  ));
+  const { ref, inView } = useInView({
+    triggerOnce: true,   // sólo la primera vez
+    threshold: 0.4,      // 40% visible
+  });
 
   return (
     <section
       id="technologies"
       className="w-full max-w-4xl mx-auto px-4 py-8 relative z-30 @container/technologies"
     >
-      <Link href="#technologies" className=" ">
+      <Link href="#technologies">
         <h3 className="text-base @md/technologies:text-2xl @lg/technologies:text-3xl font-bold text-white text-center mb-6 opacity-90">
-          Tecnologías y Herramientas
+       
+          <SparklesText sparklesCount={3} colors={{
+            first: "#2E86AB",
+            second: "#A5F3FC",
+          }}  className="text-base @md/technologies:text-2xl @lg/technologies:text-3xl font-bold text-white text-center mb-6 opacity-90">   Tecnologías y Herramientas</SparklesText>
         </h3>
       </Link>
 
       <p className="text-gray-300 text-center mb-4 text-xs @sm/technologies:text-sm @md/technologies:text-base @lg/technologies:text-lg font-open-sans">
-        Estas son algunas de las tecnologías que manejo y utilizo en mis proyectos.
+        Estas son algunas de las tecnologías que manejo y utilizo en mis
+        proyectos.
       </p>
-      <p className="text-gray-300 text-center mb-4 text-xs @sm/technologies:text-sm @md/technologies:text-base @lg/technologies:text-lg font-montserrat">
-        ¡Siempre estoy aprendiendo y mejorando mis habilidades!
-      </p>
+      <div ref={ref} className="min-h-">
+        {inView && (
+        <TypingAnimation className="text-gray-300 text-center mb-4 text-xs @sm/technologies:text-sm @md/technologies:text-base @lg/technologies:text-lg font-montserrat font-normal" duration={50}>  ¡Siempre estoy aprendiendo y mejorando mis habilidades!</TypingAnimation>
+      )}
+      </div>
       <div
         className="
           relative 
