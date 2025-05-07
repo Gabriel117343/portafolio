@@ -15,7 +15,9 @@ import { Projects } from '@components/home/Projects'
 const Home = () => {
   return (
     <>
+
       <div className="w-full group/initial-image overflow-x-hidden  @container/first">
+     
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
           <Ripple/>
         </div>

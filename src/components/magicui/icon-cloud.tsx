@@ -15,16 +15,19 @@ interface Icon {
 interface IconCloudProps {
   icons?: React.ReactNode[];
   images?: string[];
+  newRotation?: { x: number; y: number };
 }
 
 function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3);
 }
 
-export function IconCloud({ icons, images }: IconCloudProps) {
+export function IconCloud({ icons, images, newRotation }: IconCloudProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [iconPositions, setIconPositions] = useState<Icon[]>([]);
+  
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  
   const [isDragging, setIsDragging] = useState(false);
   const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -37,10 +40,18 @@ export function IconCloud({ icons, images }: IconCloudProps) {
     startTime: number;
     duration: number;
   } | null>(null);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number>(0);
   const rotationRef = useRef(rotation);
   const iconCanvasesRef = useRef<HTMLCanvasElement[]>([]);
   const imagesLoadedRef = useRef<boolean[]>([]);
+
+  // Set initial rotation if provided
+  useEffect(() => {
+    if (newRotation) {
+      rotationRef.current = rotation;
+      setRotation(rotation);
+    }
+  }, [rotation, newRotation]);
 
   // Create icon canvases once when icons/images change
   useEffect(() => {

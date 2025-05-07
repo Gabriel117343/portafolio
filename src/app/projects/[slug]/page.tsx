@@ -18,7 +18,7 @@ interface Props {
 }
 
 const ProjectDetail = async ({ params }: Props) => {
-  const slug: Slugs = params.slug;
+  const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project)
     return <p className="text-center py-12">Proyecto no encontrado</p>;

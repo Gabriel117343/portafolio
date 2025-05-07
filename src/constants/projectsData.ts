@@ -20,8 +20,7 @@ import {
   VisualStudioCodeSvg,
   JwtSvg,
 } from "@ui/svg/Technologies";
-import { BlobOptions } from "buffer";
-import { showErrorCSS } from "react-native-svg/lib/typescript/deprecated";
+
 
 export type Platforms = "web" | "mobile" | "desktop" | "all";
 

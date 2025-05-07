@@ -5,7 +5,7 @@ import {
   montserrat,
   openSans,
   oswald,
-  inter
+  inter,
 } from "@/lib/fonts";
 
 import "./globals.css";
