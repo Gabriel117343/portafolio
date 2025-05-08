@@ -41,6 +41,30 @@ export interface Architecture {
   backEndImage?: { label: string; description?: string; src: StaticImageData };
   generalImage?: { label: string; description?: string; src: StaticImageData };
 }
+export type LabelTech =
+  | "HTML"
+  | "Next.js 15"
+  | "CSS"
+  | "GitHub"
+  | "JavaScript"
+  | "React 19"
+  | "TypeScript"
+  | "Bootstrap"
+  | "TailwindCSS 4"
+  | "Git"
+  | "Linux"
+  | "PostgresSQL"
+  | "SQLite"
+  | "Python"
+  | "Django"
+  | "SQL"
+  | "Vite"
+  | "JWT Auth"
+  | "Netlify"
+  | "Vercel"
+  | "Visual Studio Code"
+  | "Google Maps API"
+  | "Django Rest Framework";
 
 export interface Project {
   slug: Slugs;
@@ -49,7 +73,7 @@ export interface Project {
 
   images: [{ label: string; platform: Platforms; src: StaticImageData }];
   techs: {
-    label: string;
+    label: LabelTech;
     Icon: React.FC<{ className?: string }>;
     showInOverview: boolean;
   }[];
@@ -108,11 +132,11 @@ export const projects: Project[] = [
       },
     ],
     techs: [
-      { label: "React", Icon: ReactSvg, showInOverview: true },
+      { label: "React 19", Icon: ReactSvg, showInOverview: true },
       { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
-      { label: "Tailwind CSS", Icon: TailwindSvg, showInOverview: true },
+      { label: "TailwindCSS 4", Icon: TailwindSvg, showInOverview: true },
       { label: "Google Maps API", Icon: GoogleMapsSvg, showInOverview: true },
-      { label: "PostgreSQL", Icon: PostgresSqlSvg, showInOverview: true },
+      { label: "PostgresSQL", Icon: PostgresSqlSvg, showInOverview: true },
       { label: "Django Rest Framework", Icon: DjangoSvg, showInOverview: true },
       { label: "Python", Icon: PythonSvg, showInOverview: false },
       { label: "Vite", Icon: ViteSvg, showInOverview: false },

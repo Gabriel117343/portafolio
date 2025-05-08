@@ -1,12 +1,13 @@
-
-"use client";
 import React from "react";
 import Link from "next/link";
-import { useInView } from "react-intersection-observer";
+
 import { Lens } from "@/components/magicui/lens";
 import { ArrowRightSvg } from "@ui/svg/ArrowRightSvg";
 import Image from "next/image";
+import { projects } from "@constants/projectsData";
 import type { StaticImageData } from "next/image";
+import { RevealOnScroll } from "@ui/RevealOnScroll";
+
 interface ProjectCardProps {
   slug: string;
   title: string;
@@ -21,22 +22,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   label,
- 
+
   thumbnail,
 }) => {
-
-
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
+  // solo aquellos que se desean ver en la viste general del proyecto
+  const TECHS_tO_SHOW =
+    projects
+      .find((p) => p.slug === slug)
+      ?.techs.filter((t) => t.showInOverview === true) ?? [];
 
   return (
-    <Link href={`/projects/${slug}`} className="block ">
-      <div
-        ref={ref}
-        className={`
-          transform transition-all duration-700 ease-out overflow-hidden 
+    <RevealOnScroll
+      as="article"
+      key="sdf"
+      className="transform transition-all duration-700 ease-out overflow-hidden 
                 rounded-xl 
                 bg-transparent
                 border border-gray-600
@@ -44,13 +43,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                
                 mask-alpha  mask-b-from-100% 
                 mask-b-to-transparent
-       
-              
+                  group/block
+                hover:scale-105
+                
+           
                 hover:mask-b-from-90%
-                relative
-          ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}
-        `}
-      >
+                relative"
+      hiddenClass="opacity-0 translate-y-12"
+      visibleClass="opacity-100 translate-y-0"
+      triggerOnce={false}
+      threshold={0.2}
+      htmlProps={{
+        "aria-label": `Animación de aparición de la tarjeta del proyecto ${title}`,
+        "aria-hidden": "false",
+        role: "article",
+      }}
+    >
+      <Link href={`/projects/${slug}`} className="block ">
         <div
           className="bg-gradient-to-bl
                         from-[#181838]
@@ -73,16 +82,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <ArrowRightSvg className="text-gray-300" />
           </div>
           <div className="flex items-center justify-start gap-3 mb-2">
-            {/* {iconsToShow.map(({ label, Icon }) => (
+            {TECHS_tO_SHOW.map(({ label, Icon }) => (
               <Icon
                 key={label}
                 className="size-5 md:size-6 contrast-75  group-hover/block:contrast-100"
               />
-            ))} */}
+            ))}
           </div>
           <p className="text-gray-300 text-sm">{description}</p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </RevealOnScroll>
   );
 };

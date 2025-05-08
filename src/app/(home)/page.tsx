@@ -15,7 +15,7 @@ import { Projects } from "@components/home/Projects";
 const Home = () => {
   return (
     <>
-      <div className="w-full group/initial-image overflow-x-hidden  @container/first">
+      <div className="w-full group/initial-image overflow-x-hidden  @container/first" >
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
           <Ripple />
         </div>
@@ -70,7 +70,16 @@ const Home = () => {
       </div>
 
       <About />
-      <Projects />
+
+      <section
+        id="projects"
+        className="w-full max-w-6xl mx-auto px-8 md:px-12 py-12  "
+      >
+        <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white text-center mb-12">
+          Proyectos Destacados
+        </h2>
+        <Projects />
+      </section>
     </>
   );
 };
