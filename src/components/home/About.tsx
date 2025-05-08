@@ -57,10 +57,9 @@ export const About: React.FC = () => {
           />
         </div>
         <p
-          className="text-pretty font-mono text-sm sm:text-[16px] md:text-lg first-letter:text-3xl    md:first-letter:text-5xl
+          className="text-pretty font-geist-mono text-sm sm:text-[16px] md:text-lg first-letter:text-3xl    md:first-letter:text-5xl
          
             first-letter:font-semibold
-
             first-letter:text-gray-200
             first-letter:float-left
             first-letter:mr-3

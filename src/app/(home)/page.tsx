@@ -10,16 +10,14 @@ import { Technologies } from "@/components/home/Technologies";
 import Image from "next/image";
 import { SpecialText } from "@components/views/specialText";
 import "./styles.css";
-import { Projects } from '@components/home/Projects'
+import { Projects } from "@components/home/Projects";
 
 const Home = () => {
   return (
     <>
-
       <div className="w-full group/initial-image overflow-x-hidden  @container/first">
-     
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
-          <Ripple/>
+          <Ripple />
         </div>
         <div className="absolute top-0 left-0 right-0 mask-conic-180 initial-image-background  max-h-[700px] overflow-hidden space-float -mt-1">
           <Image
@@ -27,7 +25,6 @@ const Home = () => {
             alt="fondo de desarrollo web"
             priority={true}
             placeholder="blur"
-        
             className="object-cover opacity-80 w-full  group-hover/initial-image:contrast-100 contrast-125 group-hover/initial-image:scale-105 transition-all duration-1000 ease-in-out "
           />
         </div>
@@ -52,7 +49,14 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <Technologies />
+
+      <section
+        id="technologies"
+        className=" w-full max-w-4xl mx-auto px-4 mt-5 lg:mt-6 py-8 relative z-30
+       "
+      >
+        <Technologies />
+      </section>
       <div className="w-full flex flex-col justify-center items-center gap-6 mt-8 mb-16 group">
         <Link href="#about">
           <p className="text-sm text-gray-200 d hover:text-cyan-400 transition duration-300 font-semibold md:text-lg ">

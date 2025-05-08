@@ -21,7 +21,6 @@ import {
   JwtSvg,
 } from "@ui/svg/Technologies";
 
-
 export type Platforms = "web" | "mobile" | "desktop" | "all";
 
 export type Slugs =
