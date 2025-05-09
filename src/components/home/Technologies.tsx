@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import Link from "next/link";
 
 import { IconCloud } from "@components/magicui/icon-cloud";

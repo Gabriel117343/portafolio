@@ -25,11 +25,6 @@ import {
   VisualStudioCodeSvg,
 } from "@ui/svg/Technologies";
 
-interface Tech {
-  label: string;
-  Icon: FC<Tsvgprops>;
-}
-
 export const TECHS: { label: LabelTech; Icon: FC<Tsvgprops> }[] = [
   { label: "HTML", Icon: HtmlSvg },
   { label: "Next.js 15", Icon: NextJsIcon },

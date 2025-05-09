@@ -78,3 +78,8 @@ export function RevealOnScroll<C extends ElementType = "div">({
     </Component>
   );
 }
+
+{
+  /** Does making Opacity 0 for load animations hurt SEO?  */
+}
+// https://www.reddit.com/r/webflow/comments/14vt0ct/does_making_opacity_0_for_load_animations_hurt_seo/
