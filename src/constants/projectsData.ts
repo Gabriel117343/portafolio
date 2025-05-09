@@ -1,5 +1,19 @@
 // Sistema de Información criminal SICA
-import SicaImg1 from "@public/images/projects/sica-system/sica-system-01.png";
+import sica_01 from "@public/images/projects/sica-system/sica-system-01.png";
+import sica_02 from "@public/images/projects/sica-system/sica-system-02.png";
+import sica_03 from "@public/images/projects/sica-system/sica-system-03.png";
+import sica_04 from "@public/images/projects/sica-system/sica-system-04.png";
+import sica_05 from "@public/images/projects/sica-system/sica-system-05.png";
+import sica_06 from "@public/images/projects/sica-system/sica-system-06.png";
+import sica_07 from "@public/images/projects/sica-system/sica-system-07.png";
+import sica_08 from "@public/images/projects/sica-system/sica-system-08.png";
+import sica_09 from "@public/images/projects/sica-system/sica-system-09.png";
+import sica_10 from "@public/images/projects/sica-system/sica-system-10.png";
+import sica_11 from "@public/images/projects/sica-system/sica-system-11.png";
+import sica_12 from "@public/images/projects/sica-system/sica-system-12.png";
+import sica_13 from "@public/images/projects/sica-system/sica-system-13.png";
+import sica_14 from "@public/images/projects/sica-system/sica-system-14.png";
+
 import SicaGeneralAchitecutre from "@public/images/projects/sica-system/achitecture-sica.png";
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
@@ -66,19 +80,26 @@ export type LabelTech =
   | "Google Maps API"
   | "Django Rest Framework";
 
+
+export type VideoDemostration = {
+  src: string;
+  thumbnail: string;
+  description?: string;
+}
+
 export interface Project {
   slug: Slugs;
   title: string;
   shortDescription: string;
 
-  images: [{ label: string; platform: Platforms; src: StaticImageData }];
+  images: Array<{ label: string; platform: Platforms; src: StaticImageData }>;
   techs: {
     label: LabelTech;
     Icon: React.FC<{ className?: string }>;
     showInOverview: boolean;
   }[];
   // Si se añade un video mostrativo y es un video de youtube usar la página https://youtube-thumbnail-grabber.com/ para extraer el tumbnails del video o miniature.
-  videoDemostration?: { src: string; thumbnail: string; description?: string };
+  videoDemostration?: VideoDemostration;
   dateFrom?: Date;
   dateTo?: Date;
   details: {
@@ -128,7 +149,72 @@ export const projects: Project[] = [
       {
         label: "Login y Dashboard del Sistema SICA",
         platform: "mobile",
-        src: SicaImg1,
+        src: sica_01,
+      },
+      {
+        label: "Detalle de Investgación",
+        platform: "web",
+        src: sica_02,
+      },
+      {
+        label: "Configuración del Sistema SICA",
+        platform: "web",
+        src: sica_03,
+      },
+      {
+        label: "Detalle de Evidencia",
+        platform: "web",
+        src: sica_04,
+      },
+      {
+        label: "Registro de Evidencia",
+        platform: "web",
+        src: sica_05,
+      },
+      {
+        label: "Tablero de Investigación",
+        platform: "web",
+        src: sica_06,
+      },
+      {
+        label: "Registro de Investigación",
+        platform: "web",
+        src: sica_07,
+      },
+      {
+        label: "Lista de Investigaciones",
+        platform: "web",
+        src: sica_08,
+      },
+      {
+        label: "Lista de Delitos",
+        platform: "web",
+        src: sica_09,
+      },
+      {
+        label: "Google Maps - delitos registrados",
+        platform: "web",
+        src: sica_10,
+      },
+      {
+        label: "Google Maps - Mapa de calor",
+        platform: "web",
+        src: sica_11,
+      },
+      {
+        label: "Google Maps - Registro de Delitos",
+        platform: "web",
+        src: sica_12,
+      },
+      {
+        label: "Google Maps - Detalle de Delito",
+        platform: "web",
+        src: sica_13,
+      },
+      {
+        label: "Lista de Usuarios del Sistema SICA",
+        platform: "web",
+        src: sica_14,
       },
     ],
     techs: [

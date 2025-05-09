@@ -10,7 +10,7 @@ import {
 
 import "./globals.css";
 
-import { Header } from "@components/Header";
+import { Header } from "@/components/views/Header";
 
 export const metadata: Metadata = {
   title: {

@@ -1,9 +1,11 @@
 import React from "react";
 import notebookCodigoFondo from "@public/images/notebook-codigo-fondo.png";
-import profileImage from "@public/images/profile-image-portafolio.jpg";
+
+import profileImage from "@public/images/profile-image-fn.png";
 import Image from "next/image";
 import "./styles.css";
 import { LineAbout } from "@components/views/lineAbout";
+import { RevealOnScroll } from "@ui/RevealOnScroll";
 
 export const About: React.FC = () => {
   return (
@@ -48,7 +50,7 @@ export const About: React.FC = () => {
       </h2>
 
       <article className="relative max-w-3xl mx-auto space-y-6 text-gray-200 ">
-        <div className="float-right overflow-hidden rounded-2xl mask-alpha  mask-b-from-50% mask-b-to-transparent border border-gray-500 box-shadow-2xl  w-[150px] md:w-[190px] lg:w-[200px] mb-4">
+        <div className="float-right overflow-hidden rounded-2xl mask-alpha  mask-b-from-50% mask-b-to-transparent border border-gray-500 box-shadow-2xl  w-[150px] md:w-[190px] lg:w-[200px] mb-4 ms-2 md:ms-4">
           <Image
             src={profileImage}
             placeholder="blur"
@@ -68,13 +70,11 @@ export const About: React.FC = () => {
           Me presento, mi nombre es Gabriel y soy{" "}
           <strong>Ingeniero en Informática</strong> con más de 2 años de
           experiencia (de manera autonoma) dedicados al desarrollo Front-End
-          profesional. Combino mis conocimientos en <em>El desarrollo Web</em>{" "}
-          con un enfoque en <strong>código limpio</strong> y buenas prácticas
-          (SOLID, patrones de diseño). Mi stack incluye{" "}
-          <strong>React 19</strong>, <strong>TypeScript</strong>,{" "}
-          <strong>Tailwind CSS 4</strong> y consumo de APIs con{" "}
-          <strong>Axios</strong>, todo asegurado bajo flujos de autenticación{" "}
-          <strong>JWT</strong>.
+          como también al Back-End. Combino mis conocimientos en{" "}
+          <em>El desarrollo Web</em> con un enfoque en{" "}
+          <strong>código limpio</strong> y buenas prácticas (SOLID, patrones de
+          diseño). Mi stack incluye <strong>React 19</strong>,{" "}
+          <strong>TypeScript</strong>, <strong>Tailwind CSS 4.</strong>
           <br />
           <br />
           Me considero una persona <strong>proactiva</strong> y comprometida con
@@ -88,6 +88,19 @@ export const About: React.FC = () => {
             limitándome a lo pasado.
           </strong>
         </p>
+        <RevealOnScroll
+          as={"small"}
+          triggerOnce={false}
+          threshold={0.1}
+          hiddenClass="translate-y-0"
+          visibleClass="translate-y-0"
+          className="italic font-serif text-[12px] md:text-sm text-gray-400 tracking-wide"
+        >
+          Se reconoce al instante un trabajo generado solo por IA: basta con
+          reconocer la ausencia de las funcionalidades más avanzadas del
+          lenguaje, la tecnología empleada o la falta de creatividad en la
+          solución propuesta.
+        </RevealOnScroll>
       </article>
     </section>
   );

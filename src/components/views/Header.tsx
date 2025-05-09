@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "./styles.css";
+import "../styles.css";
 import Link from "next/link";
 import { AngleSvg } from "@ui/svg/AngleSvg";
 import { BranchSvg } from "@ui/svg/BranchSvg";

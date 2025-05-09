@@ -23,6 +23,7 @@ export const Technologies: React.FC = () => {
     <RevealOnScroll
       hiddenClass={hiddenClassName}
       visibleClass={visibleClassName}
+
       className=" transition-all duration-900 ease-out group/technologies"
       triggerOnce={false}
       threshold={0.2}

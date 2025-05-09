@@ -1,6 +1,12 @@
 "use client";
 
-import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+import {
+  ComponentPropsWithoutRef,
+  ElementType,
+  ReactNode,
+  useEffect,
+  useState,
+} from "react";
 import { useInView } from "react-intersection-observer";
 import { twMerge } from "tailwind-merge";
 
@@ -11,7 +17,10 @@ interface RevealOnScrollOwnProps {
   triggerOnce?: boolean;
   threshold?: number;
   className?: string;
-
+  /** Desactiva la animación al entrar en viewport */
+  disableEntryAnimation?: boolean;
+  /** Desactiva la animación al salir del viewport */
+  disableExitAnimation?: boolean;
   key?: string;
   /** Tipo de elemento HTML o componente React a renderizar */
   as?: ElementType;
@@ -41,8 +50,8 @@ type RevealOnScrollProps<C extends ElementType> = RevealOnScrollOwnProps & {
 export function RevealOnScroll<C extends ElementType = "div">({
   as,
   children,
-  hiddenClass = "",
-  visibleClass = "",
+  hiddenClass = "opacity-0 translate-y-0",
+  visibleClass = "opacity-100 translate-y-12",
   triggerOnce = true,
   threshold = 0.1,
   className,
@@ -53,11 +62,20 @@ export function RevealOnScroll<C extends ElementType = "div">({
   // showBeforeHydrate = false,
 }: RevealOnScrollProps<C>) {
   const { ref, inView } = useInView({ triggerOnce, threshold });
+  const [lastY, setLastY] = useState(0);
+  const [isScrollingDown, setIsScrollingDown] = useState(true);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  // Detectar dirección del scroll
+  useEffect(() => {
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setIsScrollingDown(currentY > lastY);
+      setLastY(currentY);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [lastY]);
 
-  // es necesario asegurarse de que haya una opacidad inicial para evitar que el elemento se vea al cargar la página
-  // y luego se aplique la animación. Esto es especialmente importante para el SSR.
-  const hiddenClassMerge = twMerge("opacity-0 translate-y-12", hiddenClass);
-  const visibleClassMerge = twMerge("opacity-100 translate-y-0", visibleClass);
   const Component = as ?? "div";
 
   return (
@@ -69,7 +87,7 @@ export function RevealOnScroll<C extends ElementType = "div">({
         // siempre aplicamos la transición
         "transition-all duration-700 ease-out",
         // alternamos hidden/visible
-        inView ? visibleClassMerge : hiddenClassMerge,
+        inView ? visibleClass : hiddenClass,
         // más clases que pase el usuario
         className
       )}
