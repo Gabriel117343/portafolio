@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ComponentPropsWithoutRef,
-  ElementType,
-  ReactNode,
-  useEffect,
-  useState,
-} from "react";
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
 import { twMerge } from "tailwind-merge";
 
@@ -62,19 +56,6 @@ export function RevealOnScroll<C extends ElementType = "div">({
   // showBeforeHydrate = false,
 }: RevealOnScrollProps<C>) {
   const { ref, inView } = useInView({ triggerOnce, threshold });
-  const [lastY, setLastY] = useState(0);
-  const [isScrollingDown, setIsScrollingDown] = useState(true);
-  const [hasBeenVisible, setHasBeenVisible] = useState(false);
-  // Detectar dirección del scroll
-  useEffect(() => {
-    const onScroll = () => {
-      const currentY = window.scrollY;
-      setIsScrollingDown(currentY > lastY);
-      setLastY(currentY);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [lastY]);
 
   const Component = as ?? "div";
 

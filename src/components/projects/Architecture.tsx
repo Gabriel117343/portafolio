@@ -1,5 +1,4 @@
 import React from "react";
-import { TypingAnimation } from "@components/magicui/typing-animation";
 import { ZoomableImage } from "@/components/views/ZoomableImage";
 import { ZoomSvg } from "@ui/svg/ZoomSvg";
 import { Lens } from "@components/magicui/lens";
