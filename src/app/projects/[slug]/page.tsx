@@ -9,6 +9,7 @@ import { Architecture } from "@components/projects/Architecture";
 import { Links } from "@components/projects/Links";
 import { VideoProject } from "@components/projects/VideoProject";
 import { DevinAiSvg } from "@ui/svg/DevinAiSvg";
+import { RevealOnScroll } from "@ui/RevealOnScroll";
 import Link from "next/link";
 interface Props {
   params: Promise<{ slug: Slugs }>;
@@ -73,10 +74,11 @@ const ProjectDetail = async ({ params }: Props) => {
             </summary>
 
             <p className="text-gray-200/90 hover:text-gray-200/100 mt-2 font-open-sans text-sm">
-              Puedes ver la documentación del proyecto en <strong>DeepWiki AI</strong>, una
-              herramienta de IA que genera documentación técnica de manera
-              automática. Esta herramienta utiliza un modelo de lenguaje llamado <strong>Devin AI</strong> para analizar el código y generar documentación clara y
-              concisa.
+              Puedes ver la documentación del proyecto en{" "}
+              <strong>DeepWiki AI</strong>, una herramienta de IA que genera
+              documentación técnica de manera automática. Esta herramienta
+              utiliza un modelo de lenguaje llamado <strong>Devin AI</strong>{" "}
+              para analizar el código y generar documentación clara y concisa.
             </p>
           </details>
 
@@ -109,6 +111,20 @@ const ProjectDetail = async ({ params }: Props) => {
           />
         </section>
       )}
+      <br />
+      <br />
+      <RevealOnScroll
+        as={"div"}
+        triggerOnce={false}
+        className=" duration-700 ease-in-out transition-all  mx-auto w-full"
+        hiddenClass="opacity-50 translate-y-12 scale-10 blur-2xl text-white max-w-[100px] "
+        visibleClass="opacity-100 translate-y-0 scale-100 blur-none text-cyan-400/80 max-w-10/12"
+      >
+        <hr />
+      </RevealOnScroll>
+
+      <br />
+      <br />
     </>
   );
 };

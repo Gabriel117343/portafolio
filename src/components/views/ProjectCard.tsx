@@ -34,7 +34,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <RevealOnScroll
       as="article"
-      key="sdf"
       className="transform transition-all duration-700 ease-out overflow-hidden 
                 rounded-xl 
                 bg-transparent
@@ -72,8 +71,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <Image
               src={thumbnail}
               alt={label}
+              loading="lazy"
               placeholder="blur"
-              className="object-cover transition-transform duration-500  ease-in-out group-hover/block:scale-105"
+              className="object-cover  transition-transform duration-500  ease-in-out group-hover/block:scale-105"
             />
           </Lens>
         </div>

@@ -19,11 +19,23 @@ export const Description = ({ project }: Props) => {
     <>
       {/* Título y breve descripción */}
       <header className="space-y-2">
-        <h1 className="text-4xl font-montserrat font-bold text-white">
+        <div className="flex flex-col items-start gap-2  3xl:flex-row 3xl:items-center 3xl:justify-between ">
+           <h1 className="text-4xl font-montserrat font-bold text-white">
           {project.title}
-        </h1>
+           </h1>
+          <div className=" min-w-44 justify-start  3xl:justify-end">
+            {project.dateFrom && project.dateTo && (
+              <span className="text-gray-400 text-sm font-normal inline">
+                {" "}
+                {project.dateFrom} - {project.dateTo}
+              </span>
+            )}
+          </div>
+       
+        </div>
+       
 
-        <div className="min-h-10">
+        <div className="min-h-10  mt-5">
           <TypingAnimation duration={20} className="text-gray-300 text-lg">
             {project.shortDescription}
           </TypingAnimation>

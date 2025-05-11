@@ -26,6 +26,12 @@ import bazar_08 from "@public/images/projects/bazaar-management/bazaar-08.png";
 import bazar_09 from "@public/images/projects/bazaar-management/bazaar-09.png";
 import bazar_10 from "@public/images/projects/bazaar-management/bazaar-10.png";
 
+// Sistema de Gestión Hotelero
+import hotel_01 from "@public/images/projects/hotel-management/hotel-01.png";
+import hotel_02 from "@public/images/projects/hotel-management/hotel-02.png";
+import hotel_03 from "@public/images/projects/hotel-management/hotel-03.png";
+import hotel_04 from "@public/images/projects/hotel-management/hotel-04.png";
+
 import SicaGeneralAchitecutre from "@public/images/projects/sica-system/achitecture-sica.png";
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
@@ -59,7 +65,8 @@ export type Slugs =
   | "hotel-management"
   | "bazaar-management";
 
-type Date = `${number}${number}-${number}${number}-${number}${number}`;``
+type Date = `${number}${number}-${number}${number}-${number}${number}`;
+
 type DeepWikiURL = `https://deepwiki.com/${string}/${string}`;
 
 // Ya sea que la arquitectura sea FrontEnd y BackEnd o una sola imagen general, se puede usar el mismo tipo de dato para ambos casos.
@@ -107,7 +114,7 @@ export interface Project {
   slug: Slugs;
   title: string;
   shortDescription: string;
-
+  // aspect radio recomendado: 4:3 1920 x 1440
   images: Array<{ label: string; platform: Platforms; src: StaticImageData }>;
   techs: {
     label: LabelTech;
@@ -298,16 +305,19 @@ export const projects: Project[] = [
       { label: "React 18", Icon: ReactSvg, showInOverview: true },
       { label: "Bootstrap", Icon: BootstrapSvg, showInOverview: true },
       { label: "SQLite", Icon: SqlLiteSvg, showInOverview: true },
-      { label: "JavaScript",  Icon: JavaScriptSvg, showInOverview: true },
+      { label: "JavaScript", Icon: JavaScriptSvg, showInOverview: true },
       { label: "Python", Icon: PythonSvg, showInOverview: false },
       { label: "Django Rest Framework", Icon: DjangoSvg, showInOverview: true },
       { label: "JWT Auth", Icon: JwtSvg, showInOverview: true },
       { label: "Git", Icon: GitSvg, showInOverview: false },
       { label: "CSS", Icon: CssSvg, showInOverview: false },
       { label: "HTML", Icon: HtmlSvg, showInOverview: false },
-      { label: "Visual Studio Code", Icon: VisualStudioCodeSvg, showInOverview: false }, 
+      {
+        label: "Visual Studio Code",
+        Icon: VisualStudioCodeSvg,
+        showInOverview: false,
+      },
       { label: "Netlify", Icon: NetlifySvg, showInOverview: false },
-      
     ],
     dateFrom: "2023-08-01",
     dateTo: "2023-12-29",
@@ -363,9 +373,77 @@ export const projects: Project[] = [
         src: bazar_10,
       },
     ],
-    deepWikiURL: "https://deepwiki.com/Gabriel117343/SistemaGestionBazar-Moderno2024",
+    deepWikiURL:
+      "https://deepwiki.com/Gabriel117343/SistemaGestionBazar-Moderno2024",
     sourceCode:
       "https://github.com/Gabriel117343/SistemaGestionBazar-Moderno2024",
+  },
+  {
+    title: "Sistema de Gestión Hotelero",
+    shortDescription:
+      "Aplicación web para la gestión de reservas, clientes y habitaciones para la gestión de un Hotel",
+    slug: "hotel-management",
+    details: {
+      overview:
+        "Es un Sistema de gestión hotelero que desarrolle en mi carrera de ingeniería en informática. Aprendí a implementar formularios, autenticar usuarios, crear interfaces de usuario y gestionar el proyecto en GitHub. \n\nEste proyecto fue un gran aprendizaje para mí, por ser el primer proyecto que desarrolle. ",
+      duration: "4+ meses",
+      role: "Desarrollador Full Stack",
+      responsibilities: [
+        "Implementación de formularios y validaciones",
+        "Integración de APIs REST con serialización",
+        "Autenticación basada en tokens",
+        "construir las interfaces de usuario",
+        "Refactorizar el código",
+        "Gestionar el proyecto en GitHub",
+        "Definición de requisitos y liderazgo del proyecto",
+        "Consumir endpoints de APIs REST",
+        "Construir las vistas del backend",
+        "Crear el diseño de la base de datos",
+      ],
+    },
+    images: [
+      {
+        label: "Página principal del Sistema",
+        platform: "web",
+        src: hotel_01,
+      },
+      {
+        label: "Proceso de CheckIn de clientes",
+        platform: "web",
+        src: hotel_02,
+      },
+      {
+        label: "Modulo de Recepción",
+        platform: "web",
+        src: hotel_03,
+      },
+      {
+        label: "Dashboard de los KPIs del Sistema",
+        platform: "web",
+        src: hotel_04,
+      },
+    ],
+    techs: [
+      { label: "React 18", Icon: ReactSvg, showInOverview: true },
+      { label: "Bootstrap", Icon: BootstrapSvg, showInOverview: true },
+      { label: "SQLite", Icon: SqlLiteSvg, showInOverview: true },
+      { label: "JavaScript", Icon: JavaScriptSvg, showInOverview: true },
+      { label: "Python", Icon: PythonSvg, showInOverview: false },
+      { label: "Django Rest Framework", Icon: DjangoSvg, showInOverview: true },
+
+      { label: "Git", Icon: GitSvg, showInOverview: false },
+      { label: "CSS", Icon: CssSvg, showInOverview: false },
+      { label: "HTML", Icon: HtmlSvg, showInOverview: false },
+      {
+        label: "Visual Studio Code",
+        Icon: VisualStudioCodeSvg,
+        showInOverview: false,
+      },
+    ],
+    deepWikiURL: "https://deepwiki.com/Gabriel117343/SistemaGestionHotelAricaProyecto",
+    sourceCode: "https://github.com/Gabriel117343/SistemaGestionHotelAricaProyecto",
+    dateFrom: "2023-08-01",
+    dateTo: "2023-12-29",
   },
   // …más proyectos…
 ];
