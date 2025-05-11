@@ -98,8 +98,8 @@ export const About: React.FC = () => {
         >
           Se reconoce al instante un trabajo generado solo por IA: basta con
           reconocer la ausencia de las funcionalidades más avanzadas del
-          lenguaje, la tecnología empleada o la falta de creatividad en la
-          solución propuesta.
+          lenguaje/tecnología, o la falta de creatividad en la solución
+          propuesta.
         </RevealOnScroll>
       </article>
     </section>

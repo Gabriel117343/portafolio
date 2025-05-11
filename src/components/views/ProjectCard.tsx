@@ -45,8 +45,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 mask-b-to-transparent
                   group/block
                 hover:scale-105
-                
-           
+                w-full
+                mx-auto
+                max-w-[450px]
                 hover:mask-b-from-90%
                 relative"
       hiddenClass="opacity-0 translate-y-12"
@@ -59,14 +60,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         role: "article",
       }}
     >
-      <Link href={`/projects/${slug}`} className="block ">
+      <Link href={`/projects/${slug}`} className="block">
         <div
           className="bg-gradient-to-bl
                         from-[#181838]
                         via-[#355b81]
                         to-[#010128] absolute inset-0 opacity-35"
         />
-        <div className="relative w-full h-48 overflow-hidden">
+        <div className="relative w-full h-48 overflow-hidden ">
           <Lens ariaLabel="lente" lensSize={100} zoomFactor={1.5}>
             <Image
               src={thumbnail}

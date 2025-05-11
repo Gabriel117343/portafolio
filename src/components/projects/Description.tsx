@@ -6,6 +6,15 @@ interface Props {
 }
 
 export const Description = ({ project }: Props) => {
+
+  const regLineBreak = /\n/g;
+  
+  const overviewWithLineBreak = project.details.overview.split("\n").map((line, index) => (
+    <p key={index} className="font-inter">
+      {line}
+      {index !== project.details.overview.split(regLineBreak).length - 1 && <br />}
+    </p>
+  ))
   return (
     <>
       {/* Título y breve descripción */}
@@ -32,8 +41,10 @@ export const Description = ({ project }: Props) => {
           </dd>
         </div>
         <div>
-          <dt className="font-bold t">Descripción:</dt>
-          <dd className="mt-1 font-inter">{project.details.overview}</dd>
+          <dt className="font-bold">Descripción:</dt>
+          <dd className="mt-1 font-inter">
+            {overviewWithLineBreak}
+          </dd>
         </div>
 
         <div>

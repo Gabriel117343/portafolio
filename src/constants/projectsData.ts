@@ -14,6 +14,18 @@ import sica_12 from "@public/images/projects/sica-system/sica-system-12.png";
 import sica_13 from "@public/images/projects/sica-system/sica-system-13.png";
 import sica_14 from "@public/images/projects/sica-system/sica-system-14.png";
 
+// Sistema de Gestión de Bazar
+import bazar_01 from "@public/images/projects/bazaar-management/bazaar-01.png";
+import bazar_02 from "@public/images/projects/bazaar-management/bazaar-02.png";
+import bazar_03 from "@public/images/projects/bazaar-management/bazaar-03.png";
+import bazar_04 from "@public/images/projects/bazaar-management/bazaar-04.png";
+import bazar_05 from "@public/images/projects/bazaar-management/bazaar-05.png";
+import bazar_06 from "@public/images/projects/bazaar-management/bazaar-06.png";
+import bazar_07 from "@public/images/projects/bazaar-management/bazaar-07.png";
+import bazar_08 from "@public/images/projects/bazaar-management/bazaar-08.png";
+import bazar_09 from "@public/images/projects/bazaar-management/bazaar-09.png";
+import bazar_10 from "@public/images/projects/bazaar-management/bazaar-10.png";
+
 import SicaGeneralAchitecutre from "@public/images/projects/sica-system/achitecture-sica.png";
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
@@ -33,6 +45,9 @@ import {
   DjangoSvg,
   VisualStudioCodeSvg,
   JwtSvg,
+  BootstrapSvg,
+  SqlLiteSvg,
+  NetlifySvg,
 } from "@ui/svg/Technologies";
 
 export type Platforms = "web" | "mobile" | "desktop" | "all";
@@ -44,7 +59,8 @@ export type Slugs =
   | "hotel-management"
   | "bazaar-management";
 
-type Date = `${number}${number}-${number}${number}-${number}${number}`;
+type Date = `${number}${number}-${number}${number}-${number}${number}`;``
+type DeepWikiURL = `https://deepwiki.com/${string}/${string}`;
 
 // Ya sea que la arquitectura sea FrontEnd y BackEnd o una sola imagen general, se puede usar el mismo tipo de dato para ambos casos.
 
@@ -62,6 +78,7 @@ export type LabelTech =
   | "GitHub"
   | "JavaScript"
   | "React 19"
+  | "React 18"
   | "TypeScript"
   | "Bootstrap"
   | "TailwindCSS 4"
@@ -80,12 +97,11 @@ export type LabelTech =
   | "Google Maps API"
   | "Django Rest Framework";
 
-
 export type VideoDemostration = {
   src: string;
   thumbnail: string;
   description?: string;
-}
+};
 
 export interface Project {
   slug: Slugs;
@@ -109,6 +125,7 @@ export interface Project {
     responsibilities: string[];
   };
   architecture?: Architecture;
+  deepWikiURL?: DeepWikiURL;
 
   sourceCode?: SourceCode;
   liveDemo?: string;
@@ -255,6 +272,100 @@ export const projects: Project[] = [
     },
     sourceCode: "",
     liveDemo: "",
+  },
+  {
+    title: "Sistema de Gestión de Bazar",
+    shortDescription:
+      "Aplicación web completa para la gestión empleados, ventas y productos para un bazar",
+    slug: "bazaar-management",
+    details: {
+      overview:
+        "Es un sistema que desarrollado como proyecto de integración haya por el 2023 en mi carrera de ingeniería en Informática. Aprendí a implementar formularios, paginar datos y autenticar usuarios con JWT. También optimicé el rendimiento del sistema utilizando lazy-loading y auditorías de rendimiento con Lighthouse. \n\nRetomé este proyecto en 2024 para refactorizar todo el FrontEnd, lo que sento las bases para poder luego ese mismo año desarrollar el Sistema de Información Criminal SICA.",
+      duration: "4+ meses",
+      role: "Desarrollador Full Stack",
+      responsibilities: [
+        "Implementación de formularios y validaciones",
+        "Integración de APIs REST con paginación y serialización",
+        "Autenticación JWT con Django (login, refresh token)",
+        "Optimización de rendimiento: lazy-loading con React.lazy/Suspense",
+        "Auditorías de rendimiento con Lighthouse",
+        "Gestionar el proyecto en GitHub",
+        "Definición de requisitos y liderazgo del proyecto",
+        "Refactorizar completamente el FrontEnd del sistema con mejoras en la UI/UX, rendimiento y código limpio.",
+      ],
+    },
+    techs: [
+      { label: "React 18", Icon: ReactSvg, showInOverview: true },
+      { label: "Bootstrap", Icon: BootstrapSvg, showInOverview: true },
+      { label: "SQLite", Icon: SqlLiteSvg, showInOverview: true },
+      { label: "JavaScript",  Icon: JavaScriptSvg, showInOverview: true },
+      { label: "Python", Icon: PythonSvg, showInOverview: false },
+      { label: "Django Rest Framework", Icon: DjangoSvg, showInOverview: true },
+      { label: "JWT Auth", Icon: JwtSvg, showInOverview: true },
+      { label: "Git", Icon: GitSvg, showInOverview: false },
+      { label: "CSS", Icon: CssSvg, showInOverview: false },
+      { label: "HTML", Icon: HtmlSvg, showInOverview: false },
+      { label: "Visual Studio Code", Icon: VisualStudioCodeSvg, showInOverview: false }, 
+      { label: "Netlify", Icon: NetlifySvg, showInOverview: false },
+      
+    ],
+    dateFrom: "2023-08-01",
+    dateTo: "2023-12-29",
+    images: [
+      {
+        label: "Punto de Venta del Sistema",
+        platform: "web",
+        src: bazar_01,
+      },
+      {
+        label: "Dashboard de los KPIs del Sistema",
+        platform: "web",
+        src: bazar_02,
+      },
+      {
+        label: "Control de Stock en Tienda",
+        platform: "web",
+        src: bazar_03,
+      },
+      {
+        label: "Registro de Ventas Realizadas",
+        platform: "web",
+        src: bazar_04,
+      },
+      {
+        label: "Registro de Productos",
+        platform: "web",
+        src: bazar_05,
+      },
+      {
+        label: "Registro de Productos",
+        platform: "web",
+        src: bazar_06,
+      },
+      {
+        label: "Gestión de Empleados",
+        platform: "web",
+        src: bazar_07,
+      },
+      {
+        label: "Registro de secciones en Tienda",
+        platform: "web",
+        src: bazar_08,
+      },
+      {
+        label: "Crear orden de compra",
+        platform: "web",
+        src: bazar_09,
+      },
+      {
+        label: "Punto de venta del Sistema",
+        platform: "web",
+        src: bazar_10,
+      },
+    ],
+    deepWikiURL: "https://deepwiki.com/Gabriel117343/SistemaGestionBazar-Moderno2024",
+    sourceCode:
+      "https://github.com/Gabriel117343/SistemaGestionBazar-Moderno2024",
   },
   // …más proyectos…
 ];
