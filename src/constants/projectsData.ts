@@ -38,6 +38,16 @@ import hotel_04 from "@public/images/projects/hotel-management/hotel-04.png";
 import nasa_ap_01 from "@public/images/projects/nasa-app/nasa-app-01.png";
 import nasa_ap_02 from "@public/images/projects/nasa-app/nasa-app-02.png";
 
+// Librería React Magic Search Params
+import react_magic_search_params_01 from "@public/images/projects/react-magic-search-params/magic-params-01.jpg";
+import react_magic_search_params_02 from "@public/images/projects/react-magic-search-params/magic-params-02.png";
+
+// Mi portafolio
+
+import portfolio_01 from "@public/images/projects/portfolio/portfolio-01.jpeg";
+import portfolio_02 from "@public/images/projects/portfolio/portfolio-02.png";
+import portfolio_03 from "@public/images/projects/portfolio/portfolio-03.jpeg";
+
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
 import type { StaticImageData } from "next/image";
@@ -66,9 +76,10 @@ export type Platforms = "web" | "mobile" | "desktop" | "all";
 export type Slugs =
   | "sica-system"
   | "nasa-app"
-  | "library-react-params"
+  | "react-magic-search-params"
   | "hotel-management"
-  | "bazaar-management";
+  | "bazaar-management"
+  | "portfolio";
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 
@@ -170,6 +181,7 @@ export const projects: Project[] = [
         "Implementación de mapas de calor con Google Maps API para visualización de delitos",
         "Autenticación JWT con Django (login, refresh token) y consumo de APIs REST con paginación y serialización",
         "Optimización de rendimiento: lazy-loading con React.lazy/Suspense y auditorías con Lighthouse",
+        "Gestionar los parámetros de consulta a través de mi propia librería @react-magic-search-params",
         "Coordinación con equipo Back-End vía Git/GitHub, definición de +70 requisitos y liderazgo de proyecto",
       ],
     },
@@ -478,6 +490,7 @@ export const projects: Project[] = [
         "Crear una interfaz de usuario atractiva y fácil de usar utilizando componentes de React Native",
         "Implementar la lógica para mostrar imágenes y videos de la NASA en la aplicación",
         "Implementar la funcionalidad de blurr para las imágenes y videos",
+        "Crear mi propia librería para manejar las notificaciones Toast @react-native-toast-lite",
       ],
       role: "Desarrollador Front-End",
     },
@@ -516,6 +529,128 @@ export const projects: Project[] = [
     dateTo: "2023-07-01",
     sourceCode: "https://github.com/Gabriel117343/Aplicacion-de-la-Nasa",
     deepWikiURL: "https://deepwiki.com/Gabriel117343/Aplicacion-de-la-Nasa",
+  },
+  {
+    title: "React Magic Search Params",
+    shortDescription:
+      "Librería de React para manejar los query params de la URL de forma sencilla y gracias al autocompletado de TypeScript.",
+    slug: "react-magic-search-params",
+    details: {
+      duration: "1+ semanas",
+      overview:
+        "Desarrolle esta librería para facilitar el manejo de los query params en las URLs de mis proyectos con React. \n\nLa librería permite manejar los query params de forma sencilla y gracias al autocompletado de TypeScript, es fácil de usar. \n\nEstá publicada en npm y tiene una buena documentación.",
+      role: "Desarrollador Front-End",
+      responsibilities: [
+        "Investigar el gestor de paquetes npm y como publicar una librería",
+        "Crear un Hook para manejar los query params de la URL",
+        "Crear una página interactiva para mostra el funcionamiento de la librería",
+        "Crear la documentación detallada de la librería",
+        "Desplegar la página interactiva en Netlify",
+        "Crear un video demostrativo de la librería",
+      ],
+    },
+    images: [
+      {
+        label: "Librería en NPM",
+        platform: "web",
+        src: react_magic_search_params_01,
+      },
+      {
+        label: "Ejemplo de Código de la librería",
+        platform: "web",
+        src: react_magic_search_params_02,
+      },
+    ],
+    techs: [
+      { label: "React 18", Icon: ReactSvg, showInOverview: true },
+      { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
+      { label: "Git", Icon: GitSvg, showInOverview: false },
+      { label: "CSS", Icon: CssSvg, showInOverview: false },
+      { label: "HTML", Icon: HtmlSvg, showInOverview: false },
+      {
+        label: "Visual Studio Code",
+        Icon: VisualStudioCodeSvg,
+        showInOverview: false,
+      },
+      {
+        label: "GitHub",
+        Icon: GitHubSvg,
+        showInOverview: true,
+      },
+      {
+        label: "Netlify",
+        Icon: NetlifySvg,
+        showInOverview: true,
+      },
+    ],
+    dateFrom: "2024-09-01",
+    dateTo: "2024-09-15",
+    sourceCode: "https://github.com/Gabriel117343/react-magic-search-params",
+    deepWikiURL: "https://deepwiki.com/Gabriel117343/react-magic-search-params",
+    liveDemo: "https://react-magic-search-params.netlify.app/",
+  },
+  {
+    title: "Mi Portafolio",
+    slug: "portfolio",
+    shortDescription:
+      "Portafolio personal desarrollado con Next.js 15, TypeScript y Tailwind CSS 4.",
+    details: {
+      duration: "1+ meses",
+      overview:
+        "Cree mi propio portafolio desde 0,  utilizando Next.js 15, TypeScript y Tailwind CSS 4. \n\nEl portafolio es completamente responsivo y tiene un diseño atractivo y moderno. \n\nAdemás, he implementado una sección de proyectos donde muestro mis trabajos más destacados y una sección de contacto donde los usuarios pueden enviarme un mensaje.",
+      role: "Desarrollador Front-End",
+      responsibilities: [
+        "Crear el diseño del portafolio",
+        "Implementar el diseño en Next.js 15",
+        "Crear la sección de proyectos y contacto",
+        "Implementar la navegación entre secciones",
+        "Crear la sección de habilidades y tecnologías",
+        "Crear la sección de experiencia y educación",
+        "Cree la sección de autodocumentación",
+        "Crear la sección de habilidades y tecnologías",
+        "Desplegar el portafolio en Vercel",
+        "Trabaje en los detalles de la UI/UX",
+        "Cree componentes altamente reutilizables",
+        "Agregar animacioes y efectos visuales sin afectar el rendimiento y SEO",
+        "Asegure el correcto funcionamiento para lectores de pantalla",
+      ],
+    },
+    images: [
+      {
+        label: "Vista de inicio del portafolio",
+        platform: "web",
+        src: portfolio_01,
+      },
+      {
+        label: "Vista de Tecnologías del portafolio",
+        platform: "web",
+        src: portfolio_02,
+      },
+      {
+        label: "Vista de contacto y proyectos",
+        platform: "mobile",
+        src: portfolio_03,
+      },
+    ],
+    techs: [
+      { label: "Next.js 15", Icon: ReactSvg, showInOverview: true },
+      { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
+      { label: "TailwindCSS 4", Icon: TailwindSvg, showInOverview: true },
+      { label: "Git", Icon: GitSvg, showInOverview: false },
+      { label: "GitHub", Icon: GitHubSvg, showInOverview: false },
+      { label: "CSS", Icon: CssSvg, showInOverview: false },
+      { label: "HTML", Icon: HtmlSvg, showInOverview: false },
+      {
+        label: "Visual Studio Code",
+        Icon: VisualStudioCodeSvg,
+        showInOverview: false,
+      },
+    ],
+    dateFrom: "2025-05-01",
+    dateTo: "2025-05-28",
+    sourceCode: "https://github.com/Gabriel117343/portafolio",
+    liveDemo: "gabrielsoliz.dev",
+    deepWikiURL: "https://deepwiki.com/Gabriel117343/portafolio",
   },
   // …más proyectos…
 ];

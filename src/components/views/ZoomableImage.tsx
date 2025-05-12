@@ -44,6 +44,8 @@ export const ZoomableImage: React.FC<ZoomableImageProps> = ({
       <Image
         src={src}
         alt={alt}
+        loading="lazy"
+        placeholder="blur"
         style={{
           transform: `scale(${scale})`,
           transition: "transform 0.2s ease-out",

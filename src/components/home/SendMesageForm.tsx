@@ -88,7 +88,6 @@ export const SendMesageForm = () => {
         id="nombre"
         name="nombre"
         placeholder="Tu nombre"
-        autoFocus={true}
         autoComplete="name"
         required
         value={formData.nombre}

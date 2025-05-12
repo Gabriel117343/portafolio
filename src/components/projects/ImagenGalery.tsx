@@ -1,7 +1,10 @@
 import React from "react";
 import { type Project } from "@constants/projectsData";
-import Image from "next/image";
+
 import { RevealOnScroll } from "@ui/RevealOnScroll";
+import { ZoomableImage } from "@/components/views/ZoomableImage";
+import { Lens } from "@components/magicui/lens";
+import { InfoSvg } from "@ui/svg/InfoSvg";
 import "./styles.css";
 
 interface ImagenGaleryProps {
@@ -10,6 +13,11 @@ interface ImagenGaleryProps {
 export const ImagenGalery = ({ project }: ImagenGaleryProps) => {
   return (
     <>
+      <div className="w-full text-left my-4 text-xs sm:text-sm text-cyan-300/60 italic sm:flex items-center justify-center gap-2 hover:text-cyan-400/80 transition-colors duration-200 ease-in-outmy-0 hidden">
+        <InfoSvg className="size-4 text-cyan-300/80 " />
+        Usa la rueda del mouse para hacer zoom en las imágenes
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2   2xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 2xl:gap-8 items-center">
         {project.images.map(({ src, label }) => (
           <RevealOnScroll
@@ -25,13 +33,19 @@ export const ImagenGalery = ({ project }: ImagenGaleryProps) => {
   group/img-proyecto max-w-[450px] w-full mx-auto  "
           >
             <div className="relative w-full   min-h-52  max-h-52 hover:max-h-80 overflow-hidden hover:overflow-y-visible shadow-lg  transition-all duration-2000 ease-in-out group-hover/img-proyecto:scale-105 cursor-crosshair scrollbar-hidden ">
-              <Image
-                src={src}
-                alt={label}
-                loading="lazy"
-                className="object-fill object-top hover:object-bottom  transition-all duration-2000 ease-in-out rounded-md h-full min-h-52  
+              <Lens
+                lensColor="por algun motivo el agregar texto aquí causa un lensSize del 100%"
+                ariaLabel="lente"
+                lensSize={600}
+                zoomFactor={1.1}
+              >
+                <ZoomableImage
+                  src={src}
+                  alt={label}
+                  className="object-fill object-top hover:object-bottom  transition-all duration-2000 ease-in-out rounded-md h-full min-h-52  
             "
-              />
+                />
+              </Lens>
             </div>
             <span className="mt-2 text-sm text-gray-400 group-hover/img-proyecto:font-semibold">
               {label}
