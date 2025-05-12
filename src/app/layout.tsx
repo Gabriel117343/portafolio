@@ -11,7 +11,7 @@ import {
 import "./globals.css";
 
 import { Header } from "@/components/views/Header";
-import { Footer } from '@components/views/Footer'
+import { Footer } from "@/components/views/Footer";
 
 export const metadata: Metadata = {
   title: {
