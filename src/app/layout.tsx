@@ -11,6 +11,7 @@ import {
 import "./globals.css";
 
 import { Header } from "@/components/views/Header";
+import { Footer } from '@components/views/Footer'
 
 export const metadata: Metadata = {
   title: {
@@ -39,6 +40,7 @@ export default function RootLayout({
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1),_transparent_70%)]" />
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

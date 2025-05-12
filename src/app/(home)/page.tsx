@@ -11,11 +11,13 @@ import Image from "next/image";
 import { SpecialText } from "@components/views/specialText";
 import "./styles.css";
 import { Projects } from "@components/home/Projects";
+import { Contact } from "@components/home/Contact";
+import { RevealOnScroll } from "@ui/RevealOnScroll";
 
 const Home = () => {
   return (
     <>
-      <div className="w-full group/initial-image overflow-x-hidden  @container/first" >
+      <div className="w-full group/initial-image overflow-x-hidden  @container/first">
         <div className="absolute top-0 h-[250px] translate-x-2 w-full overflow-hidden z-20 group-hover/initial-image:translate-x-0 opacity-40  group-hover/initial-image:opacity-50 transition-all duration-1000 ease-in-out xl:h-[300px]">
           <Ripple />
         </div>
@@ -46,6 +48,19 @@ const Home = () => {
               />{" "}
               |
             </h2>
+            <RevealOnScroll
+              threshold={0.2}
+              hiddenClass="opacity-0 -translate-y-12"
+              visibleClass="opacity-100 translate-y-0"
+              triggerOnce={false}
+            >
+              <Link
+                className="w-40 h-10 bg-black/20 rounded-full border-2 border-cyan-600/30 hover:border-cyan-600/50 hover:bg-black/30 transition duration-300 flex items-center justify-center gap-2 font-semibold text-gray-200 mt-4 font-montserrat"
+                href="#contact"
+              >
+                Contactar
+              </Link>
+            </RevealOnScroll>
           </div>
         </section>
       </div>
@@ -75,10 +90,21 @@ const Home = () => {
         id="projects"
         className="w-full max-w-6xl mx-auto px-8 md:px-12 py-12  "
       >
-        <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white texts-center mb-12 text-center">
           Proyectos Destacados
         </h2>
         <Projects />
+      </section>
+      <section
+        id="contact"
+        className=" w-full max-w-4xl mx-auto px-4 mt-12 lg:mt-6 py-8 relative z-30 pb-12
+       "
+      >
+        <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white text-center mb-8">
+          Contacto
+        </h2>
+
+        <Contact />
       </section>
     </>
   );

@@ -35,7 +35,7 @@ export const Description = ({ project }: Props) => {
         </div>
        
 
-        <div className="min-h-10  mt-5">
+        <div className="min-h-10  mt-5 3xl:mt-2">
           <TypingAnimation duration={20} className="text-gray-300 text-lg">
             {project.shortDescription}
           </TypingAnimation>

@@ -14,6 +14,8 @@ import sica_12 from "@public/images/projects/sica-system/sica-system-12.png";
 import sica_13 from "@public/images/projects/sica-system/sica-system-13.png";
 import sica_14 from "@public/images/projects/sica-system/sica-system-14.png";
 
+import SicaGeneralAchitecutre from "@public/images/projects/sica-system/achitecture-sica.png";
+
 // Sistema de Gestión de Bazar
 import bazar_01 from "@public/images/projects/bazaar-management/bazaar-01.png";
 import bazar_02 from "@public/images/projects/bazaar-management/bazaar-02.png";
@@ -32,7 +34,10 @@ import hotel_02 from "@public/images/projects/hotel-management/hotel-02.png";
 import hotel_03 from "@public/images/projects/hotel-management/hotel-03.png";
 import hotel_04 from "@public/images/projects/hotel-management/hotel-04.png";
 
-import SicaGeneralAchitecutre from "@public/images/projects/sica-system/achitecture-sica.png";
+// Aplicación de la NASA
+import nasa_ap_01 from "@public/images/projects/nasa-app/nasa-app-01.png";
+import nasa_ap_02 from "@public/images/projects/nasa-app/nasa-app-02.png";
+
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
 import type { StaticImageData } from "next/image";
@@ -102,7 +107,8 @@ export type LabelTech =
   | "Vercel"
   | "Visual Studio Code"
   | "Google Maps API"
-  | "Django Rest Framework";
+  | "Django Rest Framework"
+  | "React Native";
 
 export type VideoDemostration = {
   src: string;
@@ -317,6 +323,11 @@ export const projects: Project[] = [
         Icon: VisualStudioCodeSvg,
         showInOverview: false,
       },
+      {
+        label: "GitHub",
+        Icon: GitHubSvg,
+        showInOverview: false,
+      },
       { label: "Netlify", Icon: NetlifySvg, showInOverview: false },
     ],
     dateFrom: "2023-08-01",
@@ -439,11 +450,72 @@ export const projects: Project[] = [
         Icon: VisualStudioCodeSvg,
         showInOverview: false,
       },
+      {
+        label: "GitHub",
+        Icon: GitHubSvg,
+        showInOverview: false,
+      },
     ],
-    deepWikiURL: "https://deepwiki.com/Gabriel117343/SistemaGestionHotelAricaProyecto",
-    sourceCode: "https://github.com/Gabriel117343/SistemaGestionHotelAricaProyecto",
+    deepWikiURL:
+      "https://deepwiki.com/Gabriel117343/SistemaGestionHotelAricaProyecto",
+    sourceCode:
+      "https://github.com/Gabriel117343/SistemaGestionHotelAricaProyecto",
     dateFrom: "2023-08-01",
     dateTo: "2023-12-29",
+  },
+  {
+    title: "Aplicación de la NASA",
+    shortDescription:
+      "Aplicación Movil que utiza la API de la NASA para obtener datos astrónomicos diarios, incluyendo imágenes y videos, que se presentan a los usuarios de manera atractiva.",
+    details: {
+      overview:
+        "Esta aplicación aplicación permite a los usuarios ver las imagenes y videos del día gracias a la API de la NASA. \n\n Desarrollar proyecto me ayudó a mejorar mis habilidades en el desarrollo de aplicaciones móviles y en la integración de APIs",
+      duration: "1+ meses",
+      responsibilities: [
+        "Estructurar el proyecto con React Native",
+        "Integrar la API de la NASA para obtener datos astronómicos diarios",
+        "Implementar la navegación entre pantallas utilizando React Navigation",
+        "Crear una interfaz de usuario atractiva y fácil de usar utilizando componentes de React Native",
+        "Implementar la lógica para mostrar imágenes y videos de la NASA en la aplicación",
+        "Implementar la funcionalidad de blurr para las imágenes y videos",
+      ],
+      role: "Desarrollador Front-End",
+    },
+    images: [
+      {
+        label: "Vistas generales de la Aplicación",
+        platform: "mobile",
+        src: nasa_ap_01,
+      },
+      {
+        label: "Menú de la Aplicación",
+        platform: "mobile",
+        src: nasa_ap_02,
+      },
+    ],
+    slug: "nasa-app",
+    techs: [
+      { label: "React Native", Icon: ReactSvg, showInOverview: true },
+      { label: "JavaScript", Icon: JavaScriptSvg, showInOverview: true },
+      { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
+      { label: "Git", Icon: GitSvg, showInOverview: false },
+      { label: "CSS", Icon: CssSvg, showInOverview: true },
+      { label: "HTML", Icon: HtmlSvg, showInOverview: false },
+      {
+        label: "Visual Studio Code",
+        Icon: VisualStudioCodeSvg,
+        showInOverview: false,
+      },
+      {
+        label: "GitHub",
+        Icon: GitHubSvg,
+        showInOverview: false,
+      },
+    ],
+    dateFrom: "20234-06-01",
+    dateTo: "2023-07-01",
+    sourceCode: "https://github.com/Gabriel117343/Aplicacion-de-la-Nasa",
+    deepWikiURL: "https://deepwiki.com/Gabriel117343/Aplicacion-de-la-Nasa",
   },
   // …más proyectos…
 ];

@@ -10,7 +10,9 @@ import { Links } from "@components/projects/Links";
 import { VideoProject } from "@components/projects/VideoProject";
 import { DevinAiSvg } from "@ui/svg/DevinAiSvg";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
+import { ArrowDoubleSvg } from '@ui/svg/ArrowDoubleSvg';
 import Link from "next/link";
+
 interface Props {
   params: Promise<{ slug: Slugs }>;
 }
@@ -86,9 +88,11 @@ const ProjectDetail = async ({ params }: Props) => {
             href={project.deepWikiURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cyan-400 hover:underline"
+            className="text-cyan-400 hover:underline group/doc"
           >
+         
             Ver Documentación
+            <ArrowDoubleSvg className="w-4 h-4 inline-block ml-1 rotate-180 group-hover/doc:scale-140 group-hover/doc:contrast-125 transition-all duration-300 ease-in" />
           </Link>
         </section>
       )}
