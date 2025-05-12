@@ -47,8 +47,8 @@ export const Contact: React.FC = () => {
         >
           <GitHubSvg className="w-8 h-8 hover:contrast-125 transition-colors" />
         </Link>
-        <Link
-          href="https://outlook.office.com/mail/"
+        <a
+          href="mailto:gabriel.soliz@inacapmail.cl?subject=Hola%20Gabriel%20Soliz"
           className="
             p-4 bg-blue-700/30 rounded-full 
             hover:bg-blue-700/40 transition-colors duration-200
@@ -57,11 +57,9 @@ export const Contact: React.FC = () => {
           aria-label="Ir a Outlook"
         >
           <OutlookSvg className="w-8 h-8 hover:contrast-125 transition-colors" />
-        </Link>
+        </a>
       </div>
-      <small className="text-xs text-center text-gray-200/50">
-        En desarrollo
-      </small>
+
       <section className="flex justify-center mt-12">
         <RevealOnScroll
           threshold={1}

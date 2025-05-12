@@ -13,6 +13,7 @@ import "./styles.css";
 import { Projects } from "@components/home/Projects";
 import { Contact } from "@components/home/Contact";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
+import { LineShadowText } from "@components/magicui/line-shadow-text";
 
 const Home = () => {
   return (
@@ -30,13 +31,20 @@ const Home = () => {
             className="object-cover opacity-80 w-full  group-hover/initial-image:contrast-100 contrast-125 group-hover/initial-image:scale-105 transition-all duration-1000 ease-in-out "
           />
         </div>
-        <section className="text-white relative  z-30 h-[170px] @xs/first:h-[170px]  @md/first:h-[300px] @lg/first:h-[520px] max-h-[700px] @container">
+        <section className="text-white relative  z-30 h-[200px]  @xs/first:h-[220px]  @md/first:h-[300px] @lg/first:h-[520px] max-h-[700px] @container overflow-y">
           <div className="flex items-center justify-center pt-[50px] 2xl:pt-[160px] flex-col gap-4">
             <h1 className="@xs:text-3xl text-[30px] @sm:text-4xl @md:text-5xl @lg:text-6xl @xl:text-7xl font-montserrat font-semibold">
               <p className="inline-block animate-pulse rotate-0 stick-animated">
                 |{" "}
               </p>{" "}
-              GABRIEL SOLIZ{" "}
+              GABRIEL{" "}
+              <LineShadowText
+                as="span"
+                className="inline-block"
+                shadowColor="#A3A3A3"
+              >
+                SOLIZ
+              </LineShadowText>{" "}
               <p className="inline-block p-0 m-0 animate-pulse duration-75 ease-in-out transform text-white">
                 _
               </p>
@@ -48,20 +56,21 @@ const Home = () => {
               />{" "}
               |
             </h2>
-            <RevealOnScroll
-              threshold={0.2}
-              hiddenClass="opacity-0 -translate-y-12"
-              visibleClass="opacity-100 translate-y-0"
-              triggerOnce={false}
-            >
-              <Link
-                className="w-40 h-10 bg-black/20 rounded-full border-2 border-cyan-600/30 hover:border-cyan-600/50 hover:bg-black/30 transition duration-300 flex items-center justify-center gap-2 font-semibold text-gray-200 mt-4 font-montserrat"
-                href="#contact"
-              >
-                Contactar
-              </Link>
-            </RevealOnScroll>
           </div>
+          <RevealOnScroll
+            threshold={0.2}
+            hiddenClass="opacity-0 -translate-y-12"
+            visibleClass="opacity-100 translate-y-0"
+            triggerOnce={false}
+            className="w-full flex justify-center mt-4"
+          >
+            <Link
+              className=" w-30 h-8 @sm:w-40 @sm:h-10 bg-black/20 rounded-full border-2 border-cyan-600/30 hover:border-cyan-600/50 hover:bg-black/30 transition duration-300 flex items-center justify-center gap-2 font-semibold text-gray-200 mt-4 font-montserrat "
+              href="#contact"
+            >
+              Contactar
+            </Link>
+          </RevealOnScroll>
         </section>
       </div>
 
@@ -101,7 +110,7 @@ const Home = () => {
        "
       >
         <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white text-center mb-8">
-          Contacto
+          CONTACTO
         </h2>
 
         <Contact />
