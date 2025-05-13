@@ -8,15 +8,17 @@ import {
   inter,
 } from "@/lib/fonts";
 
-import "./globals.css";
-
 import { Header } from "@/components/views/Header";
 import { Footer } from "@/components/views/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
     default: "Portafolio Gabriel Soliz",
     template: "%s | Portafolio Gabriel Soliz",
+  },
+  icons: {
+    icon: [{ url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }],
   },
   description:
     "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, Typescript, Tailwind CSS 4. Desarrollador de aplicaciones web modernas y escalables.",

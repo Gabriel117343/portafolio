@@ -69,11 +69,11 @@ export const CERTIFICATIONS: certification[] = [
     dateIssued: "2022-09-30",
   },
   {
-    name: "JavaScript Algorithms and Data Structures",
+    name: "Lo último de JavaScript (ES2023 & ES2024)",
     issuer: "freeCodeCamp.org",
 
     image: {
-      label: " Lo último de JavaScript (ES2023 & ES2024)",
+      label: " Certificación de Lo último de JavaScript (ES2023 & ES2024)",
       src: js_certification_01,
     },
     dateIssued: "2025-02-15",
