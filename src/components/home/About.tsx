@@ -67,23 +67,40 @@ export const About: React.FC = () => {
             first-letter:mr-3
             first-letter:leading-none"
         >
-          Me presento, mi nombre es Gabriel y soy{" "}
-          <strong>Ingeniero en Informática</strong> con más de 2 años de
-          experiencia (de manera autonoma) dedicados al desarrollo Front-End
-          como también al Back-End. Combino mis conocimientos en{" "}
-          <em>El desarrollo Web</em> con un enfoque en{" "}
-          <strong>código limpio</strong> y buenas prácticas (SOLID, patrones de
-          diseño). Mi stack incluye <strong>React 19</strong>,{" "}
-          <strong>TypeScript</strong>, <strong>Tailwind CSS 4.</strong>
+          Me presento, mi nombre es Gabriel, tengo 22 años y soy{" "}
+          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+            Ingeniero en Informática
+          </strong>{" "}
+          con más de 2 años de experiencia (de manera autónoma) dedicados al
+          desarrollo Front-End como también al Back-End. Combino mis
+          conocimientos en <em>El desarrollo Web</em> con un enfoque en{" "}
+          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+            código limpio
+          </strong>{" "}
+          y buenas prácticas (SOLID, patrones de diseño). Mi stack incluye{" "}
+          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+            React 19
+          </strong>
+          ,{" "}
+          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+            TypeScript
+          </strong>
+          ,{" "}
+          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+            Tailwind CSS 4.
+          </strong>
           <br />
           <br />
-          Me considero una persona <strong>proactiva</strong> y comprometida con
-          la mejora continua. Creo firmemente que la verdadera transformación
-          profesional exige <strong>ciertos sacrificios</strong> y trabajo en
-          equipo para alcanzar metas de alto impacto. Disfruto colaborar en
-          entornos ágiles, resolver retos complejos y siempre aportar valor con
-          creatividad e innovación, utilizando las últimas tecnologías que el
-          mercado ofrece y no{" "}
+          Me considero una persona{" "}
+          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+            proactiva
+          </strong>{" "}
+          y comprometida con la mejora continua. Creo firmemente que la
+          verdadera transformación profesional exige{" "}
+          <strong>ciertos sacrificios</strong> y trabajo en equipo para alcanzar
+          metas de alto impacto. Disfruto colaborar en entornos ágiles, resolver
+          retos complejos y siempre aportar valor con creatividad e innovación,
+          utilizando las últimas tecnologías que el mercado ofrece y no{" "}
           <strong className="italic font-normal">
             limitándome a lo pasado.
           </strong>

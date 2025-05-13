@@ -14,6 +14,7 @@ import { Projects } from "@components/home/Projects";
 import { Contact } from "@components/home/Contact";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
 import { LineShadowText } from "@components/magicui/line-shadow-text";
+import { Certifications } from "@components/home/Certifications";
 
 const Home = () => {
   return (
@@ -115,6 +116,7 @@ const Home = () => {
 
         <Contact />
       </section>
+      <Certifications />
     </>
   );
 };

@@ -49,9 +49,8 @@ export function RevealOnScroll<C extends ElementType = "div">({
   triggerOnce = true,
   threshold = 0.1,
   className,
-
   htmlProps,
-  key,
+
   // técnica deprecada ahora se usa sr-only
   // showBeforeHydrate = false,
 }: RevealOnScrollProps<C>) {
@@ -62,7 +61,6 @@ export function RevealOnScroll<C extends ElementType = "div">({
   return (
     <Component
       {...htmlProps}
-      key={key}
       ref={ref}
       className={twMerge(
         // siempre aplicamos la transición

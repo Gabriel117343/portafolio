@@ -1,6 +1,6 @@
 import React from "react";
 
-import { projects, type Slugs } from "@constants/projectsData";
+import { PROJECTS, type Slugs } from "@constants/projectsData";
 
 import { LineAbout } from "@components/views/lineAbout";
 import { Description } from "@components/projects/Description";
@@ -19,7 +19,7 @@ interface Props {
 
 const ProjectDetail = async ({ params }: Props) => {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = PROJECTS.find((p) => p.slug === slug);
   if (!project)
     return <p className="text-center py-12">Proyecto no encontrado</p>;
 

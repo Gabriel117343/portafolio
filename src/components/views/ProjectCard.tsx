@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Lens } from "@/components/magicui/lens";
 import { ArrowRightSvg } from "@ui/svg/ArrowRightSvg";
 import Image from "next/image";
-import { projects } from "@constants/projectsData";
+import { PROJECTS } from "@constants/projectsData";
 import type { StaticImageData } from "next/image";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
 
@@ -27,9 +27,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   // solo aquellos que se desean ver en la viste general del proyecto
   const TECHS_tO_SHOW =
-    projects
-      .find((p) => p.slug === slug)
-      ?.techs.filter((t) => t.showInOverview === true) ?? [];
+    PROJECTS.find((p) => p.slug === slug)?.techs.filter(
+      (t) => t.showInOverview === true
+    ) ?? [];
 
   return (
     <RevealOnScroll

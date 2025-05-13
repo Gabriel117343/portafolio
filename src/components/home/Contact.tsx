@@ -15,7 +15,12 @@ export const Contact: React.FC = () => {
         threshold={0.2}
         hiddenClass="opacity-0 translate-x-12"
         visibleClass="opacity-100 translate-x-0"
-        triggerOnce={false}
+        triggerOnce={true}
+        htmlProps={{
+          "aria-label": "Texto de contacto",
+          "aria-hidden": "false",
+          role: "text",
+        }}
       >
         Puedes contactarme a través de mis redes sociales y mi correo Outlook
       </RevealOnScroll>

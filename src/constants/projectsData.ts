@@ -48,6 +48,8 @@ import portfolio_01 from "@public/images/projects/portfolio/portfolio-01.jpeg";
 import portfolio_02 from "@public/images/projects/portfolio/portfolio-02.png";
 import portfolio_03 from "@public/images/projects/portfolio/portfolio-03.jpeg";
 
+
+
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
 import type { StaticImageData } from "next/image";
@@ -69,6 +71,8 @@ import {
   BootstrapSvg,
   SqlLiteSvg,
   NetlifySvg,
+  VercelSvg,
+  NextJsIcon,
 } from "@ui/svg/Technologies";
 
 export type Platforms = "web" | "mobile" | "desktop" | "all";
@@ -153,12 +157,13 @@ export interface Project {
 
   sourceCode?: SourceCode;
   liveDemo?: string;
+ 
 }
 
 // Nota: Siempre la primera imagen del array será la que se mostrará en el slider de la vista general de proyectos
 // y la que se mostrará en la vista de detalle del proyecto. El resto de imágenes son opcionales y se mostrarán en el slider de la vista de detalle del proyecto.
 
-export const projects: Project[] = [
+export const PROJECTS: Project[] = [
   {
     slug: "sica-system",
     title: "Sistema de Información Criminal SICA",
@@ -633,7 +638,8 @@ export const projects: Project[] = [
       },
     ],
     techs: [
-      { label: "Next.js 15", Icon: ReactSvg, showInOverview: true },
+      { label: "Next.js 15", Icon: NextJsIcon, showInOverview: true },
+      { label: "Vercel", Icon: VercelSvg, showInOverview: true },
       { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
       { label: "TailwindCSS 4", Icon: TailwindSvg, showInOverview: true },
       { label: "Git", Icon: GitSvg, showInOverview: false },
@@ -652,5 +658,6 @@ export const projects: Project[] = [
     liveDemo: "gabrielsoliz.dev",
     deepWikiURL: "https://deepwiki.com/Gabriel117343/portafolio",
   },
+  
   // …más proyectos…
 ];

@@ -23,7 +23,6 @@ export const Technologies: React.FC = () => {
     <RevealOnScroll
       hiddenClass={hiddenClassName}
       visibleClass={visibleClassName}
-
       className=" transition-all duration-900 ease-out group/technologies"
       triggerOnce={false}
       threshold={0.2}
@@ -68,10 +67,6 @@ export const Technologies: React.FC = () => {
         </div>
         <article className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-3 lg:gap-4 items-center justify-items-center ">
           {TECHS.map(({ label, Icon }, idx) => {
-            const rotateClass =
-              Math.random() > 0.5
-                ? "group-hover/tech:rotate-6"
-                : "group-hover/tech:-rotate-6";
             return (
               <div
                 key={idx}
@@ -83,7 +78,8 @@ export const Technologies: React.FC = () => {
                         transition-transform duration-200
                         group-hover/tech:contrast-125
                         group-hover/tech:scale-110
-                        ${rotateClass}
+                        
+                        group-hover/tech:rotate-6
                         cursor-crosshair
                       `}
                 />

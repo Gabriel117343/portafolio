@@ -20,6 +20,26 @@ export const metadata: Metadata = {
   },
   description:
     "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, Typescript, Tailwind CSS 4. Desarrollador de aplicaciones web modernas y escalables.",
+  keywords: [
+    "Portafolio",
+    "Gabriel Soliz",
+    "Desarrollador Front End",
+    "Desarrollador Web",
+    "Ingeniero en Informática",
+    "React",
+    "Next.js",
+    "Typescript",
+    "Tailwind CSS",
+  ],
+  openGraph: {
+    title: "Portafolio Gabriel Soliz",
+    description:
+      "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, Typescript, Tailwind CSS 4. Desarrollador de aplicaciones web modernas y escalables.",
+    url: "https://www.gabrielsoliz.dev/",
+
+    locale: "es_CL",
+    siteName: "Gabriel Soliz",
+  },
 };
 
 export default function RootLayout({

@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin
+Disallow: /drafts
+
+# Host
+Host: https://www.gabrielsoliz.dev
+
+# Sitemaps
+Sitemap: https://www.gabrielsoliz.dev/sitemap.xml
+Sitemap: https://www.gabrielsoliz.dev/server-sitemap-index.xml
