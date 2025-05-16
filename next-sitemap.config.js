@@ -48,8 +48,13 @@ module.exports = {
   },
   // Solo los proyectos (Next.js genera "/" y "/projects" por ti)
   additionalPaths: async (config) => {
+    const staticPaths = ["/", "/projects"]; // Rutas principales
+    const projectPaths = projectsSlugs.map((slug) => `/projects/${slug}`);
+
     return Promise.all(
-      projectsSlugs.map((slug) => config.transform(config, `/projects/${slug}`))
+      [...staticPaths, ...projectPaths].map((path) =>
+        config.transform(config, path)
+      )
     );
   },
   // Opciones extra para robots.txt

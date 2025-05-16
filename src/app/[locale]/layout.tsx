@@ -25,7 +25,15 @@ export const metadata: Metadata = {
     template: "%s | Portafolio Gabriel Soliz",
   },
   icons: {
-    icon: [{ url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }],
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      // Icono que se mostrará en la busqueda de google
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+    ],
+    other: [
+      // rel="shortcut icon" ayuda a que algunos buscadores la lean:
+      { rel: "shortcut icon", url: "/favicon.ico" },
+    ],
   },
   description:
     "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, Typescript, Tailwind CSS 4. Desarrollador de aplicaciones web modernas y escalables.",
