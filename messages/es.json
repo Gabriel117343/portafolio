@@ -1,0 +1,440 @@
+{
+  "home": {
+    "Metadata": {
+      "title": "Portafolio Gabriel Soliz",
+      "description": "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, TypeScript y Tailwind CSS 4."
+    },
+    "header": {
+      "nav": {
+        "home": "Inicio",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "about": "Sobre mí",
+        "contact": "Contactos"
+      }
+    },
+    "developer": { "firstName": "Gabriel", "lastName": "Soliz" },
+    "briefProfesionalInfo": {
+      "left": "Ingeniero en Informática",
+      "rightSwitch": {
+        "start": "Desarrollador Front End",
+        "end": "Especialista en React"
+      }
+    },
+    "contact": "Contáctame",
+    "technologiesSection": {
+      "title": "Tecnologías y Herramientas",
+      "description": "Estas son algunas de las tecnologías y herramientas que manejo y utilizo en mis proyectos.",
+      "secondDescription": "¡Siempre estoy aprendiendo y mejorando mis habilidades!"
+    },
+    "more": "Desliza para saber más",
+    "aboutSection": {
+      "title": "Sobre mí",
+
+      "firstParagraph": {
+        "text": "Me presento, mi nombre es <strong>Gabriel</strong>, tengo 22 años y soy <strong>Ingeniero en Informática</strong> con más de 2 años de experiencia (de manera autónoma) dedicados al desarrollo web. Combino los conocimientos que he adquirido con un enfoque en el <strong>código limpio</strong> y buenas prácticas (SOLID, patrones de diseño). Mi stack suele incluir <strong>React 19, TypeScript y Tailwind CSS 4</strong>. <br></br> <br></br> Me considero una persona <strong>proactiva</strong> y comprometida con la mejora continua. Creo firmemente que la verdadera transformación profesional exige ciertos sacrificios y <strong>trabajo en equipo</strong> para lograr objetivos de alto impacto. Disfruto colaborar en <strong>entornos ágiles</strong> y aportar valor con <strong>creatividad e innovación</strong>, utilizando las últimas tecnologías que el mercado ofrece y no solo lo que está de moda.",
+        "keyWords": {
+          "name": "Gabriel",
+          "engineer": "Ingeniero en Informática",
+          "cleanCode": "código limpio",
+          "stack": "React 19, TypeScript y Tailwind CSS 4",
+          "proactive": "proactiva",
+          "teamwork": "trabajo en equipo",
+          "agile": "entornos ágiles",
+          "creativity": "creatividad e innovación"
+        }
+      },
+
+      "note": "Se reconoce al instante un trabajo realizado solo por IA: basta con reconocer la ausencia de las funcionalidades más avanzadas del lenguaje/tecnología, además de una arquitectura poco escalable."
+    },
+    "projectsSection": {
+      "title": "Proyectos Destacados"
+    },
+    "contactSection": {
+      "title": "CONTACTO",
+      "description": "No dudes en ponerte en contacto conmigo a través de los siguientes canales:",
+      "form": {
+        "title": "Envíame un mensaje",
+        "name": "Tu nombre",
+        "email": "Tu correo electrónico",
+        "message": "Motivo del mensaje",
+        "bigText": "Escribe tu mensaje aquí...",
+        "button": "Enviar mensaje",
+        "isSending": "Enviando ",
+        "statusSend": {
+          "success": {
+            "title": "¡Mensaje enviado!",
+            "description": "Gracias por contactarme. Te responderé pronto.",
+            "btnConfirmation": "Aceptar"
+          },
+          "error": {
+            "title": "Error al enviar el mensaje",
+            "description": "No se pudo enviar el mensaje. Intenta nuevamente más tarde.",
+            "btnConfirmation": "Aceptar"
+          }
+        }
+      }
+    },
+    "certificationsSection": {
+      "title": "Certificaciones"
+    },
+    "footer": {
+      "description": "© 2025 - Todos los derechos reservados"
+    }
+  },
+
+  "detailProyect": {
+    "technologiesSection": {
+      "title": "Tecnologías y Herramientas"
+    },
+    "galerySection": {
+      "title": "Galería de Imágenes",
+      "info": "Usa la rueda del mouse para hacer zoom en las imágenes"
+    },
+    "architectureSection": {
+      "title": "Arquitectura del Proyecto"
+    },
+    "documentationSection": {
+      "title": "Documentación",
+      "smallInfo": "(DeepWiki AI)",
+      "showDescription": "Puedes ver la documentación del proyecto en DeepWiki AI, una herramienta de IA que genera documentación técnica de manera automática. Esta herramienta utiliza un modelo de lenguaje llamado Devin AI para analizar el código y generar documentación clara y concisa.",
+      "linkText": "Ver Documentación"
+    },
+    "linksSection": {
+      "title": "Enlaces",
+      "gitHubStatus": {
+        "public": "Código en GitHub",
+        "privateInfo": "Puedes pedirme una vista previa contactandome",
+        "private": "Repositorio privado"
+      }
+    },
+    "videoSection": {
+      "title": "Video de Demostración"
+    }
+  },
+  "projects": {
+    "Metadata": {
+      "title": "Proyectos Destacados | Gabriel Soliz",
+      "description": "Proyectos destacados de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, TypeScript y Tailwind CSS 4."
+    },
+    "staticData": {
+      "technologiesSection": {
+        "title": "Tecnologías y Herramientas"
+      },
+      "galerySection": {
+        "title": "Galería de Imágenes",
+        "info": "Usa la rueda del mouse para hacer zoom en las imágenes"
+      },
+      "architectureSection": {
+        "title": "Arquitectura del Proyecto"
+      },
+      "documentationSection": {
+        "title": "Documentación",
+        "smallInfo": "(DeepWiki AI)",
+        "question": "¿Qué es DeepWiki AI?",
+        "showDescription": "Puedes ver la documentación del proyecto en <strong>DeepWiki AI</strong>, una herramienta de IA que genera documentación técnica de manera automática. Esta herramienta utiliza un modelo de lenguaje llamado <strong>Devin AI</strong> para analizar el código y generar documentación clara y concisa.",
+        "linkText": "Ver Documentación"
+      },
+      "linksSection": {
+        "title": "Enlaces",
+        "gitHubStatus": {
+          "public": "Código en GitHub",
+          "privateInfo": "Puedes pedirme una vista previa contactandome",
+          "private": "Repositorio privado"
+        },
+        "liveDemoStatus": {
+          "success": "Ver live demo online",
+          "failiture": "Live demo no disponible"
+        }
+      },
+      "videoSection": {
+        "title": "Video de Demostración"
+      }
+    },
+    "sica-system": {
+      "title": "Sistema de Información Criminal SICA",
+      "shortDescription": "Aplicación web full-stack para el registro, gestión y análisis en tiempo real de datos criminales.",
+      "details": {
+        "overview": "Fue mi proyecto de tesis y uno de los más grandes que he realizado. Desarrolle una Aplicación web full-stack junto a otro desarrollador, para el registro, gestión y análisis de datos criminales en tiempo real. Implementada con React + TypeScript en el FrontEnd y Django REST Framework + PostgreSQL en el BackEnd.",
+        "duration": "8+ meses",
+        "role": "Desarrollador Front-End (con contribuciones al Back-End)",
+        "responsibilities": [
+          "Migración de Tailwind CSS v3 → v4 para aprovechar nuevas utilidades y mejorar rendimiento",
+          "Migración de JavaScript → TypeScript, añadiendo tipado a APIs y mejorando mantenibilidad",
+          "Actualización de React 18.3 → React 19",
+          "Creación de hooks y utilidades para manejo de query-params",
+          "Integración de React DevTools y configuración de ESLint/Prettier",
+          "Implementación de mapas de calor con Google Maps API para visualización de delitos",
+          "Autenticación JWT con Django (login, refresh token) y consumo de APIs REST con paginación y serialización",
+          "Optimización de rendimiento: lazy-loading con React.lazy/Suspense y auditorías con Lighthouse",
+          "Gestionar los parámetros de consulta a través de mi propia librería @react-magic-search-params",
+          "Coordinación con equipo Back-End vía Git/GitHub, definición de +70 requisitos y liderazgo de proyecto"
+        ]
+      },
+      "images": [
+        {
+          "id": 1,
+          "label": "Login y Dashboard del Sistema SICA"
+        },
+        {
+          "id": 2,
+          "label": "Detalle de Investigación"
+        },
+        {
+          "id": 3,
+          "label": "Configuración del Sistema SICA"
+        },
+        {
+          "id": 4,
+          "label": "Detalle de Evidencia"
+        },
+        {
+          "id": 5,
+          "label": "Registro de Evidencia"
+        },
+        {
+          "id": 6,
+          "label": "Tablero de Investigación"
+        },
+        {
+          "id": 7,
+          "label": "Registro de Investigación"
+        },
+        {
+          "id": 8,
+          "label": "Lista de Investigaciones"
+        },
+        {
+          "id": 9,
+          "label": "Lista de Delitos"
+        },
+        {
+          "id": 10,
+          "label": "Google Maps - delitos registrados"
+        },
+        {
+          "id": 11,
+          "label": "Google Maps - Mapa de calor"
+        },
+        {
+          "id": 12,
+          "label": "Google Maps - Registro de Delitos"
+        },
+        {
+          "id": 13,
+          "label": "Google Maps - Detalle de Delito"
+        },
+        {
+          "id": 14,
+          "label": "Lista de Usuarios del Sistema SICA"
+        }
+      ],
+      "videoDemostration": {
+        "description": "Video experimental, no tiene  nada que ver con el proyecto, pero es un video de prueba para mostrar como se vería un video en la vista de detalle del proyecto."
+      },
+      "architecture": {
+        "generalImage": {
+          "label": "Arquitectura del Sistema SICA",
+          "description": "Una vista general de los modulos del sistema, en donde se puede ver la Arquitectura del sistema y como se comunican entre si."
+        }
+      }
+    },
+    "bazaar-management": {
+      "title": "Sistema de Gestión de Bazar",
+      "shortDescription": "Aplicación web completa para la gestión empleados, ventas y productos para un bazar",
+
+      "details": {
+        "overview": "Es un sistema que desarrollado como Proyecto de Integración, haya por el 2023 en mi carrera de Ingeniería en Informática. Aprendí a implementar formularios, paginar datos y autenticar usuarios con JWT. También optimicé el rendimiento del sistema utilizando lazy-loading y auditorías de rendimiento con Lighthouse. \n\nRetomé este proyecto en 2024 para refactorizar todo el FrontEnd, lo que sento las bases para poder luego ese mismo año desarrollar el Sistema de Información Criminal SICA.",
+        "duration": "4+ meses",
+        "role": "Desarrollador Full Stack",
+        "responsibilities": [
+          "Implementación de formularios y validaciones",
+          "Integración de APIs REST con paginación y serialización",
+          "Autenticación JWT con Django (login, refresh token)",
+          "Optimización de rendimiento: lazy-loading con React.lazy/Suspense",
+          "Auditorías de rendimiento con Lighthouse",
+          "Gestionar el proyecto en GitHub",
+          "Definición de requisitos y liderazgo del proyecto",
+          "Refactorizar completamente el FrontEnd del sistema con mejoras en la UI/UX, rendimiento y código limpio."
+        ]
+      },
+      "images": [
+        {
+          "id": 1,
+          "label": "Punto de Venta del Sistema"
+        },
+        {
+          "id": 2,
+          "label": "Dashboard de los KPIs del Sistema"
+        },
+        {
+          "id": 3,
+          "label": "Control de Stock en Tienda"
+        },
+        {
+          "id": 4,
+          "label": "Registro de Ventas Realizadas"
+        },
+        {
+          "id": 5,
+          "label": "Registro de Productos"
+        },
+        {
+          "id": 6,
+          "label": "Registro de Productos"
+        },
+        {
+          "id": 7,
+          "label": "Gestión de Empleados"
+        },
+        {
+          "id": 8,
+          "label": "Registro de secciones en Tienda"
+        },
+        {
+          "id": 9,
+          "label": "Crear orden de compra"
+        },
+        {
+          "id": 10,
+          "label": "Punto de venta del Sistema"
+        }
+      ]
+    },
+    "hotel-management": {
+      "title": "Sistema de Gestión Hotelero",
+      "shortDescription": "Aplicación web para la gestión de reservas, clientes y habitaciones para la gestión de un Hotel",
+
+      "details": {
+        "overview": "Es un Sistema de gestión hotelero que desarrolle en mi carrera de ingeniería en informática. Aprendí a implementar formularios, autenticar usuarios, crear interfaces de usuario y gestionar el proyecto en GitHub. \n\nEste proyecto fue un gran aprendizaje para mí, por ser el primer proyecto que desarrolle. ",
+        "duration": "4+ meses",
+        "role": "Desarrollador Full Stack",
+        "responsibilities": [
+          "Implementación de formularios y validaciones",
+          "Integración de APIs REST con serialización",
+          "Autenticación basada en tokens",
+          "construir las interfaces de usuario",
+          "Refactorizar el código",
+          "Gestionar el proyecto en GitHub",
+          "Definición de requisitos y liderazgo del proyecto",
+          "Consumir endpoints de APIs REST",
+          "Construir las vistas del backend",
+          "Crear el diseño de la base de datos"
+        ]
+      },
+      "images": [
+        {
+          "id": 1,
+          "label": "Página principal del Sistema"
+        },
+        {
+          "id": 2,
+          "label": "Proceso de CheckIn de clientes"
+        },
+        {
+          "id": 3,
+          "label": "Modulo de Recepción"
+        },
+        {
+          "id": 4,
+          "label": "Dashboard de los KPIs del Sistema"
+        }
+      ]
+    },
+    "nasa-app": {
+      "title": "Aplicación de la NASA",
+      "shortDescription": "Aplicación Movil que utiza la API de la NASA para obtener datos astrónomicos diarios, incluyendo imágenes y videos, que se presentan a los usuarios de manera atractiva.",
+      "details": {
+        "overview": "Esta aplicación aplicación permite a los usuarios ver las imagenes y videos del día gracias a la API de la NASA. \n\n Desarrollar proyecto me ayudó a mejorar mis habilidades en el desarrollo de aplicaciones móviles y en la integración de APIs",
+        "duration": "1+ meses",
+        "responsibilities": [
+          "Estructurar el proyecto con React Native",
+          "Integrar la API de la NASA para obtener datos astronómicos diarios",
+          "Implementar la navegación entre pantallas utilizando React Navigation",
+          "Crear una interfaz de usuario atractiva y fácil de usar utilizando componentes de React Native",
+          "Implementar la lógica para mostrar imágenes y videos de la NASA en la aplicación",
+          "Implementar la funcionalidad de blurr para las imágenes y videos",
+          "Crear mi propia librería para manejar las notificaciones Toast @react-native-toast-lite"
+        ],
+        "role": "Desarrollador Front-End"
+      },
+      "images": [
+        {
+          "id": 1,
+          "label": "Vistas generales de la Aplicación"
+        },
+        {
+          "id": 2,
+          "label": "Menú de la Aplicación"
+        }
+      ]
+    },
+    "react-magic-search-params": {
+      "title": "React Magic Search Params",
+      "shortDescription": "Librería de React para manejar los query params de la URL de forma sencilla y gracias al autocompletado de TypeScript.",
+
+      "details": {
+        "duration": "1+ semanas",
+        "overview": "Desarrolle esta librería para facilitar el manejo de los query params en las URLs de mis proyectos con React. \n\nLa librería permite manejar los query params de forma sencilla y gracias al autocompletado de TypeScript, es fácil de usar. \n\nEstá publicada en npm y tiene una buena documentación.",
+        "role": "Desarrollador Front-End",
+        "responsibilities": [
+          "Investigar el gestor de paquetes npm y como publicar una librería",
+          "Crear un Hook para manejar los query params de la URL",
+          "Crear una página interactiva para mostra el funcionamiento de la librería",
+          "Crear la documentación detallada de la librería",
+          "Desplegar la página interactiva en Netlify",
+          "Crear un video demostrativo de la librería"
+        ]
+      },
+      "images": [
+        {
+          "id": 1,
+          "label": "Librería en NPM"
+        },
+        {
+          "id": 2,
+          "label": "Ejemplo de Código de la librería"
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Mi Portafolio",
+
+      "shortDescription": "Portafolio personal desarrollado con Next.js 15, TypeScript y Tailwind CSS 4.",
+      "details": {
+        "duration": "1+ meses",
+        "overview": "Cree mi propio portafolio desde 0,  utilizando Next.js 15, TypeScript y Tailwind CSS 4. \n\nEl portafolio es completamente responsivo y tiene un diseño atractivo y moderno. \n\nAdemás, he implementado una sección de proyectos donde muestro mis trabajos más destacados y una sección de contacto donde los usuarios pueden enviarme un mensaje.",
+        "role": "Desarrollador Front-End",
+        "responsibilities": [
+          "Crear la sección de proyectos y contacto",
+          "Implementar la navegación entre secciones",
+          "Crear la sección de habilidades y tecnologías",
+          "Crear la sección de experiencia y educación",
+          "Crear la sección de habilidades y tecnologías",
+          "Trabajar en los detalles de la UI/UX",
+          "Trabjar en la responsividad en para todas las pantallas",
+          "Crear componentes altamente reutilizables",
+          "Agregar animacioes y efectos visuales sin afectar el rendimiento y SEO",
+          "Asegurar el correcto funcionamiento para lectores de pantalla",
+          "Usar la librería Next-Intl para el soporte en diferentes idiomas, siguiendo el proceso de internacionalización (i18n)",
+          "Desplegar el portafolio en Vercel",
+          "Agregar un Dominio personalizado."
+        ]
+      },
+      "images": [
+        {
+          "id": 1,
+          "label": "Vista de inicio del portafolio"
+        },
+        {
+          "id": 2,
+          "label": "Vista de Tecnologías del portafolio"
+        },
+        {
+          "id": 3,
+          "label": "Vista de contacto y proyectos"
+        }
+      ]
+    }
+  }
+}

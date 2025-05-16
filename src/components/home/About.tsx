@@ -6,20 +6,15 @@ import Image from "next/image";
 import "./styles.css";
 import { LineAbout } from "@components/views/lineAbout";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
+import { useTranslations } from "next-intl";
 
-export const About: React.FC = () => {
+export const About = () => {
+  const text = useTranslations("home.aboutSection");
+
   return (
     <section
       id="about"
-      className="
-    w-full
-      relative
-      overflow-hidden
-      group/about
-      py-16 px-6 md:px-12 lg:px-24
-]
-    
-    "
+      className=" w-full relative   overflow-hidden  group/about      aboutpy-16 px-6 md:px-12 lg:px-24 py-14"
     >
       <LineAbout />
 
@@ -46,7 +41,7 @@ export const About: React.FC = () => {
       </div>
 
       <h2 className="relative text-4xl font-bold text-gray-200 mb-6 text-center font-montserrat">
-        Sobre mí
+        {text("title")}
       </h2>
 
       <article className="relative max-w-3xl mx-auto space-y-6 text-gray-200 ">
@@ -67,43 +62,14 @@ export const About: React.FC = () => {
             first-letter:mr-3
             first-letter:leading-none"
         >
-          Me presento, mi nombre es Gabriel, tengo 22 años y soy{" "}
-          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
-            Ingeniero en Informática
-          </strong>{" "}
-          con más de 2 años de experiencia (de manera autónoma) dedicados al
-          desarrollo Front-End como también al Back-End. Combino mis
-          conocimientos en <em>El desarrollo Web</em> con un enfoque en{" "}
-          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
-            código limpio
-          </strong>{" "}
-          y buenas prácticas (SOLID, patrones de diseño). Mi stack incluye{" "}
-          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
-            React 19
-          </strong>
-          ,{" "}
-          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
-            TypeScript
-          </strong>
-          ,{" "}
-          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
-            Tailwind CSS 4.
-          </strong>
-          <br />
-          <br />
-          Me considero una persona{" "}
-          <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
-            proactiva
-          </strong>{" "}
-          y comprometida con la mejora continua. Creo firmemente que la
-          verdadera transformación profesional exige{" "}
-          <strong>ciertos sacrificios</strong> y trabajo en equipo para alcanzar
-          metas de alto impacto. Disfruto colaborar en entornos ágiles, resolver
-          retos complejos y siempre aportar valor con creatividad e innovación,
-          utilizando las últimas tecnologías que el mercado ofrece y no{" "}
-          <strong className="italic font-normal">
-            limitándome a lo pasado.
-          </strong>
+          {text.rich("firstParagraph.text", {
+            strong: (chunk) => (
+              <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+                {chunk}
+              </strong>
+            ),
+            br: () => <br />,
+          })}
         </p>
         <RevealOnScroll
           as={"small"}
@@ -113,10 +79,7 @@ export const About: React.FC = () => {
           visibleClass="translate-y-0"
           className="italic font-serif text-[12px] md:text-sm text-gray-400 tracking-wide"
         >
-          Se reconoce al instante un trabajo generado solo por IA: basta con
-          reconocer la ausencia de las funcionalidades más avanzadas del
-          lenguaje/tecnología, o la falta de creatividad en la solución
-          propuesta.
+          {text("note")}
         </RevealOnScroll>
       </article>
     </section>

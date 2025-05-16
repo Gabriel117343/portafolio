@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -17,33 +13,22 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "allowArbitraryExtensions": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@ui/*": [
-        "./src/components/ui/*"
-      ],
-      "@public/*": [
-        "./public/*"
-      ],
-      "@lib/*": [
-        "./src/lib/*"
-      ],
-      "@constants/*": [
-        "./src/constants/*"
-      ],
-      "@app/*": [
-        "./src/app/*"
-      ]
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@ui/*": ["./src/components/ui/*"],
+      "@public/*": ["./public/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@app/*": ["./src/app/*"],
+      "@/i18n/*": ["./src/i18n/*"],
+      "@/hooks/*": ["./src/hooks/*"]
     }
   },
   "include": [
@@ -51,9 +36,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    "next-sitemap.config.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

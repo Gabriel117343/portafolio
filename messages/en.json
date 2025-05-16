@@ -1,0 +1,397 @@
+{
+  "home": {
+    "Metadata": {
+      "title": "Gabriel Soliz’s Portfolio",
+      "description": "Gabriel Soliz’s front-end developer portfolio. Expertise in Next.js, React, TypeScript and Tailwind CSS 4."
+    },
+    "header": {
+      "nav": {
+        "home": "Home",
+        "experience": "Experience",
+        "projects": "Projects",
+        "about": "About me",
+        "contact": "Contacts"
+      }
+    },
+    "developer": { "firstName": "Gabriel", "lastName": "Soliz" },
+    "briefProfesionalInfo": {
+      "left": "Computer Engineer",
+      "rightSwitch": {
+        "start": "Front End Developer",
+        "end": "React Specialist"
+      }
+    },
+    "contact": "Contact me",
+    "technologiesSection": {
+      "title": "Technologies and Tools",
+      "description": "These are some of the technologies and tools I work with and use in my projects.",
+      "secondDescription": "I'm always learning and improving my skills!"
+    },
+    "more": "Swipe to learn more",
+    "aboutSection": {
+      "title": "About Me",
+
+      "firstParagraph": {
+        "text": "Let me introduce myself, <strong>Gabriel</strong>, I'm 22 years old and I'm a <strong>Computer Engineer</strong> with over 2 years of experience (working independently) dedicated to web development. I combine the knowledge I've acquired with a focus on <strong>clean code</strong> and best practices (SOLID, design patterns). My stack typically includes <strong>React 19, TypeScript, and Tailwind CSS 4</strong>. <br></br> <br></br> I consider myself a <strong>proactive</strong> person committed to continuous improvement. I firmly believe that true professional transformation requires certain sacrifices and <strong>teamwork</strong> to achieve high-impact goals. I enjoy collaborating in <strong>agile enviroments</strong> and adding value through <strong>creativity and innovation</strong> and innovation, using the latest technologies the market offers and not just what's trendy.",
+        "keyWords": {
+          "name": "Gabriel",
+          "engineer": "Computer Engineer",
+          "cleanCode": "clean code",
+          "stack": "React 19, TypeScript, and Tailwind CSS 4",
+          "proactive": "proactive",
+          "teamwork": "teamwork",
+          "agile": "agile environments",
+          "creativity": "creativity and innovation"
+        }
+      },
+
+      "note": "AI-only work can be instantly recognized by noticing the absence of more advanced language/technology features, as well as a poorly scalable architecture."
+    },
+    "projectsSection": {
+      "title": "Highlights Projects"
+    },
+    "contactSection": {
+      "title": "CONTACT",
+      "description": "Feel free to reach out to me through the following channels:",
+      "form": {
+        "title": "Send me a message",
+        "name": "Your name",
+        "email": "Your email address",
+        "message": "Subject of the message",
+        "bigText": "Write your message here...",
+        "button": "Send message",
+        "isSending": "Sending",
+        "statusSend": {
+          "success": {
+            "title": "Message sent!",
+            "description": "Thank you for contacting me. I will get back to you soon.",
+            "btnConfirmation": "Ok"
+          },
+          "error": {
+            "title": "Error sending message",
+            "description": "Could not send the message. Please try again later.",
+            "btnConfirmation": "Ok"
+          }
+        }
+      }
+    },
+    "certificationsSection": {
+      "title": "Certifications"
+    }
+  },
+
+  "footer": {
+    "description": "© 2025 - All rights reserved."
+  },
+  "projects": {
+    "Metadata": {
+      "title": "Featured Projects | Gabriel Soliz",
+      "description": "Featured projects by Gabriel Soliz, Front End developer. Experience in Next.js, React, TypeScript and Tailwind CSS 4."
+    },
+    "staticData": {
+      "technologiesSection": {
+        "title": "Technologies and Tools"
+      },
+      "galerySection": {
+        "title": "Image Gallery",
+        "info": "Use the mouse wheel to zoom in on the images"
+      },
+      "architectureSection": {
+        "title": "Project Architecture"
+      },
+      "documentationSection": {
+        "title": "Documentation",
+        "smallInfo": "(DeepWiki AI)",
+        "question": "What is DeepWiki AI?",
+        "showDescription": "You can view the project documentation on <strong>DeepWiki AI</strong>, an AI tool that automatically generates technical documentation. This tool uses a language model called <strong>Devin AI</strong> to analyze the code and generate clear and concise documentation.",
+        "linkText": "View Documentation"
+      },
+      "linksSection": {
+        "title": "Links",
+        "gitHubStatus": {
+          "public": "Code on GitHub",
+          "privateInfo": "You can request a preview by contacting me",
+          "private": "Private repository"
+        },
+        "liveDemoStatus": {
+          "success": "View live demo online",
+          "failiture": "Live demo not available"
+        }
+      },
+      "videoSection": {
+        "title": "Demo Video"
+      }
+    },
+    "sica-system": {
+      "title": "Criminal Information System SICA",
+      "shortDescription": "Full-stack web application for real-time registration, management, and analysis of criminal data.",
+      "details": {
+        "overview": "It was my thesis project and one of the largest I've completed. I developed a full-stack web application with another developer for real-time registration, management, and analysis of criminal data. Implemented with React + TypeScript in the Frontend and Django REST Framework + PostgreSQL in the Backend.",
+        "duration": "8+ months",
+        "role": "Front-End Developer (with Back-End contributions)",
+        "responsibilities": [
+          "Migration from Tailwind CSS v3 → v4 to leverage new utilities and improve performance",
+          "Migration from JavaScript → TypeScript, adding typing to APIs and improving maintainability",
+          "Upgrade from React 18.3 → React 19",
+          "Creation of hooks and utilities for query-params management",
+          "Integration of React DevTools and configuration of ESLint/Prettier",
+          "Implementation of heat maps with Google Maps API for crime visualization",
+          "JWT Authentication with Django (login, refresh token) and consumption of REST APIs with pagination and serialization",
+          "Performance optimization: lazy-loading with React.lazy/Suspense and audits with Lighthouse",
+          "Management of query parameters through my own library @react-magic-search-params",
+          "Coordination with Back-End team via Git/GitHub, definition of +70 requirements and project leadership"
+        ]
+      },
+      "images": [
+        {
+          "label": "SICA System Login and Dashboard"
+        },
+        {
+          "label": "Investigation Details"
+        },
+        {
+          "label": "SICA System Configuration"
+        },
+        {
+          "label": "Evidence Details"
+        },
+        {
+          "label": "Evidence Registration"
+        },
+        {
+          "label": "Investigation Dashboard"
+        },
+        {
+          "label": "Investigation Registration"
+        },
+        {
+          "label": "Investigations List"
+        },
+        {
+          "label": "Crimes List"
+        },
+        {
+          "label": "Google Maps - registered crimes"
+        },
+        {
+          "label": "Google Maps - Heat Map"
+        },
+        {
+          "label": "Google Maps - Crime Registration"
+        },
+        {
+          "label": "Google Maps - Crime Details"
+        },
+        {
+          "label": "SICA System Users List"
+        }
+      ],
+      "videoDemostration": {
+        "description": "Experimental video, it has nothing to do with the project, but it's a test video to show how a video would look in the project detail view."
+      },
+      "architecture": {
+        "generalImage": {
+          "label": "SICA System Architecture",
+          "description": "A general view of the system modules, where you can see the system Architecture and how they communicate with each other."
+        }
+      }
+    },
+    "bazaar-management": {
+      "title": "Bazaar Management System",
+      "shortDescription": "Complete web application for managing employees, sales and products for a bazaar",
+
+      "details": {
+      "overview": "This is a system developed as an Integration Project back in 2023 during my Computer Engineering degree. I learned to implement forms, paginate data, and authenticate users with JWT. I also optimized the system's performance using lazy-loading and performance audits with Lighthouse. \n\nI revisited this project in 2024 to refactor the entire Frontend, which laid the foundation for developing the SICA Criminal Information System later that same year.",
+      "duration": "4+ months",
+      "role": "Full Stack Developer",
+      "responsibilities": [
+        "Implementation of forms and validations",
+        "Integration of REST APIs with pagination and serialization",
+        "JWT Authentication with Django (login, refresh token)",
+        "Performance optimization: lazy-loading with React.lazy/Suspense",
+        "Performance audits with Lighthouse",
+        "Managing the project on GitHub",
+        "Definition of requirements and project leadership",
+        "Complete refactoring of the system's Frontend with improvements in UI/UX, performance, and clean code."
+      ]
+      },
+      "images": [
+      {
+        "id": 1,
+        "label": "System's Point of Sale"
+      },
+      {
+        "id": 2,
+        "label": "Dashboard of System KPIs"
+      },
+      {
+        "id": 3,
+        "label": "Store Stock Control"
+      },
+      {
+        "id": 4,
+        "label": "Sales Records"
+      },
+      {
+        "id": 5,
+        "label": "Product Registration"
+      },
+      {
+        "id": 6,
+        "label": "Product Registration"
+      },
+      {
+        "id": 7,
+        "label": "Employee Management"
+      },
+      {
+        "id": 8,
+        "label": "Store Sections Registration"
+      },
+      {
+        "id": 9,
+        "label": "Create Purchase Order"
+      },
+      {
+        "id": 10,
+        "label": "System's Point of Sale"
+      }
+      ]
+    },
+    "hotel-management": {
+      "title": "Hotel Management System",
+      "shortDescription": "Web application for managing reservations, customers, and rooms for hotel administration",
+
+      "details": {
+      "overview": "It's a Hotel Management System that I developed during my Computer Engineering degree. I learned to implement forms, authenticate users, create user interfaces, and manage the project on GitHub. \n\nThis project was a significant learning experience for me, as it was the first project I developed.",
+      "duration": "4+ months",
+      "role": "Full Stack Developer",
+      "responsibilities": [
+        "Implementation of forms and validations",
+        "Integration of REST APIs with serialization",
+        "Token-based authentication",
+        "Building user interfaces",
+        "Refactoring code",
+        "Managing the project on GitHub",
+        "Definition of requirements and project leadership",
+        "Consuming REST API endpoints",
+        "Building backend views",
+        "Creating database design"
+      ]
+      },
+      "images": [
+      {
+        "id": 1,
+        "label": "System's Main Page"
+      },
+      {
+        "id": 2,
+        "label": "Customer Check-In Process"
+      },
+      {
+        "id": 3,
+        "label": "Reception Module"
+      },
+      {
+        "id": 4,
+        "label": "System KPIs Dashboard"
+      }
+      ]
+    },
+    "nasa-app": {
+      "title": "NASA Application",
+      "shortDescription": "Mobile application that uses NASA's API to obtain daily astronomical data, including images and videos, presented to users in an attractive way.",
+      "details": {
+      "overview": "This application allows users to view daily images and videos thanks to NASA's API. \n\n Developing this project helped me improve my skills in mobile application development and API integration.",
+      "duration": "1+ months",
+      "responsibilities": [
+        "Structure the project with React Native",
+        "Integrate NASA's API to obtain daily astronomical data",
+        "Implement navigation between screens using React Navigation",
+        "Create an attractive and user-friendly interface using React Native components",
+        "Implement logic to display NASA images and videos in the application",
+        "Implement blur functionality for images and videos",
+        "Create my own library to handle Toast notifications @react-native-toast-lite"
+      ],
+      "role": "Front-End Developer"
+      },
+      "images": [
+      {
+        "id": 1,
+        "label": "General Views of the Application"
+      },
+      {
+        "id": 2,
+        "label": "Application Menu"
+      }
+      ]
+    },
+    "react-magic-search-params": {
+      "title": "React Magic Search Params",
+      "shortDescription": "React library for managing URL query parameters easily with TypeScript autocomplete support.",
+
+      "details": {
+      "duration": "1+ weeks",
+      "overview": "I developed this library to facilitate the management of query parameters in URLs for my React projects. \n\nThe library allows for easy handling of query parameters and, thanks to TypeScript's autocomplete, it's easy to use. \n\nIt's published on npm and has good documentation.",
+      "role": "Front-End Developer",
+      "responsibilities": [
+        "Research the npm package manager and how to publish a library",
+        "Create a Hook to manage URL query parameters",
+        "Create an interactive page to demonstrate the library's functionality", 
+        "Create detailed documentation for the library",
+        "Deploy the interactive page on Netlify",
+        "Create a demonstration video for the library"
+      ]
+      },
+      "images": [
+      {
+        "id": 1,
+        "label": "Library on NPM"
+      },
+      {
+        "id": 2,
+        "label": "Library Code Example"
+      }
+      ]
+    },
+    "portfolio": {
+      "title": "My Portfolio",
+
+      "shortDescription": "Personal portfolio developed with Next.js 15, TypeScript, and Tailwind CSS 4.",
+      "details": {
+      "duration": "1+ months",
+      "overview": "I created my portfolio from scratch using Next.js 15, TypeScript, and Tailwind CSS 4. \n\nThe portfolio is fully responsive and has an attractive modern design. \n\nAdditionally, I implemented a projects section where I showcase my most notable works and a contact section where users can send me a message.",
+      "role": "Front-End Developer",
+      "responsibilities": [
+        "Create the projects and contact sections",
+        "Implement navigation between sections",
+        "Create the skills and technologies section",
+        "Create the experience and education section",
+        "Create the skills and technologies section",
+        "Work on UI/UX details",
+        "Work on responsiveness for all screen sizes",
+        "Create highly reusable components",
+        "Add animations and visual effects without affecting performance and SEO",
+        "Ensure proper functionality for screen readers",
+        "Use the Next-Intl library for multi-language support, following the internationalization (i18n) process",
+        "Deploy the portfolio on Vercel",
+        "Add a custom domain"
+      ]
+      },
+      "images": [
+      {
+        "id": 1,
+        "label": "Portfolio home view"
+      },
+      {
+        "id": 2,
+        "label": "Portfolio technologies view"
+      },
+      {
+        "id": 3,
+        "label": "Contact and projects view"
+      }
+      ]
+    }
+  }
+}

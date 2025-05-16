@@ -6,23 +6,26 @@ interface Props {
 }
 
 export const Description = ({ project }: Props) => {
-
   const regLineBreak = /\n/g;
-  
-  const overviewWithLineBreak = project.details.overview.split("\n").map((line, index) => (
-    <p key={index} className="font-inter">
-      {line}
-      {index !== project.details.overview.split(regLineBreak).length - 1 && <br />}
-    </p>
-  ))
+
+  const overviewWithLineBreak = project.details.overview
+    .split("\n")
+    .map((line, index) => (
+      <p key={index} className="font-inter">
+        {line}
+        {index !== project.details.overview.split(regLineBreak).length - 1 && (
+          <br />
+        )}
+      </p>
+    ));
   return (
     <>
       {/* Título y breve descripción */}
       <header className="space-y-2">
         <div className="flex flex-col items-start gap-2  3xl:flex-row 3xl:items-center 3xl:justify-between ">
-           <h1 className="text-4xl font-montserrat font-bold text-white">
-          {project.title}
-           </h1>
+          <h1 className="text-4xl font-montserrat font-bold text-white">
+            {project.title}
+          </h1>
           <div className=" min-w-44 justify-start  3xl:justify-end">
             {project.dateFrom && project.dateTo && (
               <span className="text-gray-400 text-sm font-normal inline">
@@ -31,9 +34,7 @@ export const Description = ({ project }: Props) => {
               </span>
             )}
           </div>
-       
         </div>
-       
 
         <div className="min-h-10  mt-5 3xl:mt-2">
           <TypingAnimation duration={20} className="text-gray-300 text-lg">
@@ -54,9 +55,7 @@ export const Description = ({ project }: Props) => {
         </div>
         <div>
           <dt className="font-bold">Descripción:</dt>
-          <dd className="mt-1 font-inter">
-            {overviewWithLineBreak}
-          </dd>
+          <dd className="mt-1 font-inter">{overviewWithLineBreak}</dd>
         </div>
 
         <div>

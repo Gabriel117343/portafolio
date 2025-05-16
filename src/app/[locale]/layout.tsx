@@ -10,7 +10,14 @@ import {
 
 import { Header } from "@/components/views/Header";
 import { Footer } from "@/components/views/Footer";
+
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { getMessages } from "next-intl/server";
+
 import "./globals.css";
+import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: {
@@ -44,24 +51,47 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+// Permite el renderizado estático de las páginas en lugar de uno dinámico (por la traducción español - inglés)
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{
+    locale: string;
+  }>;
 }>) {
+  // ensure that the incoming "locale" param is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    // If not, show a 404 page
+    return notFound();
+  }
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Cargar solos los mensajes necesarios para header que es del lado del cliente
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable} ${oswald.variable} ${inter.variable} antialiased font-geist-sans`}
     >
       <body>
-        <Header />
+        <NextIntlClientProvider locale={locale} messages={await getMessages()}>
+          <Header />
+        </NextIntlClientProvider>
 
         <main className="bg-gradient-to-r overflow-x-hidden from-[#000428] min-h-screen via-[#022849] to-[#010639] relative selection:bg-cyan-600 selection:text-white text-white ">
           {/* Overlay radial muy sutil */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1),_transparent_70%)]" />
           {children}
         </main>
+
         <Footer />
       </body>
     </html>

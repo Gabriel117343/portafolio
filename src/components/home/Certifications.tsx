@@ -6,7 +6,11 @@ import { CERTIFICATIONS, certification } from "@constants/certificationsData";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
 import Link from "next/link";
 
-export const Certifications: React.FC = () => {
+export const Certifications = ({
+  title,
+}: {
+  title: string;
+}): React.ReactNode => {
   return (
     <section
       id="certifications"
@@ -27,7 +31,7 @@ export const Certifications: React.FC = () => {
         px-4 py-12 pb-28"
       >
         <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-cyan-300/90 group-hover/certifications:text-cyan-300/100 text-center mb-12">
-          Certificaciones
+          {title}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

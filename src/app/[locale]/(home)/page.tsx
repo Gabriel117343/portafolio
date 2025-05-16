@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+
 import { About } from "@/components/home/About";
 
 import PlanetaAsteroidesImg from "@public/images/planeta-asteroides-fondo.jpg";
@@ -15,8 +16,25 @@ import { Contact } from "@components/home/Contact";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
 import { LineShadowText } from "@components/magicui/line-shadow-text";
 import { Certifications } from "@components/home/Certifications";
+import { useTranslations, Locale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home.Metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 const Home = () => {
+  const text = useTranslations("home");
   return (
     <>
       <div className="w-full group/initial-image overflow-x-hidden  @container/first">
@@ -38,22 +56,25 @@ const Home = () => {
               <p className="inline-block animate-pulse rotate-0 stick-animated">
                 |{" "}
               </p>{" "}
-              GABRIEL{" "}
+              {text("developer.firstName")}{" "}
               <LineShadowText
                 as="span"
                 className="inline-block"
                 shadowColor="#A3A3A3"
               >
-                SOLIZ
+                {text("developer.lastName")}
               </LineShadowText>{" "}
               <p className="inline-block p-0 m-0 animate-pulse duration-75 ease-in-out transform text-white">
                 _
               </p>
             </h1>
             <h2 className="font-open-sans text-2xl text-[10px] @xs:text-xs @sm:text-sm @md:text-lg @lg:text-xl @xl:text-2xl font-semibold text-gray-200">
-              Ingeniero en Informática,{" "}
+              {text("briefProfesionalInfo.left")},{" "}
               <SpecialText
-                texts={["Desarrollador Front End", "Especialista en React"]}
+                texts={[
+                  text("briefProfesionalInfo.rightSwitch.start"),
+                  text("briefProfesionalInfo.rightSwitch.end"),
+                ]}
               />{" "}
               |
             </h2>
@@ -69,7 +90,7 @@ const Home = () => {
               className=" w-30 h-8 @sm:w-40 @sm:h-10 bg-black/20 rounded-full border-2 border-cyan-600/30 hover:border-cyan-600/50 hover:bg-black/30 transition duration-300 flex items-center justify-center gap-2 font-semibold text-gray-200 mt-4 font-montserrat "
               href="#contact"
             >
-              Contactar
+              {text("contact")}
             </Link>
           </RevealOnScroll>
         </section>
@@ -80,13 +101,17 @@ const Home = () => {
         className=" w-full max-w-4xl mx-auto px-4 mt-5 lg:mt-6 py-8 relative z-30
        "
       >
-        <Technologies />
+        <Technologies
+          title={text("technologiesSection.title")}
+          description={text("technologiesSection.description")}
+          secondDescription={text("technologiesSection.secondDescription")}
+        />
       </section>
       <div className="w-full flex flex-col justify-center items-center gap-6 mt-8 mb-16 group">
         <Link href="#about">
           <p className="text-sm text-gray-200 d hover:text-cyan-400 transition duration-300 font-semibold md:text-lg ">
             {" "}
-            Desliza para saber más
+            {text("more")}
           </p>
         </Link>
         <div className="animate-bounce duration-1000 ease-in-out opacity-60 group-hover:opacity-80">
@@ -101,7 +126,7 @@ const Home = () => {
         className="w-full max-w-6xl mx-auto px-8 md:px-12 py-12  "
       >
         <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white texts-center mb-12 text-center">
-          Proyectos Destacados
+          {text("projectsSection.title")}
         </h2>
         <Projects />
       </section>
@@ -111,12 +136,12 @@ const Home = () => {
        "
       >
         <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white text-center mb-8">
-          CONTACTO
+          {text("contactSection.title")}
         </h2>
 
-        <Contact />
+        <Contact description={text("contactSection.description")} />
       </section>
-      <Certifications />
+      <Certifications title={text("certificationsSection.title")} />
     </>
   );
 };

@@ -9,23 +9,26 @@ import "./styles.css";
 
 interface ImagenGaleryProps {
   project: Project;
+  infoText?: string;
 }
-export const ImagenGalery = ({ project }: ImagenGaleryProps) => {
+export const ImagenGalery = ({ project, infoText }: ImagenGaleryProps) => {
   return (
     <>
-      <div className="w-full text-left my-4 text-xs sm:text-sm text-cyan-300/60 italic sm:flex items-center justify-center gap-2 hover:text-cyan-400/80 transition-colors duration-200 ease-in-outmy-0 hidden">
-        <InfoSvg className="size-4 text-cyan-300/80 " />
-        Usa la rueda del mouse para hacer zoom en las imágenes
-      </div>
+      {infoText && (
+        <div className="w-full text-left my-4 text-xs sm:text-sm text-cyan-300/60 italic sm:flex items-center justify-center gap-2 hover:text-cyan-400/80 transition-colors duration-200 ease-in-outmy-0 hidden">
+          <InfoSvg className="size-4 text-cyan-300/80 " />
+          {infoText}
+        </div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2   2xl:grid-cols-3 gap-3 md:gap-4 lg:gap-6 2xl:gap-8 items-center">
-        {project.images.map(({ src, label }) => (
+        {project.images.map(({ src, label, id }) => (
           <RevealOnScroll
             as={"article"}
             triggerOnce={false}
             hiddenClass="opacity-100 translate-y-12 scale-10 blur-2xl"
             visibleClass="opacity-100 translate-y-0 scale-100 blur-none"
-            key={label}
+            key={id.toString()}
             className="flex flex-col items-center border border-indigo-400/20 hover:border-indigo-300/30 rounded-xl p-4 bg-gradient-to-br
   from-gray-900/70 via-blue-900/80 to-black/90
   shadow-[0_0_30px_#1e3a8a50] hover:shadow-[0_0_40px_#3b82f680]

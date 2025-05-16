@@ -13,9 +13,19 @@ const cloudIcons = TECHS.map((tech, i) => (
   <tech.Icon key={i} width={60} height={60} />
 ));
 
-export const Technologies: React.FC = () => {
+interface TechnologiesProps {
+  title: string;
+  description: string;
+  secondDescription: string;
+}
+
+export const Technologies = ({
+  title,
+  description,
+  secondDescription,
+}: TechnologiesProps): React.ReactNode => {
   // este texto sale en el SSR, pero en el cliente se anima
-  const text = "¡Siempre estoy aprendiendo y mejorando mis habilidades!";
+
   const visibleClassName = "opacity-100 translate-y-0 ";
 
   const hiddenClassName = "opacity-0 translate-y-12";
@@ -34,13 +44,12 @@ export const Technologies: React.FC = () => {
             colors={{ first: "#2E86AB", second: "#A5F3FC" }}
             className="inline text-[19px]  @3xs/technologies:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-centeropacity-85 group-hover/technologies:opacity-95 transition-all duration-500 ease-in-out text-pretty translate-y"
           >
-            Tecnologías y Herramientas
+            {title}
           </SparklesText>
         </Link>
       </div>
       <p className="text-gray-300 text-center mb-4 text-xs sm:text-sm md:text-base lg:text-lg font-open-sans">
-        Estas son algunas de las tecnologías que manejo y utilizo en mis
-        proyectos.
+        {description}
       </p>
       <RevealOnScroll
         hiddenClass="opacity-0 translate-y-12 "
@@ -53,7 +62,7 @@ export const Technologies: React.FC = () => {
           className="text-gray-300 text-center text-xs sm:text-sm md:text-base lg:text-lg font-montserrat font-normal"
           duration={50}
         >
-          {text}
+          {secondDescription}
         </TypingAnimation>
       </RevealOnScroll>
 

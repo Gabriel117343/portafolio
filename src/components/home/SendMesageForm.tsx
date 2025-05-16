@@ -3,7 +3,33 @@ import React, { useState } from "react";
 import { RefreshSvg } from "@ui/svg/RefreshSvg";
 import Swal from "sweetalert2";
 
-export const SendMesageForm = () => {
+type TextLang = {
+  title: string;
+  name: string;
+  email: string;
+  message: string;
+  bigText: string;
+  buttonText: string;
+  isSending: string;
+  statusSend: {
+    success: {
+      title: string;
+      text: string;
+      btnConfirmation: string;
+    };
+    error: {
+      title: string;
+      text: string;
+      btnConfirmation: string;
+    };
+  };
+};
+
+interface Props {
+  textLang: TextLang;
+}
+
+export const SendMesageForm = ({ textLang }: Props): React.ReactNode => {
   const [formData, setFormData] = useState({
     nombre: "",
     correo: "",
@@ -42,10 +68,10 @@ export const SendMesageForm = () => {
 
         Swal.fire({
           icon: "success",
-          title: "¡Mensaje enviado!",
-          text: "Gracias por contactarme. Te responderé pronto.",
+          title: `${textLang.statusSend.success.title}`,
+          text: `${textLang.statusSend.success.text}`,
           confirmButtonColor: "#3b82f6",
-          confirmButtonText: "Aceptar",
+          confirmButtonText: `${textLang.statusSend.success.btnConfirmation}`,
         });
 
         setTimeout(() => {
@@ -61,10 +87,10 @@ export const SendMesageForm = () => {
 
       Swal.fire({
         icon: "error",
-        title: "Error al enviar",
-        text: "No se pudo enviar el mensaje. Intenta nuevamente más tarde.",
+        title: `${textLang.statusSend.error.title}`,
+        text: `${textLang.statusSend.error.text}`,
         confirmButtonColor: "#ef4444",
-        confirmButtonText: "Aceptar",
+        confirmButtonText: `${textLang.statusSend.error.btnConfirmation}`,
       });
 
       setTimeout(() => {
@@ -80,14 +106,14 @@ export const SendMesageForm = () => {
     >
       <div className="absolute inset-0 bg-gradient-to-bl from-blue-900/20 to-blue-700/40  -z-10 group-hover/form:from-blue-900/30 w-full h-full" />
       <h3 className="text-2xl font-semibold text-cyan-300/90 hover:text-cyan-400 transition-colors duration-200 text-center mb-8">
-        Envíame un mensaje
+        {textLang.title}
       </h3>
 
       <input
         type="text"
         id="nombre"
         name="nombre"
-        placeholder="Tu nombre"
+        placeholder={textLang.name}
         autoComplete="name"
         required
         value={formData.nombre}
@@ -97,7 +123,7 @@ export const SendMesageForm = () => {
       <input
         type="email"
         name="correo"
-        placeholder="Tu correo"
+        placeholder={textLang.email}
         autoComplete="email"
         required
         value={formData.correo}
@@ -107,7 +133,7 @@ export const SendMesageForm = () => {
       <input
         type="text"
         name="asunto"
-        placeholder="Motivo del mensaje"
+        placeholder={`${textLang.message}`}
         required
         value={formData.asunto}
         onChange={handleChange}
@@ -117,7 +143,7 @@ export const SendMesageForm = () => {
       <textarea
         name="mensaje"
         rows={4}
-        placeholder="Escribe tu mensaje aquí..."
+        placeholder={textLang.bigText}
         required
         value={formData.mensaje}
         onChange={handleChange}
@@ -130,18 +156,12 @@ export const SendMesageForm = () => {
         {status === "enviando" ? (
           <span className="flex items-center justify-center gap-2">
             <RefreshSvg className="animate-spin text-gray-200 size-6" />
-            Enviando
+            {textLang.isSending}
           </span>
         ) : (
-          "Enviar mensaje"
+          <span>{textLang.buttonText}</span>
         )}
       </button>
-      {status === "enviado" && (
-        <p className="text-green-400">¡Mensaje enviado con éxito!</p>
-      )}
-      {status === "error" && (
-        <p className="text-red-400">Hubo un error al enviar el mensaje.</p>
-      )}
     </form>
   );
 };

@@ -34,6 +34,8 @@ Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
 ## 🔍 Integración de `next-sitemap`
 
+Mejora del SEO (para la indexación en google) del Portafolio con next-sitemap
+
 ### ⚙️ Archivos clave
 
 - **`next-sitemap.config.js`**  

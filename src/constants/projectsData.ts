@@ -48,8 +48,6 @@ import portfolio_01 from "@public/images/projects/portfolio/portfolio-01.jpeg";
 import portfolio_02 from "@public/images/projects/portfolio/portfolio-02.png";
 import portfolio_03 from "@public/images/projects/portfolio/portfolio-03.jpeg";
 
-
-
 import { GoogleMapsSvg } from "@ui/svg/GoogleMapsSvg";
 
 import type { StaticImageData } from "next/image";
@@ -76,6 +74,9 @@ import {
 } from "@ui/svg/Technologies";
 
 export type Platforms = "web" | "mobile" | "desktop" | "all";
+
+// **NOTA IMPORTANTE**: Es necesario mantener sincronizados estos slugs con los definidos en `next-sitemap.config.js`.
+// Los slugs son utilizado por `next-sitemap.config.js` para generar el sitemap de todas las rutas públicas (mejorar el SEO).
 
 export type Slugs =
   | "sica-system"
@@ -136,7 +137,12 @@ export interface Project {
   title: string;
   shortDescription: string;
   // aspect radio recomendado: 4:3 1920 x 1440
-  images: Array<{ label: string; platform: Platforms; src: StaticImageData }>;
+  images: Array<{
+    id: number;
+    label: string;
+    platform: Platforms;
+    src: StaticImageData;
+  }>;
   techs: {
     label: LabelTech;
     Icon: React.FC<{ className?: string }>;
@@ -157,7 +163,6 @@ export interface Project {
 
   sourceCode?: SourceCode;
   liveDemo?: string;
- 
 }
 
 // Nota: Siempre la primera imagen del array será la que se mostrará en el slider de la vista general de proyectos
@@ -194,71 +199,85 @@ export const PROJECTS: Project[] = [
     dateTo: "2025-04-18",
     images: [
       {
+        id: 1,
         label: "Login y Dashboard del Sistema SICA",
         platform: "mobile",
         src: sica_01,
       },
       {
+        id: 2,
         label: "Detalle de Investgación",
         platform: "web",
         src: sica_02,
       },
       {
+        id: 3,
         label: "Configuración del Sistema SICA",
         platform: "web",
         src: sica_03,
       },
       {
+        id: 4,
         label: "Detalle de Evidencia",
         platform: "web",
         src: sica_04,
       },
       {
+        id: 5,
         label: "Registro de Evidencia",
         platform: "web",
         src: sica_05,
       },
       {
+        id: 6,
         label: "Tablero de Investigación",
         platform: "web",
         src: sica_06,
       },
       {
+        id: 7,
         label: "Registro de Investigación",
         platform: "web",
         src: sica_07,
       },
       {
+        id: 8,
         label: "Lista de Investigaciones",
         platform: "web",
         src: sica_08,
       },
       {
+        id: 9,
         label: "Lista de Delitos",
         platform: "web",
         src: sica_09,
       },
       {
+        id: 10,
         label: "Google Maps - delitos registrados",
         platform: "web",
         src: sica_10,
       },
       {
+        id: 11,
         label: "Google Maps - Mapa de calor",
         platform: "web",
         src: sica_11,
       },
       {
+        id: 12,
         label: "Google Maps - Registro de Delitos",
         platform: "web",
         src: sica_12,
       },
       {
+        id: 13,
         label: "Google Maps - Detalle de Delito",
         platform: "web",
         src: sica_13,
       },
       {
+        id: 14,
         label: "Lista de Usuarios del Sistema SICA",
         platform: "web",
         src: sica_14,
@@ -310,7 +329,7 @@ export const PROJECTS: Project[] = [
     slug: "bazaar-management",
     details: {
       overview:
-        "Es un sistema que desarrollado como proyecto de integración haya por el 2023 en mi carrera de ingeniería en Informática. Aprendí a implementar formularios, paginar datos y autenticar usuarios con JWT. También optimicé el rendimiento del sistema utilizando lazy-loading y auditorías de rendimiento con Lighthouse. \n\nRetomé este proyecto en 2024 para refactorizar todo el FrontEnd, lo que sento las bases para poder luego ese mismo año desarrollar el Sistema de Información Criminal SICA.",
+        "Es un sistema que desarrollado como Proyecto de Integración, haya por el 2023 en mi carrera de Ingeniería en Informática. Aprendí a implementar formularios, paginar datos y autenticar usuarios con JWT. También optimicé el rendimiento del sistema utilizando lazy-loading y auditorías de rendimiento con Lighthouse. \n\nRetomé este proyecto en 2024 para refactorizar todo el FrontEnd, lo que sento las bases para poder luego ese mismo año desarrollar el Sistema de Información Criminal SICA.",
       duration: "4+ meses",
       role: "Desarrollador Full Stack",
       responsibilities: [
@@ -351,51 +370,61 @@ export const PROJECTS: Project[] = [
     dateTo: "2023-12-29",
     images: [
       {
+        id: 1,
         label: "Punto de Venta del Sistema",
         platform: "web",
         src: bazar_01,
       },
       {
+        id: 2,
         label: "Dashboard de los KPIs del Sistema",
         platform: "web",
         src: bazar_02,
       },
       {
+        id: 3,
         label: "Control de Stock en Tienda",
         platform: "web",
         src: bazar_03,
       },
       {
+        id: 4,
         label: "Registro de Ventas Realizadas",
         platform: "web",
         src: bazar_04,
       },
       {
+        id: 5,
         label: "Registro de Productos",
         platform: "web",
         src: bazar_05,
       },
       {
+        id: 6,
         label: "Registro de Productos",
         platform: "web",
         src: bazar_06,
       },
       {
+        id: 7,
         label: "Gestión de Empleados",
         platform: "web",
         src: bazar_07,
       },
       {
+        id: 8,
         label: "Registro de secciones en Tienda",
         platform: "web",
         src: bazar_08,
       },
       {
+        id: 9,
         label: "Crear orden de compra",
         platform: "web",
         src: bazar_09,
       },
       {
+        id: 10,
         label: "Punto de venta del Sistema",
         platform: "web",
         src: bazar_10,
@@ -431,21 +460,25 @@ export const PROJECTS: Project[] = [
     },
     images: [
       {
+        id: 1,
         label: "Página principal del Sistema",
         platform: "web",
         src: hotel_01,
       },
       {
+        id: 2,
         label: "Proceso de CheckIn de clientes",
         platform: "web",
         src: hotel_02,
       },
       {
+        id: 3,
         label: "Modulo de Recepción",
         platform: "web",
         src: hotel_03,
       },
       {
+        id: 4,
         label: "Dashboard de los KPIs del Sistema",
         platform: "web",
         src: hotel_04,
@@ -501,11 +534,13 @@ export const PROJECTS: Project[] = [
     },
     images: [
       {
+        id: 1,
         label: "Vistas generales de la Aplicación",
         platform: "mobile",
         src: nasa_ap_01,
       },
       {
+        id: 2,
         label: "Menú de la Aplicación",
         platform: "mobile",
         src: nasa_ap_02,
@@ -530,8 +565,8 @@ export const PROJECTS: Project[] = [
         showInOverview: false,
       },
     ],
-    dateFrom: "20234-06-01",
-    dateTo: "2023-07-01",
+    dateFrom: "2024-06-01",
+    dateTo: "2024-07-01",
     sourceCode: "https://github.com/Gabriel117343/Aplicacion-de-la-Nasa",
     deepWikiURL: "https://deepwiki.com/Gabriel117343/Aplicacion-de-la-Nasa",
   },
@@ -556,11 +591,13 @@ export const PROJECTS: Project[] = [
     },
     images: [
       {
+        id: 1,
         label: "Librería en NPM",
         platform: "web",
         src: react_magic_search_params_01,
       },
       {
+        id: 2,
         label: "Ejemplo de Código de la librería",
         platform: "web",
         src: react_magic_search_params_02,
@@ -605,33 +642,36 @@ export const PROJECTS: Project[] = [
         "Cree mi propio portafolio desde 0,  utilizando Next.js 15, TypeScript y Tailwind CSS 4. \n\nEl portafolio es completamente responsivo y tiene un diseño atractivo y moderno. \n\nAdemás, he implementado una sección de proyectos donde muestro mis trabajos más destacados y una sección de contacto donde los usuarios pueden enviarme un mensaje.",
       role: "Desarrollador Front-End",
       responsibilities: [
-        "Crear el diseño del portafolio",
-        "Implementar el diseño en Next.js 15",
         "Crear la sección de proyectos y contacto",
         "Implementar la navegación entre secciones",
         "Crear la sección de habilidades y tecnologías",
         "Crear la sección de experiencia y educación",
-        "Cree la sección de autodocumentación",
         "Crear la sección de habilidades y tecnologías",
-        "Desplegar el portafolio en Vercel",
-        "Trabaje en los detalles de la UI/UX",
-        "Cree componentes altamente reutilizables",
+        "Trabajar en los detalles de la UI/UX",
+        "Trabjar en la responsividad en para todas las pantallas",
+        "Crear componentes altamente reutilizables",
         "Agregar animacioes y efectos visuales sin afectar el rendimiento y SEO",
-        "Asegure el correcto funcionamiento para lectores de pantalla",
+        "Asegurar el correcto funcionamiento para lectores de pantalla",
+        "Usar la librería Next-Intl para el soporte en diferentes idiomas, siguiendo el proceso de internacionalización (i18n)",
+        "Desplegar el portafolio en Vercel",
+        "Agregar un Dominio personalizado.",
       ],
     },
     images: [
       {
+        id: 1,
         label: "Vista de inicio del portafolio",
         platform: "web",
         src: portfolio_01,
       },
       {
+        id: 2,
         label: "Vista de Tecnologías del portafolio",
         platform: "web",
         src: portfolio_02,
       },
       {
+        id: 3,
         label: "Vista de contacto y proyectos",
         platform: "mobile",
         src: portfolio_03,
@@ -653,11 +693,11 @@ export const PROJECTS: Project[] = [
       },
     ],
     dateFrom: "2025-05-01",
-    dateTo: "2025-05-28",
+    dateTo: "2025-05-21",
     sourceCode: "https://github.com/Gabriel117343/portafolio",
     liveDemo: "gabrielsoliz.dev",
     deepWikiURL: "https://deepwiki.com/Gabriel117343/portafolio",
   },
-  
+
   // …más proyectos…
 ];

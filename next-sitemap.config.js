@@ -1,4 +1,15 @@
 /** @type {import('next-sitemap').IConfig} */
+
+// Nota: de esta forma siempre se asegura una única fuente de verdad para los datos, en este caso los slugs.
+
+const projectsSlugs = [
+  "sica-system",
+  "nasa-app",
+  "react-magic-search-params",
+  "hotel-management",
+  "bazaar-management",
+  "portfolio",
+];
 module.exports = {
   // URL de tu web
   siteUrl: "https://www.gabrielsoliz.dev",
@@ -12,24 +23,35 @@ module.exports = {
   generateRobotsTxt: true,
   // Excluir rutas que no quieras indexar
   exclude: ["/drafts/*", "/admin", "/secret-page"],
-  // Alternates (p.ej. si en el futuro tienes /es, /fr)
-  alternateRefs: [
-    { href: "https://www.gabrielsoliz.dev", hreflang: "en" },
-    { href: "https://www.gabrielsoliz.dev/es", hreflang: "es" },
-  ],
-  // Transformación global de cada ruta
-  transform: async (config, path) => ({
-    loc: path,
-    changefreq: config.changefreq,
-    priority: path === "/" ? 1.0 : config.priority,
-    lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-    alternateRefs: config.alternateRefs ?? [],
-  }),
-  // Añadir rutas manuales (si tienes secciones estáticas fuera de pages/app)
-  additionalPaths: async (config) => [
-    await config.transform(config, "/projects"),
-    await config.transform(config, "/certifications"),
-  ],
+
+  // Build each <url> entry
+  transform: async (config, path) => {
+    const { siteUrl, changefreq, priority, autoLastmod } = config;
+    // URL “por defecto” (defaultLocale = 'es')
+    const urlDefault = `${siteUrl}${path}`;
+    // English → prefix /en
+    const urlEn = `${siteUrl}/en${path}`;
+    // Spanish explicit → prefix /es
+    const urlEs = `${siteUrl}/es${path}`;
+
+    return {
+      loc: urlDefault,
+      changefreq,
+      priority: path === "/" ? 1.0 : priority,
+      lastmod: autoLastmod ? new Date().toISOString() : undefined,
+      alternateRefs: [
+        { href: urlDefault, hreflang: "x-default" },
+        { href: urlEn, hreflang: "en" },
+        { href: urlEs, hreflang: "es" },
+      ],
+    };
+  },
+  // Solo los proyectos (Next.js genera "/" y "/projects" por ti)
+  additionalPaths: async (config) => {
+    return Promise.all(
+      projectsSlugs.map((slug) => config.transform(config, `/projects/${slug}`))
+    );
+  },
   // Opciones extra para robots.txt
   robotsTxtOptions: {
     policies: [

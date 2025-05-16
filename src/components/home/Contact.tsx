@@ -4,9 +4,37 @@ import { GitHubSvg } from "@ui/svg/Technologies";
 import { OutlookSvg } from "@ui/svg/OutlookSvg";
 import { SendMesageForm } from "./SendMesageForm";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
-export const Contact: React.FC = () => {
+export const Contact = ({
+  description,
+}: {
+  description: string;
+}): React.ReactNode => {
+  const t = useTranslations("home.contactSection.form");
+
+  const textFormLang = {
+    title: t("title"),
+    name: t("name"),
+    email: t("email"),
+    message: t("message"),
+    bigText: t("bigText"),
+    buttonText: t("button"),
+    isSending: t("isSending"),
+    statusSend: {
+      success: {
+        title: t("statusSend.success.title"),
+        text: t("statusSend.success.description"),
+        btnConfirmation: t("statusSend.success.btnConfirmation"),
+      },
+      error: {
+        title: t("statusSend.error.title"),
+        text: t("statusSend.error.description"),
+        btnConfirmation: t("statusSend.success.btnConfirmation"),
+      },
+    },
+  };
   return (
     <>
       <RevealOnScroll
@@ -22,7 +50,7 @@ export const Contact: React.FC = () => {
           role: "text",
         }}
       >
-        Puedes contactarme a través de mis redes sociales y mi correo Outlook
+        {description}
       </RevealOnScroll>
       <p className="text-center  text-gray-200/80 text font-inter"></p>
       <div className="flex items-center justify-center space-x-8 mt-8">
@@ -72,7 +100,7 @@ export const Contact: React.FC = () => {
           visibleClass="opacity-100 scale-100 translate-y-0"
           triggerOnce={true}
         >
-          <SendMesageForm />
+          <SendMesageForm textLang={textFormLang} />
         </RevealOnScroll>
       </section>
     </>
