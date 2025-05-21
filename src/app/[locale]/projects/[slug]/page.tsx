@@ -134,7 +134,7 @@ const ProjectDetail = async ({ params }: Props) => {
       </article>
 
       {/* Tecnologías */}
-      <section className="px-6 py-12 max-w-4xl mx-auto space-y-12">
+      <section className="px-6 py-12 max-w-4xl mx-auto space-y-12" id="technologies">
         <h2 className="text-2xl font-semibold text-white mb-4">
           {staticData("technologiesSection.title")}
         </h2>
@@ -151,7 +151,7 @@ const ProjectDetail = async ({ params }: Props) => {
         </div>
       </section>
       <LineAbout />
-      <section className="px-6 py-5 max-w-11/12 md:max-w-10/12 mx-auto space-y-12 group/project-galery">
+      <section className="px-6 py-5 max-w-11/12 md:max-w-10/12 mx-auto space-y-12 group/project-galery" id="gallery">
         <h2 className="text-2xl font-semibold text-white text-center">
           {staticData("galerySection.title")}
         </h2>
@@ -226,7 +226,7 @@ const ProjectDetail = async ({ params }: Props) => {
 
       {/* Vídeo (opcional) */}
       {project.videoDemostration && (
-        <section className="px-6 py-12 max-w-4xl mx-auto space-y-12">
+        <section className="px-6 py-12 max-w-4xl mx-auto space-y-12" id="videoDemo">
           <LineAbout />
           <VideoProject
             title={staticData("videoSection.title")}

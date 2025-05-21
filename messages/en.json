@@ -10,7 +10,7 @@
         "experience": "Experience",
         "projects": "Projects",
         "about": "About me",
-        "contact": "Contacts"
+        "contact": "Contact"
       }
     },
     "developer": { "firstName": "Gabriel", "lastName": "Soliz" },
@@ -87,6 +87,15 @@
     "Metadata": {
       "title": "Featured Projects | Gabriel Soliz",
       "description": "Featured projects by Gabriel Soliz, Front End developer. Experience in Next.js, React, TypeScript and Tailwind CSS 4."
+    },
+    "header": {
+      "nav": {
+        "home": "Home",
+        "technologies": "Technologies",
+        "gallery": "Gallery",
+        "links": "Links",
+        "videoDemo": "Video Demo"
+      }
     },
     "staticData": {
       "technologiesSection": {
@@ -201,61 +210,61 @@
       "shortDescription": "Complete web application for managing employees, sales and products for a bazaar",
 
       "details": {
-      "overview": "This is a system developed as an Integration Project back in 2023 during my Computer Engineering degree. I learned to implement forms, paginate data, and authenticate users with JWT. I also optimized the system's performance using lazy-loading and performance audits with Lighthouse. \n\nI revisited this project in 2024 to refactor the entire Frontend, which laid the foundation for developing the SICA Criminal Information System later that same year.",
-      "duration": "4+ months",
-      "role": "Full Stack Developer",
-      "responsibilities": [
-        "Implementation of forms and validations",
-        "Integration of REST APIs with pagination and serialization",
-        "JWT Authentication with Django (login, refresh token)",
-        "Performance optimization: lazy-loading with React.lazy/Suspense",
-        "Performance audits with Lighthouse",
-        "Managing the project on GitHub",
-        "Definition of requirements and project leadership",
-        "Complete refactoring of the system's Frontend with improvements in UI/UX, performance, and clean code."
-      ]
+        "overview": "This is a system developed as an Integration Project back in 2023 during my Computer Engineering degree. I learned to implement forms, paginate data, and authenticate users with JWT. I also optimized the system's performance using lazy-loading and performance audits with Lighthouse. \n\nI revisited this project in 2024 to refactor the entire Frontend, which laid the foundation for developing the SICA Criminal Information System later that same year.",
+        "duration": "4+ months",
+        "role": "Full Stack Developer",
+        "responsibilities": [
+          "Implementation of forms and validations",
+          "Integration of REST APIs with pagination and serialization",
+          "JWT Authentication with Django (login, refresh token)",
+          "Performance optimization: lazy-loading with React.lazy/Suspense",
+          "Performance audits with Lighthouse",
+          "Managing the project on GitHub",
+          "Definition of requirements and project leadership",
+          "Complete refactoring of the system's Frontend with improvements in UI/UX, performance, and clean code."
+        ]
       },
       "images": [
-      {
-        "id": 1,
-        "label": "System's Point of Sale"
-      },
-      {
-        "id": 2,
-        "label": "Dashboard of System KPIs"
-      },
-      {
-        "id": 3,
-        "label": "Store Stock Control"
-      },
-      {
-        "id": 4,
-        "label": "Sales Records"
-      },
-      {
-        "id": 5,
-        "label": "Product Registration"
-      },
-      {
-        "id": 6,
-        "label": "Product Registration"
-      },
-      {
-        "id": 7,
-        "label": "Employee Management"
-      },
-      {
-        "id": 8,
-        "label": "Store Sections Registration"
-      },
-      {
-        "id": 9,
-        "label": "Create Purchase Order"
-      },
-      {
-        "id": 10,
-        "label": "System's Point of Sale"
-      }
+        {
+          "id": 1,
+          "label": "System's Point of Sale"
+        },
+        {
+          "id": 2,
+          "label": "Dashboard of System KPIs"
+        },
+        {
+          "id": 3,
+          "label": "Store Stock Control"
+        },
+        {
+          "id": 4,
+          "label": "Sales Records"
+        },
+        {
+          "id": 5,
+          "label": "Product Registration"
+        },
+        {
+          "id": 6,
+          "label": "Product Registration"
+        },
+        {
+          "id": 7,
+          "label": "Employee Management"
+        },
+        {
+          "id": 8,
+          "label": "Store Sections Registration"
+        },
+        {
+          "id": 9,
+          "label": "Create Purchase Order"
+        },
+        {
+          "id": 10,
+          "label": "System's Point of Sale"
+        }
       ]
     },
     "hotel-management": {
@@ -263,67 +272,67 @@
       "shortDescription": "Web application for managing reservations, customers, and rooms for hotel administration",
 
       "details": {
-      "overview": "It's a Hotel Management System that I developed during my Computer Engineering degree. I learned to implement forms, authenticate users, create user interfaces, and manage the project on GitHub. \n\nThis project was a significant learning experience for me, as it was the first project I developed.",
-      "duration": "4+ months",
-      "role": "Full Stack Developer",
-      "responsibilities": [
-        "Implementation of forms and validations",
-        "Integration of REST APIs with serialization",
-        "Token-based authentication",
-        "Building user interfaces",
-        "Refactoring code",
-        "Managing the project on GitHub",
-        "Definition of requirements and project leadership",
-        "Consuming REST API endpoints",
-        "Building backend views",
-        "Creating database design"
-      ]
+        "overview": "It's a Hotel Management System that I developed during my Computer Engineering degree. I learned to implement forms, authenticate users, create user interfaces, and manage the project on GitHub. \n\nThis project was a significant learning experience for me, as it was the first project I developed.",
+        "duration": "4+ months",
+        "role": "Full Stack Developer",
+        "responsibilities": [
+          "Implementation of forms and validations",
+          "Integration of REST APIs with serialization",
+          "Token-based authentication",
+          "Building user interfaces",
+          "Refactoring code",
+          "Managing the project on GitHub",
+          "Definition of requirements and project leadership",
+          "Consuming REST API endpoints",
+          "Building backend views",
+          "Creating database design"
+        ]
       },
       "images": [
-      {
-        "id": 1,
-        "label": "System's Main Page"
-      },
-      {
-        "id": 2,
-        "label": "Customer Check-In Process"
-      },
-      {
-        "id": 3,
-        "label": "Reception Module"
-      },
-      {
-        "id": 4,
-        "label": "System KPIs Dashboard"
-      }
+        {
+          "id": 1,
+          "label": "System's Main Page"
+        },
+        {
+          "id": 2,
+          "label": "Customer Check-In Process"
+        },
+        {
+          "id": 3,
+          "label": "Reception Module"
+        },
+        {
+          "id": 4,
+          "label": "System KPIs Dashboard"
+        }
       ]
     },
     "nasa-app": {
       "title": "NASA Application",
       "shortDescription": "Mobile application that uses NASA's API to obtain daily astronomical data, including images and videos, presented to users in an attractive way.",
       "details": {
-      "overview": "This application allows users to view daily images and videos thanks to NASA's API. \n\n Developing this project helped me improve my skills in mobile application development and API integration.",
-      "duration": "1+ months",
-      "responsibilities": [
-        "Structure the project with React Native",
-        "Integrate NASA's API to obtain daily astronomical data",
-        "Implement navigation between screens using React Navigation",
-        "Create an attractive and user-friendly interface using React Native components",
-        "Implement logic to display NASA images and videos in the application",
-        "Implement blur functionality for images and videos",
-        "Create my own library to handle Toast notifications @react-native-toast-lite"
-      ],
-      "role": "Front-End Developer"
+        "overview": "This application allows users to view daily images and videos thanks to NASA's API. \n\n Developing this project helped me improve my skills in mobile application development and API integration.",
+        "duration": "1+ months",
+        "responsibilities": [
+          "Structure the project with React Native",
+          "Integrate NASA's API to obtain daily astronomical data",
+          "Implement navigation between screens using React Navigation",
+          "Create an attractive and user-friendly interface using React Native components",
+          "Implement logic to display NASA images and videos in the application",
+          "Implement blur functionality for images and videos",
+          "Create my own library to handle Toast notifications @react-native-toast-lite"
+        ],
+        "role": "Front-End Developer"
       },
       "images": [
-      {
-        "id": 1,
-        "label": "General Views of the Application"
-      },
-      {
-        "id": 2,
-        "label": "Application Menu"
-      }
+        {
+          "id": 1,
+          "label": "General Views of the Application"
+        },
+        {
+          "id": 2,
+          "label": "Application Menu"
+        }
       ]
     },
     "react-magic-search-params": {
@@ -331,27 +340,27 @@
       "shortDescription": "React library for managing URL query parameters easily with TypeScript autocomplete support.",
 
       "details": {
-      "duration": "1+ weeks",
-      "overview": "I developed this library to facilitate the management of query parameters in URLs for my React projects. \n\nThe library allows for easy handling of query parameters and, thanks to TypeScript's autocomplete, it's easy to use. \n\nIt's published on npm and has good documentation.",
-      "role": "Front-End Developer",
-      "responsibilities": [
-        "Research the npm package manager and how to publish a library",
-        "Create a Hook to manage URL query parameters",
-        "Create an interactive page to demonstrate the library's functionality", 
-        "Create detailed documentation for the library",
-        "Deploy the interactive page on Netlify",
-        "Create a demonstration video for the library"
-      ]
+        "duration": "1+ weeks",
+        "overview": "I developed this library to facilitate the management of query parameters in URLs for my React projects. \n\nThe library allows for easy handling of query parameters and, thanks to TypeScript's autocomplete, it's easy to use. \n\nIt's published on npm and has good documentation.",
+        "role": "Front-End Developer",
+        "responsibilities": [
+          "Research the npm package manager and how to publish a library",
+          "Create a Hook to manage URL query parameters",
+          "Create an interactive page to demonstrate the library's functionality",
+          "Create detailed documentation for the library",
+          "Deploy the interactive page on Netlify",
+          "Create a demonstration video for the library"
+        ]
       },
       "images": [
-      {
-        "id": 1,
-        "label": "Library on NPM"
-      },
-      {
-        "id": 2,
-        "label": "Library Code Example"
-      }
+        {
+          "id": 1,
+          "label": "Library on NPM"
+        },
+        {
+          "id": 2,
+          "label": "Library Code Example"
+        }
       ]
     },
     "portfolio": {
@@ -359,38 +368,38 @@
 
       "shortDescription": "Personal portfolio developed with Next.js 15, TypeScript, and Tailwind CSS 4.",
       "details": {
-      "duration": "1+ months",
-      "overview": "I created my portfolio from scratch using Next.js 15, TypeScript, and Tailwind CSS 4. \n\nThe portfolio is fully responsive and has an attractive modern design. \n\nAdditionally, I implemented a projects section where I showcase my most notable works and a contact section where users can send me a message.",
-      "role": "Front-End Developer",
-      "responsibilities": [
-        "Create the projects and contact sections",
-        "Implement navigation between sections",
-        "Create the skills and technologies section",
-        "Create the experience and education section",
-        "Create the skills and technologies section",
-        "Work on UI/UX details",
-        "Work on responsiveness for all screen sizes",
-        "Create highly reusable components",
-        "Add animations and visual effects without affecting performance and SEO",
-        "Ensure proper functionality for screen readers",
-        "Use the Next-Intl library for multi-language support, following the internationalization (i18n) process",
-        "Deploy the portfolio on Vercel",
-        "Add a custom domain"
-      ]
+        "duration": "1+ months",
+        "overview": "I created my portfolio from scratch using Next.js 15, TypeScript, and Tailwind CSS 4. \n\nThe portfolio is fully responsive and has an attractive modern design. \n\nAdditionally, I implemented a projects section where I showcase my most notable works and a contact section where users can send me a message.",
+        "role": "Front-End Developer",
+        "responsibilities": [
+          "Create the projects and contact sections",
+          "Implement navigation between sections",
+          "Create the skills and technologies section",
+          "Create the experience and education section",
+          "Create the skills and technologies section",
+          "Work on UI/UX details",
+          "Work on responsiveness for all screen sizes",
+          "Create highly reusable components",
+          "Add animations and visual effects without affecting performance and SEO",
+          "Ensure proper functionality for screen readers",
+          "Use the Next-Intl library for multi-language support, following the internationalization (i18n) process",
+          "Deploy the portfolio on Vercel",
+          "Add a custom domain"
+        ]
       },
       "images": [
-      {
-        "id": 1,
-        "label": "Portfolio home view"
-      },
-      {
-        "id": 2,
-        "label": "Portfolio technologies view"
-      },
-      {
-        "id": 3,
-        "label": "Contact and projects view"
-      }
+        {
+          "id": 1,
+          "label": "Portfolio home view"
+        },
+        {
+          "id": 2,
+          "label": "Portfolio technologies view"
+        },
+        {
+          "id": 3,
+          "label": "Contact and projects view"
+        }
       ]
     }
   }

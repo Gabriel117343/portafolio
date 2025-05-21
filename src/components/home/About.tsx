@@ -64,7 +64,7 @@ export const About = () => {
         >
           {text.rich("firstParagraph.text", {
             strong: (chunk) => (
-              <strong className=" group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
+              <strong className="text-cyan-400/80 sm:text-gray-200 sm:group-hover/about:text-cyan-400/80 transition-colors duration-300 ease-in-out">
                 {chunk}
               </strong>
             ),

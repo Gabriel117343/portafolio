@@ -10,7 +10,7 @@
         "experience": "Experiencia",
         "projects": "Proyectos",
         "about": "Sobre mí",
-        "contact": "Contactos"
+        "contact": "Contacto"
       }
     },
     "developer": { "firstName": "Gabriel", "lastName": "Soliz" },
@@ -116,6 +116,15 @@
     "Metadata": {
       "title": "Proyectos Destacados | Gabriel Soliz",
       "description": "Proyectos destacados de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, TypeScript y Tailwind CSS 4."
+    },
+    "header": {
+      "nav": {
+        "home": "Inicio",
+        "technologies": "Tecnologías",
+        "gallery": "Galería",
+        "links": "Enlaces",
+        "videoDemo": "Video Demo"
+      }
     },
     "staticData": {
       "technologiesSection": {

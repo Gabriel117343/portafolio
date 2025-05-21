@@ -33,7 +33,7 @@ export const ImagenGalery = ({ project, infoText }: ImagenGaleryProps) => {
   from-gray-900/70 via-blue-900/80 to-black/90
   shadow-[0_0_30px_#1e3a8a50] hover:shadow-[0_0_40px_#3b82f680]
   transition-all duration-300 ease-in-out relative hover:scale-105
-  group/img-proyecto max-w-[450px] w-full mx-auto  "
+  group/img-proyecto max-w-[450px] w-full mx-auto"
           >
             <div className="relative w-full   min-h-52  max-h-52 hover:max-h-80 overflow-hidden hover:overflow-y-visible shadow-lg  transition-all duration-2000 ease-in-out group-hover/img-proyecto:scale-105 cursor-crosshair scrollbar-hidden ">
               <Lens
@@ -45,7 +45,7 @@ export const ImagenGalery = ({ project, infoText }: ImagenGaleryProps) => {
                 <ZoomableImage
                   src={src}
                   alt={label}
-                  className="object-fill object-top hover:object-bottom  transition-all duration-2000 ease-in-out rounded-md h-full min-h-52  
+                  className="object-fill object-top hover:object-bottom  transition-all duration-2000 ease-in-out rounded-md h-full 
             "
                 />
               </Lens>

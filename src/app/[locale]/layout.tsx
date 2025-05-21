@@ -21,8 +21,8 @@ import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: {
-    default: "Portafolio Gabriel Soliz",
-    template: "%s | Portafolio Gabriel Soliz",
+    default: "Gabriel Soliz | Desarrollador Front End",
+    template: "%s | Gabriel Soliz",
   },
   icons: {
     icon: [
@@ -47,6 +47,13 @@ export const metadata: Metadata = {
     "Next.js",
     "Typescript",
     "Tailwind CSS",
+    "Desarrollo web",
+    "Programador frontend",
+    "Aplicaciones React",
+    "SSR",
+    "Portfolio profesional",
+    "Freelance",
+    "UX/UI",
   ],
   openGraph: {
     title: "Portafolio Gabriel Soliz",
@@ -54,8 +61,23 @@ export const metadata: Metadata = {
       "Portafolio de Gabriel Soliz, desarrollador Front End. Experiencia en Next.js, React, Typescript, Tailwind CSS 4. Desarrollador de aplicaciones web modernas y escalables.",
     url: "https://www.gabrielsoliz.dev/",
 
+    type: "profile",
+    firstName: "Gabriel",
+    lastName: "Soliz",
+
     locale: "es_CL",
     siteName: "Gabriel Soliz",
+  },
+  metadataBase: new URL("https://www.gabrielsoliz.dev"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      es: "/es",
+    },
+  },
+  verification: {
+    google: "q2U6aqSp0sMR3zqBbpjGLLJJsW-Etp_9A86yqPwpgB0",
   },
 };
 
@@ -89,6 +111,7 @@ export default async function RootLayout({
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable} ${oswald.variable} ${inter.variable} antialiased font-geist-sans`}
     >
+      
       <body>
         <NextIntlClientProvider locale={locale} messages={await getMessages()}>
           <Header />
