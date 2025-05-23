@@ -97,6 +97,13 @@
         "videoDemo": "Video Demo"
       }
     },
+    "errors": {
+      "invalidSlug": {
+        "title": "Invalid slug",
+        "statusCode": 404,
+        "description": "The project you are looking for does not exist or has been removed."
+      }
+    },
     "staticData": {
       "technologiesSection": {
         "title": "Technologies and Tools"

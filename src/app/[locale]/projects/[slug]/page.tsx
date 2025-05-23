@@ -15,7 +15,7 @@ import Link from "next/link";
 import { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { type Project } from "@constants/projectsData";
+import { type Project, SLUGS } from "@constants/projectsData";
 
 export async function generateMetadata({
   params,
@@ -110,9 +110,17 @@ interface Props {
 }
 const ProjectDetail = async ({ params }: Props) => {
   const { slug, locale } = await params;
-
+  if (!SLUGS.includes(slug)) {
+    // en caso no exista el slug
+    const errorT = await getTranslations({
+      locale,
+      namespace: "projects.errors",
+    });
+    throw new Error(errorT("invalidSlug.title"));
+  }
   // 2) Encuentro el proyecto “neutro”
   const project = PROJECTS.find((p) => p.slug === slug);
+
   if (!project) return notFound(); // Si no existe el proyecto, devuelvo 404
 
   // 3) Inyecto los campos traducidos (merge con el neutro)
@@ -134,7 +142,10 @@ const ProjectDetail = async ({ params }: Props) => {
       </article>
 
       {/* Tecnologías */}
-      <section className="px-6 py-12 max-w-4xl mx-auto space-y-12" id="technologies">
+      <section
+        className="px-6 py-12 max-w-4xl mx-auto space-y-12"
+        id="technologies"
+      >
         <h2 className="text-2xl font-semibold text-white mb-4">
           {staticData("technologiesSection.title")}
         </h2>
@@ -151,7 +162,10 @@ const ProjectDetail = async ({ params }: Props) => {
         </div>
       </section>
       <LineAbout />
-      <section className="px-6 py-5 max-w-11/12 md:max-w-10/12 mx-auto space-y-12 group/project-galery" id="gallery">
+      <section
+        className="px-6 py-5 max-w-11/12 md:max-w-10/12 mx-auto space-y-12 group/project-galery"
+        id="gallery"
+      >
         <h2 className="text-2xl font-semibold text-white text-center">
           {staticData("galerySection.title")}
         </h2>
@@ -226,7 +240,10 @@ const ProjectDetail = async ({ params }: Props) => {
 
       {/* Vídeo (opcional) */}
       {project.videoDemostration && (
-        <section className="px-6 py-12 max-w-4xl mx-auto space-y-12" id="videoDemo">
+        <section
+          className="px-6 py-12 max-w-4xl mx-auto space-y-12"
+          id="videoDemo"
+        >
           <LineAbout />
           <VideoProject
             title={staticData("videoSection.title")}

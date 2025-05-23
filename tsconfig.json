@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
+    "target": "ES2024",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    "baseUrl": "./",
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -14,6 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "allowArbitraryExtensions": true,
+    "types": ["node", "jest"],
     "plugins": [
       {
         "name": "next"
@@ -28,7 +30,8 @@
       "@constants/*": ["./src/constants/*"],
       "@app/*": ["./src/app/*"],
       "@/i18n/*": ["./src/i18n/*"],
-      "@/hooks/*": ["./src/hooks/*"]
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/errors/*": ["./src/errors/*"],
     }
   },
   "include": [
@@ -37,7 +40,11 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "build/types/**/*.ts",
-    "next-sitemap.config.js"
+    "next-sitemap.config.js",
+    "__tests__/SendMenssageForm.test.tsx",
+    "__tests__/**/*.test.ts",
+    "jest.config.ts",
+    "jest.setup.ts"
   ],
   "exclude": ["node_modules"]
 }

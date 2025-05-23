@@ -13,12 +13,11 @@ import { Footer } from "@/components/views/Footer";
 
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import { getMessages } from "next-intl/server";
 
 import "./globals.css";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
-
+import { ErrorWrapper } from "./error-wrapper";
 export const metadata: Metadata = {
   title: {
     default: "Gabriel Soliz | Desarrollador Front End",
@@ -111,16 +110,15 @@ export default async function RootLayout({
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable} ${oswald.variable} ${inter.variable} antialiased font-geist-sans`}
     >
-      
       <body>
-        <NextIntlClientProvider locale={locale} messages={await getMessages()}>
+        <NextIntlClientProvider locale={locale}>
           <Header />
         </NextIntlClientProvider>
 
         <main className="bg-gradient-to-r overflow-x-hidden from-[#000428] min-h-screen via-[#022849] to-[#010639] relative selection:bg-cyan-600 selection:text-white text-white ">
           {/* Overlay radial muy sutil */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1),_transparent_70%)]" />
-          {children}
+          <ErrorWrapper>{children}</ErrorWrapper>
         </main>
 
         <Footer />

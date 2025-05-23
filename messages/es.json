@@ -126,6 +126,13 @@
         "videoDemo": "Video Demo"
       }
     },
+    "errors": {
+      "invalidSlug": {
+        "title": "Slug no válido",
+        "statusCode": 404,
+        "description": "El proyecto que estás buscando no existe o ha sido eliminado."
+      }
+    },
     "staticData": {
       "technologiesSection": {
         "title": "Tecnologías y Herramientas"

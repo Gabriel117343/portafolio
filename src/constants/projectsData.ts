@@ -78,6 +78,15 @@ export type Platforms = "web" | "mobile" | "desktop" | "all";
 // **NOTA IMPORTANTE**: Es necesario mantener sincronizados estos slugs con los definidos en `next-sitemap.config.js`.
 // Los slugs son utilizado por `next-sitemap.config.js` para generar el sitemap de todas las rutas públicas (mejorar el SEO).
 
+export const SLUGS:Array<Slugs> = [
+  "sica-system",
+  "nasa-app",
+  "react-magic-search-params",
+  "hotel-management",
+  "bazaar-management",
+  "portfolio",
+]
+
 export type Slugs =
   | "sica-system"
   | "nasa-app"

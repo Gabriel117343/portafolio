@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-import { About } from "@/components/home/About";
+import { About } from "@components/home/About";
 
 import PlanetaAsteroidesImg from "@public/images/planeta-asteroides-fondo.jpg";
 import { Ripple } from "@components/magicui/ripple";
 import { ArrowBottomSvg } from "@ui/svg/ArrowBottomSvg";
 
-import { Technologies } from "@/components/home/Technologies";
+import { Technologies } from "@components/home/Technologies";
 import Image from "next/image";
 import { SpecialText } from "@components/views/specialText";
 import "./styles.css";
