@@ -1,5 +1,6 @@
-# Portafolio de Gabriel Soliz 👨‍💻
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Gabriel117343/portafolio)
 
+# Portafolio Profesional
 Este es mi portafolio personal, en constante desarrollo, donde muestro mis proyectos y habilidades.
 
 ## 🛠️ Tecnologías
