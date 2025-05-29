@@ -46,7 +46,7 @@ export function RevealOnScroll<C extends ElementType = "div">({
   children,
   hiddenClass = "opacity-0 translate-y-0",
   visibleClass = "opacity-100 translate-y-12",
-  triggerOnce = true,
+  triggerOnce = false,
   threshold = 0.1,
   className,
   htmlProps,

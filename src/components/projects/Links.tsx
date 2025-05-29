@@ -1,6 +1,7 @@
 import React from "react";
 import { GitHubSvg } from "@ui/svg/Technologies";
 import { LiveWebSvg } from "@ui/svg/LiveWebSvg";
+import Link from "next/link";
 
 interface LinksProps {
   sourceCode?: string;
@@ -25,15 +26,15 @@ export const Links = ({
     <div className="flex flex-wrap gap-6 md:gap-12 lg:gap-16">
       {/* Enlace al código fuente */}
       {sourceCode ? (
-        <a
-          href={sourceCode}
+        <Link
+          href={`Open Link to ${sourceCode}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-gray-200 hover:text-white transition-colors"
         >
           <GitHubSvg className="size-6 md:size-7" />
           <span>{codeUpText}</span>
-        </a>
+        </Link>
       ) : (
         <div className="flex items-center gap-2 text-gray-500 relative">
           <GitHubSvg className="size-6 md:size-7 opacity-50" />

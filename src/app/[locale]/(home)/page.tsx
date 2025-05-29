@@ -13,11 +13,13 @@ import { SpecialText } from "@components/views/specialText";
 import "./styles.css";
 import { Projects } from "@components/home/Projects";
 import { Contact } from "@components/home/Contact";
-import { RevealOnScroll } from "@ui/RevealOnScroll";
+
 import { LineShadowText } from "@components/magicui/line-shadow-text";
 import { Certifications } from "@components/home/Certifications";
 import { useTranslations, Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import { RevealOnScroll } from "@ui/RevealOnScroll";
 
 export async function generateMetadata({
   params,
@@ -27,10 +29,13 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home.Metadata" });
 
-  return {
-    title: t("title"),
-    description: t("description"),
+  const metadata: Metadata = {
+    title: {
+      default: t("title.default"),
+      template: t("title.template"),
+    },
   };
+  return metadata;
 }
 
 const Home = () => {
@@ -52,11 +57,19 @@ const Home = () => {
         </div>
         <section className="text-white relative  z-30 h-[200px]  @xs/first:h-[220px]  @md/first:h-[300px] @lg/first:h-[520px] max-h-[700px] @container overflow-y">
           <div className="flex items-center justify-center pt-[50px] 2xl:pt-[160px] flex-col gap-4">
-            <h1 className="@xs:text-3xl text-[30px] @sm:text-4xl @md:text-5xl @lg:text-6xl @xl:text-7xl font-montserrat font-semibold">
+            <RevealOnScroll
+              as={"h1"}
+              triggerOnce={false}
+              threshold={0.2}
+              hiddenClass="scale-75 -translate-x-full opacity-0"
+              visibleClass="scale-100 translate-x-0 opacity-100"
+              className="@xs:text-3xl text-[30px] @sm:text-4xl @md:text-5xl @lg:text-6xl @xl:text-7xl font-montserrat font-semibold min-h-20 @md:min-h-25 transition-all duration-3500 ease-out"
+            >
+              {" "}
               <p className="inline-block animate-pulse rotate-0 stick-animated">
                 |{" "}
               </p>{" "}
-              {text("developer.firstName")}{" "}
+              {text("developer.firstName")}
               <LineShadowText
                 as="span"
                 className="inline-block"
@@ -64,11 +77,19 @@ const Home = () => {
               >
                 {text("developer.lastName")}
               </LineShadowText>{" "}
-              <p className="inline-block p-0 m-0 animate-pulse duration-75 ease-in-out transform text-white">
+              <p className="inline-block p-0 m-0 animate-pulse duration-75 ease-in-out transform text-white ">
                 _
               </p>
-            </h1>
-            <h2 className="font-open-sans text-2xl text-[10px] @xs:text-xs @sm:text-sm @md:text-lg @lg:text-xl @xl:text-2xl font-semibold text-gray-200">
+            </RevealOnScroll>
+
+            <RevealOnScroll
+              as={"h2"}
+              triggerOnce={false}
+              threshold={0.2}
+              hiddenClass="scale-75 translate-x-full opacity-0"
+              visibleClass="scale-100 translate-x-0 opacity-100"
+              className="font-open-sans text-2xl text-[10px] @xs:text-xs @sm:text-sm @md:text-lg @lg:text-xl @xl:text-2xl font-semibold text-gray-200 transition-all duration-2500 ease-out"
+            >
               {text("briefProfesionalInfo.left")},{" "}
               <SpecialText
                 texts={[
@@ -77,7 +98,7 @@ const Home = () => {
                 ]}
               />{" "}
               |
-            </h2>
+            </RevealOnScroll>
           </div>
           <RevealOnScroll
             threshold={0.2}

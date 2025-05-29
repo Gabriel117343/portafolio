@@ -19,9 +19,10 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { ErrorWrapper } from "./error-wrapper";
 export const metadata: Metadata = {
+  // Nota: por defecto en HomePage > Metadata se utilizará el titulo obtenido de la traducción por lo que tendrá prioridad sobre este título.
   title: {
-    default: "Gabriel Soliz | Desarrollador Front End",
-    template: "%s | Gabriel Soliz",
+    default: "Gabriel Soliz | Ingeniero en Informática, Desarrollador Web",
+    template: "%s | Portafolio",
   },
   icons: {
     icon: [
@@ -111,15 +112,17 @@ export default async function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable} ${oswald.variable} ${inter.variable} antialiased font-geist-sans`}
     >
       <body>
+        {/* Proveedor de NextIntl para el cliente */}
         <NextIntlClientProvider locale={locale}>
           <Header />
         </NextIntlClientProvider>
-
+        {/* Contenido estatico de la página - lado del servidor */}
         <main className="bg-gradient-to-r overflow-x-hidden from-[#000428] min-h-screen via-[#022849] to-[#010639] relative selection:bg-cyan-600 selection:text-white text-white ">
           {/* Overlay radial muy sutil */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.1),_transparent_70%)]" />
           <ErrorWrapper>{children}</ErrorWrapper>
         </main>
+        {}
 
         <Footer />
       </body>

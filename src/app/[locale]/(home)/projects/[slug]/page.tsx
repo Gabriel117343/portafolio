@@ -25,7 +25,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
 
   // Nota: Dará error de ts (No overload) porque espera que en es.json y en.json existan las traducciones de cada proyecto de @PROJECTS
-  // pero en realidad no siempre tiene que existir, ya que se generan dinámicamente a medida que se van traduciendo los proyectos
+  // pero en realidad no siempre tiene que existir (en desarrollo), ya que se generan dinámicamente a medida que se van traduciendo los proyectos (aunque al hacer build para producción dará error de ts)
   const t = await getTranslations({
     locale,
     namespace: `projects.${slug}`,

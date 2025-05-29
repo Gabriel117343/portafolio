@@ -25,7 +25,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   thumbnail,
 }) => {
-  // solo aquellos que se desean ver en la viste general del proyecto
+  // solo aquellos que se desean ver en la vista general del proyecto
 
   const TECHS_tO_SHOW =
     PROJECTS.find((p) => p.slug === slug)?.techs.filter(
@@ -80,7 +80,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <div className="p-4 relative">
           <h3 className="text-xl font-semibold text-white mb-1">{title}</h3>
-          <div className="absolute right-0 top-0 z-40 mt-5 mr-2 invisible group-hover/block:visible hover:translate-x-3 ">
+          <div className="absolute right-0 top-0 z-40 mt-5 mr-2 invisible group-hover/block:visible hover:translate-x-3 -translate-y-4">
             <ArrowRightSvg className="text-gray-300" />
           </div>
           <div className="flex items-center justify-start gap-3 mb-2">

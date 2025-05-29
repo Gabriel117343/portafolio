@@ -45,7 +45,7 @@ export const About = () => {
       </h2>
 
       <article className="relative max-w-3xl mx-auto space-y-6 text-gray-200 ">
-        <div className="float-right overflow-hidden rounded-2xl mask-alpha  mask-b-from-50% mask-b-to-transparent border border-gray-500 box-shadow-2xl  w-[150px] md:w-[190px] lg:w-[200px] mb-4 ms-2 md:ms-4">
+        <div className="float-right overflow-hidden rounded-2xl mask-alpha  mask-b-from-60% mask-b-to-transparent border border-gray-500 box-shadow-2xl  w-[150px] md:w-[190px] lg:w-[200px] mb-4 ms-2 md:ms-4">
           <Image
             src={profileImage}
             placeholder="blur"

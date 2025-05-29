@@ -1,7 +1,10 @@
 {
   "home": {
     "Metadata": {
-      "title": "Gabriel Soliz’s Portfolio",
+      "title": {
+        "default": "Gabriel Soliz | Computer Engineer, Web Developer",
+        "template": "%s | Portfolio"
+      },
       "description": "Gabriel Soliz’s front-end developer portfolio. Expertise in Next.js, React, TypeScript and Tailwind CSS 4."
     },
     "header": {
@@ -32,7 +35,7 @@
       "title": "About Me",
 
       "firstParagraph": {
-        "text": "Let me introduce myself, <strong>Gabriel</strong>, I'm 22 years old and I'm a <strong>Computer Engineer</strong> with over 2 years of experience (working independently) dedicated to web development. I combine the knowledge I've acquired with a focus on <strong>clean code</strong> and best practices (SOLID, design patterns). My stack typically includes <strong>React 19, TypeScript, and Tailwind CSS 4</strong>. <br></br> <br></br> I consider myself a <strong>proactive</strong> person committed to continuous improvement. I firmly believe that true professional transformation requires certain sacrifices and <strong>teamwork</strong> to achieve high-impact goals. I enjoy collaborating in <strong>agile enviroments</strong> and adding value through <strong>creativity and innovation</strong> and innovation, using the latest technologies the market offers and not just what's trendy.",
+        "text": "Let me introduce myself, <strong>Gabriel</strong>, I'm 22 years old and I'm a <strong>Computer Engineer</strong> with over 2 years of experience (working independently) dedicated to web development. I combine the knowledge I've acquired with a focus on <strong>clean code</strong> and best practices (SOLID, design patterns). My stack typically includes <strong>React 19, TypeScript, and Tailwind CSS 4</strong>. <br></br> <br></br> I consider myself a <strong>proactive</strong> person committed to continuous improvement. I firmly believe that true professional transformation requires certain sacrifices and <strong>teamwork</strong> to achieve high-impact goals. I enjoy collaborating in <strong>agile enviroments</strong> and adding value through <strong>creativity and innovation</strong> and innovation, using the latest technologies the market offers and not just what's trendy. <br></br><br></br>I am currently a graduate of <strong>Computer Engineering</strong> and I am certifying my knowledge.",
         "keyWords": {
           "name": "Gabriel",
           "engineer": "Computer Engineer",
@@ -77,12 +80,12 @@
     },
     "certificationsSection": {
       "title": "Certifications"
+    },
+    "footer": {
+      "description": "© 2025 - All rights reserved |"
     }
   },
 
-  "footer": {
-    "description": "© 2025 - All rights reserved."
-  },
   "projects": {
     "Metadata": {
       "title": "Featured Projects | Gabriel Soliz",
