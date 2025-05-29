@@ -60,10 +60,10 @@ const Home = () => {
             <RevealOnScroll
               as={"h1"}
               triggerOnce={false}
-              threshold={0.2}
+              threshold={0.1}
               hiddenClass="scale-75 -translate-x-full opacity-0"
               visibleClass="scale-100 translate-x-0 opacity-100"
-              className="@xs:text-3xl text-[30px] @sm:text-4xl @md:text-5xl @lg:text-6xl @xl:text-7xl font-montserrat font-semibold min-h-20 @md:min-h-25 transition-all duration-3500 ease-out"
+              className="@xs:text-3xl text-[30px] @sm:text-4xl @md:text-5xl @lg:text-6xl @xl:text-7xl font-montserrat font-semibold min-h-10 sm:min-h-20 @md:min-h-25 transition-all duration-3500 ease-out"
             >
               {" "}
               <p className="inline-block animate-pulse rotate-0 stick-animated">
