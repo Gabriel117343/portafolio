@@ -6,7 +6,10 @@ import typing_certification_03 from "@public/images/certifications/typing-certif
 import harvardsql_certification_04 from "@public/images/certifications/harvardSQL-certificate-04.jpg";
 import harvardcs50_certification_05 from "@public/images/certifications/harvardCS50-certificate-05.jpg";
 import englishdevelopers_certification_06 from "@public/images/certifications/englishDevelopers-certificate-06.jpg";
+import advancedReact_certification_07 from "@public/images/certifications/advancedReact-certificate-07.png";
 import type { StaticImageData } from "next/image";
+import introductionToSoftwareEngineering_certification_08 from "@public/images/certifications/introductionToSoftwareEngineering-certificate-08.png";
+import introductionToCloudComputing_certification_09 from "@public/images/certifications/introductionToCloudComputing-certificate-09.png";
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 export type certification = {
@@ -18,6 +21,36 @@ export type certification = {
 };
 
 export const CERTIFICATIONS: certification[] = [
+  {
+    name: "Advanced React",
+    issuer: "META",
+    url: "https://www.coursera.org/account/accomplishments/certificate/3796GE03FGOS",
+    image: {
+      label: "Certificación de Advanced React",
+      src: advancedReact_certification_07,
+    },
+    dateIssued: "2025-05-23",
+  },
+  {
+    name: "Introduction to Cloud Computing",
+    issuer: "IBM",
+    url: "https://www.coursera.org/account/accomplishments/certificate/EMDGW9M4S8MH",
+    image: {
+      label: "Certificación de Introducción a la Computación en la Nube",
+      src: introductionToCloudComputing_certification_09,
+    },
+    dateIssued: "2025-05-28",
+  },
+  {
+    name: "Introduction to Software Engineering",
+    issuer: "IBM",
+    url: "https://www.coursera.org/account/accomplishments/certificate/EMDGW9M4S8MH",
+    image: {
+      label: "Certificación de Introducción a la Ingeniería de Software",
+      src: introductionToSoftwareEngineering_certification_08,
+    },
+    dateIssued: "2025-05-27",
+  },
   {
     name: "English for Developers & IT Professionals",
     issuer: "Desafío Latam",
@@ -70,7 +103,7 @@ export const CERTIFICATIONS: certification[] = [
   },
   {
     name: "Lo último de JavaScript (ES2023 & ES2024)",
-    issuer: "freeCodeCamp.org",
+    issuer: "midu.dev",
 
     image: {
       label: " Certificación de Lo último de JavaScript (ES2023 & ES2024)",
