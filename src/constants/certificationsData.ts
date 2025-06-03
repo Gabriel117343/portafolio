@@ -10,6 +10,7 @@ import advancedReact_certification_07 from "@public/images/certifications/advanc
 import type { StaticImageData } from "next/image";
 import introductionToSoftwareEngineering_certification_08 from "@public/images/certifications/introductionToSoftwareEngineering-certificate-08.png";
 import introductionToCloudComputing_certification_09 from "@public/images/certifications/introductionToCloudComputing-certificate-09.png";
+import englishB1_certification_10 from '@public/images/certifications/englishB1-certificate-10.png'
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 export type certification = {
@@ -21,6 +22,17 @@ export type certification = {
 };
 
 export const CERTIFICATIONS: certification[] = [
+  {
+    name: "English B1",
+    issuer: "EF SET",
+    url: "https://cert.efset.org/en/3cqpQg",
+    image: {
+      label: "Certificación de inglés B1",
+      src: englishB1_certification_10,
+    },
+    dateIssued: "2025-06-03",
+
+  },
   {
     name: "Advanced React",
     issuer: "META",
