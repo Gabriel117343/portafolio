@@ -20,6 +20,7 @@ import { useTranslations, Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
+import { InfoSvg } from '@ui/svg/InfoSvg'
 
 export async function generateMetadata({
   params,
@@ -149,6 +150,10 @@ const Home = () => {
         <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white texts-center mb-12 text-center">
           {text("projectsSection.title")}
         </h2>
+         <div className="w-full text-left my-4 text-xs sm:text-sm text-cyan-300/60 italic sm:flex items-center justify-center gap-2 hover:text-cyan-400/80 transition-colors duration-200 ease-in-outmy-0 hidden">
+                  <InfoSvg className="size-4 text-cyan-300/80 " />
+                  {text("projectsSection.info")}
+                </div>
         <Projects />
       </section>
       <section

@@ -119,6 +119,7 @@ const ProjectDetail = async ({ params }: Props) => {
     throw new Error(errorT("invalidSlug.title"));
   }
   // 2) Encuentro el proyecto “neutro”
+  // Nota: probablemente en el futuro debería guardar el resultado de este find en caché para no tener que buscarlo cada vez que se accede a un proyecto.
   const project = PROJECTS.find((p) => p.slug === slug);
 
   if (!project) return notFound(); // Si no existe el proyecto, devuelvo 404

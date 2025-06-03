@@ -78,14 +78,14 @@ export type Platforms = "web" | "mobile" | "desktop" | "all";
 // **NOTA IMPORTANTE**: Es necesario mantener sincronizados estos slugs con los definidos en `next-sitemap.config.js`.
 // Los slugs son utilizado por `next-sitemap.config.js` para generar el sitemap de todas las rutas públicas (mejorar el SEO).
 
-export const SLUGS:Array<Slugs> = [
+export const SLUGS: Array<Slugs> = [
   "sica-system",
   "nasa-app",
   "react-magic-search-params",
   "hotel-management",
   "bazaar-management",
   "portfolio",
-]
+];
 
 export type Slugs =
   | "sica-system"
@@ -329,7 +329,7 @@ export const PROJECTS: Project[] = [
       },
     },
     sourceCode: "",
-    liveDemo: "",
+    liveDemo: "https://www.sicasystem.com",
   },
   {
     title: "Sistema de Gestión de Bazar",
@@ -704,7 +704,7 @@ export const PROJECTS: Project[] = [
     dateFrom: "2025-05-01",
     dateTo: "2025-05-21",
     sourceCode: "https://github.com/Gabriel117343/portafolio",
-    liveDemo: "gabrielsoliz.dev",
+    liveDemo: "https://www.gabrielsoliz.dev",
     deepWikiURL: "https://deepwiki.com/Gabriel117343/portafolio",
   },
 

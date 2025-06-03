@@ -29,6 +29,7 @@ export const Projects: React.FC = () => {
             slug={project.slug}
             thumbnail={firstImage}
             title={title}
+            liveDemo={project.liveDemo}
             key={project.slug}
           />
         );

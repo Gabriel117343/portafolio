@@ -51,7 +51,8 @@
       "note": "Se reconoce al instante un trabajo realizado solo por IA: basta con reconocer la ausencia de las funcionalidades más avanzadas del lenguaje/tecnología, además de una arquitectura poco escalable."
     },
     "projectsSection": {
-      "title": "Proyectos Destacados"
+      "title": "Proyectos Destacados",
+      "info": "Haz click para ver el detalle de cada Proyecto."
     },
     "contactSection": {
       "title": "CONTACTO",

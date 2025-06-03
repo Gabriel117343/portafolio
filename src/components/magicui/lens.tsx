@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useMotionTemplate } from "motion/react";
 import React, { useCallback, useMemo, useRef, useState } from "react";
+import { twMerge } from 'tailwind-merge'
 
 interface Position {
   /** The x coordinate of the lens */
@@ -29,12 +30,15 @@ interface LensProps {
   lensColor?: string;
   /** The aria label of the lens */
   ariaLabel?: string;
+  /** Additional class names for the lens container */
+  className?: string;
 }
 
 export function Lens({
   children,
   zoomFactor = 1.3,
   lensSize = 170,
+  className = "",
   isStatic = false,
   position = { x: 0, y: 0 },
   defaultPosition,
@@ -110,7 +114,7 @@ export function Lens({
   return (
     <div
       ref={containerRef}
-      className="relative z-20 overflow-hidden rounded-xl"
+      className={twMerge("relative z-20 overflow-hidden rounded-xl", className)}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseMove={handleMouseMove}

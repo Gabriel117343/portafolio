@@ -8,12 +8,13 @@ import { PROJECTS, Slugs } from "@constants/projectsData";
 import type { StaticImageData } from "next/image";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
 
+import { LiveDemo } from "@components/views/LiveDemo";
 interface ProjectCardProps {
   slug: Slugs;
   title: string;
   description: string;
   label: string;
-
+  liveDemo?: string;
   thumbnail: StaticImageData;
 }
 
@@ -22,7 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   label,
-
+  liveDemo,
   thumbnail,
 }) => {
   // solo aquellos que se desean ver en la vista general del proyecto
@@ -68,19 +69,30 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                         to-[#010128] absolute inset-0 opacity-35"
         />
         <div className="relative w-full h-48 overflow-hidden ">
-          <Lens ariaLabel="lente" lensSize={100} zoomFactor={1.5}>
+          {liveDemo && (
+            <LiveDemo
+              className="absolute bottom-0 left-0 z-40 ms-1 mb-1 opacity-70 hover:opacity-90 hover:scale-105 transition-transform ease-in duration-300 cursor-pointer contrast-125 hover:rotate-12"
+              liveDemo={liveDemo}
+            />
+          )}
+          <Lens
+            className="min-h-48 rounded-xs"
+            ariaLabel="lente"
+            lensSize={100}
+            zoomFactor={1.5}
+          >
             <Image
               src={thumbnail}
               alt={label}
               loading="lazy"
               placeholder="blur"
-              className="object-cover  transition-transform duration-500  ease-in-out group-hover/block:scale-105"
+              className="object-fill h-48  transition-transform duration-500  ease-in-out group-hover/block:scale-105"
             />
           </Lens>
         </div>
         <div className="p-4 relative">
           <h3 className="text-xl font-semibold text-white mb-1">{title}</h3>
-          <div className="absolute right-0 top-0 z-40 mt-5 mr-2 invisible group-hover/block:visible hover:translate-x-3 -translate-y-4">
+          <div className="absolute right-0 top-0 z-40 mt-5 mr-2 invisible group-hover/block:visible hover:translate-x-2 transition-all duration-300 ease-in -translate-y-4">
             <ArrowRightSvg className="text-gray-300" />
           </div>
           <div className="flex items-center justify-start gap-3 mb-2">
