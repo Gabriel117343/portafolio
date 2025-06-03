@@ -27,8 +27,9 @@ export const Links = ({
       {/* Enlace al código fuente */}
       {sourceCode ? (
         <Link
-          href={`Open Link to ${sourceCode}`}
+          href={sourceCode}
           target="_blank"
+          aria-label={`Open Link to ${sourceCode}`}
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-gray-200 hover:text-white transition-colors"
         >

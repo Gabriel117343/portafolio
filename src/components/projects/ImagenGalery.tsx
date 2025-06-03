@@ -6,6 +6,7 @@ import { ZoomableImage } from "@/components/views/ZoomableImage";
 import { Lens } from "@components/magicui/lens";
 import { InfoSvg } from "@ui/svg/InfoSvg";
 import "./styles.css";
+import { CustomModal } from "@ui/CustomModal";
 
 interface ImagenGaleryProps {
   project: Project;
@@ -35,20 +36,22 @@ export const ImagenGalery = ({ project, infoText }: ImagenGaleryProps) => {
   transition-all duration-300 ease-in-out relative hover:scale-105
   group/img-proyecto max-w-[450px] w-full mx-auto"
           >
-            <div className="relative w-full   min-h-52  max-h-52 hover:max-h-80 overflow-hidden hover:overflow-y-visible shadow-lg  transition-all duration-2000 ease-in-out group-hover/img-proyecto:scale-105 cursor-crosshair scrollbar-hidden ">
-              <Lens
-                lensColor="por algun motivo el agregar texto aquí causa un lensSize del 100%"
-                ariaLabel="lente"
-                lensSize={600}
-                zoomFactor={1.1}
-              >
-                <ZoomableImage
-                  src={src}
-                  alt={label}
-                  className="object-fill object-top hover:object-bottom  transition-all duration-2000 ease-in-out rounded-md h-full 
+            <div className="relative w-full   min-h-52  max-h-52 hover:max-h-80 overflow-hidden hover:overflow-y-visible shadow-lg  transition-all duration-2000 ease-in-out group-hover/img-proyecto:scale-105  scrollbar-hidden ">
+              <CustomModal className="absolute inset-0  w-[85vw] ">
+                <Lens
+                  lensColor="por algun motivo el agregar texto aquí causa un lensSize del 100%"
+                  ariaLabel="lente"
+                  lensSize={600}
+                  zoomFactor={1.1}
+                >
+                  <ZoomableImage
+                    src={src}
+                    alt={label}
+                    className="object-fill object-top hover:object-bottom  transition-all duration-2000 ease-in-out rounded-md h-full cursor-zoom-in
             "
-                />
-              </Lens>
+                  />
+                </Lens>
+              </CustomModal>
             </div>
             <span className="mt-2 text-sm text-gray-400 group-hover/img-proyecto:font-semibold">
               {label}

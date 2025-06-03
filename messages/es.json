@@ -142,7 +142,7 @@
       },
       "galerySection": {
         "title": "Galería de Imágenes",
-        "info": "Usa la rueda del mouse para hacer zoom en las imágenes"
+        "info": "Usa la rueda del mouse para hacer zoom en las imágenes o haz click para abrir en pantalla completa"
       },
       "architectureSection": {
         "title": "Arquitectura del Proyecto"

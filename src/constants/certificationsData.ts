@@ -34,7 +34,7 @@ export const CERTIFICATIONS: certification[] = [
   {
     name: "Introduction to Cloud Computing",
     issuer: "IBM",
-    url: "https://www.coursera.org/account/accomplishments/certificate/EMDGW9M4S8MH",
+    url: "https://www.coursera.org/account/accomplishments/certificate/8HZY7CGMTZ30",
     image: {
       label: "Certificación de Introducción a la Computación en la Nube",
       src: introductionToCloudComputing_certification_09,

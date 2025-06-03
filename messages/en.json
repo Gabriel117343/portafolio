@@ -113,7 +113,7 @@
       },
       "galerySection": {
         "title": "Image Gallery",
-        "info": "Use the mouse wheel to zoom in on the images"
+        "info": "Use the mouse wheel to zoom in on the images or click to open in full screen"
       },
       "architectureSection": {
         "title": "Project Architecture"
