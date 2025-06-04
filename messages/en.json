@@ -207,7 +207,7 @@
         }
       ],
       "videoDemostration": {
-        "description": "Experimental video, it has nothing to do with the project, but it's a test video to show how a video would look in the project detail view."
+        "description": "Below is a brief demonstration of the most important parts of the SICA system, including authentication, crime registration, investigation management, and map visualization."
       },
       "architecture": {
         "generalImage": {

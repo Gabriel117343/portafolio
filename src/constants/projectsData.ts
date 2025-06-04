@@ -315,10 +315,10 @@ export const PROJECTS: Project[] = [
     ],
 
     videoDemostration: {
-      src: "https://www.youtube.com/watch?v=foL1yFlUQRc",
-      thumbnail: "https://img.youtube.com/vi/foL1yFlUQRc/maxresdefault.jpg",
+      src: "https://www.youtube.com/watch?v=LoMFo45motE",
+      thumbnail: "https://img.youtube.com/vi/LoMFo45motE/maxresdefault.jpg",
       description:
-        "Video experimental, no tiene  nada que ver con el proyecto, pero es un video de prueba para mostrar como se vería un video en la vista de detalle del proyecto.",
+        "A continuación una breve demostración de las partes más importantes del sistema SICA, incluyendo la autenticación, registro de delitos, gestión de investigaciones y visualización de mapas.",
     },
     architecture: {
       generalImage: {
