@@ -11,6 +11,7 @@ import type { StaticImageData } from "next/image";
 import introductionToSoftwareEngineering_certification_08 from "@public/images/certifications/introductionToSoftwareEngineering-certificate-08.png";
 import introductionToCloudComputing_certification_09 from "@public/images/certifications/introductionToCloudComputing-certificate-09.png";
 import englishB1_certification_10 from '@public/images/certifications/englishB1-certificate-10.png'
+import intermediateSql_certification_11 from '@public/images/certifications/intermediateSql-certificate-11.png'
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 export type certification = {
@@ -82,6 +83,17 @@ export const CERTIFICATIONS: certification[] = [
       src: harvardcs50_certification_05,
     },
     dateIssued: "2025-03-01",
+  },
+  {
+    name: "Intermediate SQL",
+    issuer: "DataCamp",
+    url: "https://www.datacamp.com/statement-of-accomplishment/course/06e241ab0b2f1036e9fbedfc6a450d6f04c6e513?raw=1",
+    image: {
+      label: "Certificación de SQL Intermedio",
+      src: intermediateSql_certification_11,
+    },
+    dateIssued: "2025-06-05",
+
   },
   {
     name: "CS50’s Introduction to Databases with SQL",
