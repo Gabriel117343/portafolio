@@ -10,8 +10,9 @@ import advancedReact_certification_07 from "@public/images/certifications/advanc
 import type { StaticImageData } from "next/image";
 import introductionToSoftwareEngineering_certification_08 from "@public/images/certifications/introductionToSoftwareEngineering-certificate-08.png";
 import introductionToCloudComputing_certification_09 from "@public/images/certifications/introductionToCloudComputing-certificate-09.png";
-import englishB1_certification_10 from '@public/images/certifications/englishB1-certificate-10.png'
-import intermediateSql_certification_11 from '@public/images/certifications/intermediateSql-certificate-11.png'
+import englishB1_certification_10 from "@public/images/certifications/englishB1-certificate-10.png";
+import intermediateSql_certification_11 from "@public/images/certifications/intermediateSql-certificate-11.png";
+import sqlDataManipulation_certification_12 from "@public/images/certifications/sqlDataManipulation-certificate-12.png";
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 export type certification = {
@@ -24,6 +25,16 @@ export type certification = {
 
 export const CERTIFICATIONS: certification[] = [
   {
+    name: "SQL Data Manipulation",
+    issuer: "DataCamp",
+    url: "https://www.datacamp.com/statement-of-accomplishment/course/95829c09d9ba111e16c4eec6f63ee7e82db6e219?raw=1",
+    image: {
+      label: "Certificación de SQL Data Manipulation",
+      src: sqlDataManipulation_certification_12,
+    },
+    dateIssued: "2025-06-13",
+  },
+  {
     name: "English B1",
     issuer: "EF SET",
     url: "https://cert.efset.org/en/3cqpQg",
@@ -32,7 +43,6 @@ export const CERTIFICATIONS: certification[] = [
       src: englishB1_certification_10,
     },
     dateIssued: "2025-06-03",
-
   },
   {
     name: "Advanced React",
@@ -93,7 +103,6 @@ export const CERTIFICATIONS: certification[] = [
       src: intermediateSql_certification_11,
     },
     dateIssued: "2025-06-05",
-
   },
   {
     name: "CS50’s Introduction to Databases with SQL",
