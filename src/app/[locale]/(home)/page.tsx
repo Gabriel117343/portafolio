@@ -20,7 +20,9 @@ import { useTranslations, Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
-import { InfoSvg } from '@ui/svg/InfoSvg'
+import { InfoSvg } from "@ui/svg/InfoSvg";
+
+import { Clock } from "@components/views/Clock";
 
 export async function generateMetadata({
   params,
@@ -57,6 +59,7 @@ const Home = () => {
           />
         </div>
         <section className="text-white relative  z-30 h-[200px]  @xs/first:h-[220px]  @md/first:h-[300px] @lg/first:h-[520px] max-h-[700px] @container overflow-y">
+          <Clock className="absolute bottom-0 right-0 mr-2 @sm:mr-5 z-50 clock" />
           <div className="flex items-center justify-center pt-[50px] 2xl:pt-[160px] flex-col gap-4">
             <RevealOnScroll
               as={"h1"}
@@ -70,7 +73,7 @@ const Home = () => {
               <p className="inline-block animate-pulse rotate-0 stick-animated">
                 |{" "}
               </p>{" "}
-              {text("developer.firstName")}
+              {text("developer.firstName")}{" "}
               <LineShadowText
                 as="span"
                 className="inline-block"
@@ -78,9 +81,7 @@ const Home = () => {
               >
                 {text("developer.lastName")}
               </LineShadowText>{" "}
-              <p className="inline-block p-0 m-0 animate-pulse duration-75 ease-in-out transform text-white ">
-                _
-              </p>
+              <p className="inline-block p-0 m-0 text-white ">_</p>
             </RevealOnScroll>
 
             <RevealOnScroll
@@ -98,7 +99,9 @@ const Home = () => {
                   text("briefProfesionalInfo.rightSwitch.end"),
                 ]}
               />{" "}
-              |
+              <strong className="inline-block p-0 m-0 animate-pulse duration-75 ease-in-out transform text-white">
+                |
+              </strong>
             </RevealOnScroll>
           </div>
           <RevealOnScroll
@@ -150,10 +153,10 @@ const Home = () => {
         <h2 className="text-3xl md:text-4xl font-montserrat font-semibold text-white texts-center mb-12 text-center">
           {text("projectsSection.title")}
         </h2>
-         <div className="w-full text-left my-4 text-xs sm:text-sm text-cyan-300/60 italic sm:flex items-center justify-center gap-2 hover:text-cyan-400/80 transition-colors duration-200 ease-in-outmy-0 hidden">
-                  <InfoSvg className="size-4 text-cyan-300/80 " />
-                  {text("projectsSection.info")}
-                </div>
+        <div className="w-full text-left my-4 text-xs sm:text-sm text-cyan-300/60 italic sm:flex items-center justify-center gap-2 hover:text-cyan-400/80 transition-colors duration-200 ease-in-outmy-0 hidden">
+          <InfoSvg className="size-4 text-cyan-300/80 " />
+          {text("projectsSection.info")}
+        </div>
         <Projects />
       </section>
       <section

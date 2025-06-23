@@ -52,3 +52,19 @@
     animation: space-float 8s ease-in-out infinite alternate;
   }
 }
+
+.clock {
+  
+  opacity: 1;
+  transition: all 5s allow-discrete;
+  animation: ease-in-out;
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .clock {
+    display: none;
+  }
+}
