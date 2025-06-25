@@ -13,6 +13,7 @@ import introductionToCloudComputing_certification_09 from "@public/images/certif
 import englishB1_certification_10 from "@public/images/certifications/englishB1-certificate-10.png";
 import intermediateSql_certification_11 from "@public/images/certifications/intermediateSql-certificate-11.png";
 import sqlDataManipulation_certification_12 from "@public/images/certifications/sqlDataManipulation-certificate-12.png";
+import sqlFundamentals_certification_13 from '@public/images/certifications/SqlFundamentals-certificate-13.png'
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 export type certification = {
@@ -24,6 +25,16 @@ export type certification = {
 };
 
 export const CERTIFICATIONS: certification[] = [
+  {
+    name: "SQL Fundamentals",
+    issuer: "DataCamp",
+    url: "https://www.datacamp.com/completed/statement-of-accomplishment/track/a230be2b067dafacf9035c411871775e3589157b",
+    image: {
+      label: "Certificación de SQL Fundamentals",
+      src: sqlFundamentals_certification_13,
+    },
+    dateIssued: "2025-06-24",
+  },
   {
     name: "SQL Data Manipulation",
     issuer: "DataCamp",
