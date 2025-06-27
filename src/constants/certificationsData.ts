@@ -14,6 +14,7 @@ import englishB1_certification_10 from "@public/images/certifications/englishB1-
 import intermediateSql_certification_11 from "@public/images/certifications/intermediateSql-certificate-11.png";
 import sqlDataManipulation_certification_12 from "@public/images/certifications/sqlDataManipulation-certificate-12.png";
 import sqlFundamentals_certification_13 from '@public/images/certifications/SqlFundamentals-certificate-13.png'
+import cleaningDataPostgresql_certification_14 from '@public/images/certifications/cleaningDataPostgreSql-certificate-14.png'
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 export type certification = {
@@ -25,6 +26,16 @@ export type certification = {
 };
 
 export const CERTIFICATIONS: certification[] = [
+  {
+    name: "Cleaning Data in PostgreSQL",
+    issuer: "DataCamp",
+    url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/288006cfe606ff9aa9a757fa49d96fe0548efc42",
+    image: {
+      label: "Certificación de Cleaning Data in PostgreSQL Databases",
+      src: cleaningDataPostgresql_certification_14,
+    },
+    dateIssued: "2025-06-26",
+  },
   {
     name: "SQL Fundamentals",
     issuer: "DataCamp",
