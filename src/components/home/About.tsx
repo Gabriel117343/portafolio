@@ -7,6 +7,8 @@ import "./styles.css";
 import { LineAbout } from "@components/views/lineAbout";
 import { RevealOnScroll } from "@ui/RevealOnScroll";
 import { useTranslations } from "next-intl";
+import { BookSvg } from "@ui/svg/BookSvg";
+import { BooksSection } from '@components/home/BooksSection'
 
 export const About = () => {
   const text = useTranslations("home.aboutSection");
@@ -14,14 +16,43 @@ export const About = () => {
   return (
     <section
       id="about"
-      className=" w-full relative   overflow-hidden  group/about      aboutpy-16 px-6 md:px-12 lg:px-24 py-14"
+      className=" w-full relative   overflow-hidden  group/about   h-full  px-6 md:px-12 lg:px-24 py-14 "
     >
       <LineAbout />
+      <div className="absolute inset-0 z-50">
+        <input type="checkbox" id="toggleBooks" className="peer hidden" />
+
+        {/* Botón de acción */}
+        <label
+          htmlFor="toggleBooks"
+          className="absolute bottom-0 right-0 size-12 p-12 z-50 cursor-pointer"
+        >
+          <BookSvg className="size-6 md:size-8 animate-ripple duration-2500 ease-in" />
+        </label>
+
+        {/* Panel deslizable */}
+        <section className="absolute inset-0 z-40  transition-transform duration-300 ease-in-out translate-x-full peer-checked:translate-x-0 pointer-events-none">
+          {/* contenido del panel */}
+          <BooksSection />
+        </section>
+      </div>
 
       <div
-        className="inset-0 -z-0 opacity-40 absolute   
-      bg-gradient-to-br from-[#181838] via-[#010128] to-[#010128 group-hover/about:opacity-30"
-      ></div>
+        className="w-full overflow-hidden opacity-40  inset-0 -z-0  absolute
+ "
+      >
+        <div className="grid grid-cols-2 h-full w-full overflow-hidden">
+          <div
+            className="w-full h-full   
+      bg-gradient-to-br from-[#181838] via-[#181838] to-[#010128] translate-x-full group-hover/about:translate-x-0 transition-all duration-600 ease-in-out"
+          />
+          <div
+            className="w-full h-full   
+      bg-gradient-to-br from-[#181838] via-[#010128] to-[#181838] -translate-x-full group-hover/about:-translate-x-0 transition-all duration-600 ease-in-out "
+          />
+        </div>
+      </div>
+
       {/* Estrellas de fondo */}
       <div
         className="
