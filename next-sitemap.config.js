@@ -9,6 +9,7 @@ const projectsSlugs = [
   "hotel-management",
   "bazaar-management",
   "portfolio",
+  "puntomatico-app",
 ];
 module.exports = {
   // URL de tu web

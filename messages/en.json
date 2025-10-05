@@ -47,7 +47,7 @@
           "creativity": "creativity and innovation"
         }
       },
-        "note": "\"The key to great code isn't in the tools, but in the programmer's discipline.\" — The Pragmatic Programmer"
+      "note": "\"The key to great code isn't in the tools, but in the programmer's discipline.\" — The Pragmatic Programmer"
     },
     "projectsSection": {
       "title": "Highlighted Projects",
@@ -139,6 +139,58 @@
       },
       "videoSection": {
         "title": "Demo Video"
+      }
+    },
+    "app-en-desarrollo": {
+      "title": "App in Development",
+      "shortDescription": "Application aggregating businesses from every category in Chile into a single mobile platform. Currently in development.",
+      "details": {
+        "overview": "Work in progress. The app centralizes multi-category businesses inside a unified mobile ecosystem. Built with a stack focused on scalability and performance. Detailed functional scope is intentionally limited until a public milestone.",
+        "duration": "In development",
+        "role": "Full Stack Developer",
+        "responsibilities": [
+          "Incremental architecture design and evolution",
+          "Data modeling and endpoint design (Django REST Framework + JWT)",
+          "Mobile integration (React Native + Expo + expo-sqlite for local cache)",
+          "PostgreSQL query optimization",
+          "UI implementation with utility-first TailwindCSS",
+          "Modular strategy and strict typing with TypeScript"
+        ]
+      },
+      "images": [{ "label": "Preliminary blurred view – Subject to change" }]
+    },
+    "puntomatico-app": {
+      "title": "PuntoMatico Mobile App",
+      "shortDescription": "Catalog-style mobile app to explore affiliated businesses: search, filters, hours, services and quick contact.",
+      "details": {
+        "overview": "I built a two-part solution: a mobile application (React Native + Expo) and an administrative web panel (Django REST Framework + PostgreSQL) where businesses are managed and then displayed in the app. Users can search by name, category, services and hours, view whether the business is currently open, access quick actions (call, WhatsApp, open in Google Maps) and see structured service badges. The panel manages logo, description, location, structured weekly schedule and offered services (delivery, pickup, reservations, QR menu, WhatsApp). Figma prototyping and integrated functional tests ensured data consistency.",
+        "duration": "+2 months",
+        "role": "Full Stack Developer",
+        "responsibilities": [
+          "Prototyping in Figma (splash, list, detail)",
+          "REST API with Django REST Framework + PostgreSQL",
+          "JWT authentication for the admin panel",
+          "Data modeling for businesses, schedules and services",
+          "Logo upload and management",
+          "Endpoint consumption and data normalization in the app",
+          "Search and filters (category, services, open now)",
+          "Quick actions: phone, WhatsApp, Google Maps",
+          "Dark mode & basic accessibility support",
+          "Manual integrated panel ↔ app testing",
+          "Version control with Git"
+        ]
+      },
+      "images": [
+        { "label": "Welcome / General screen" },
+        { "label": "Search business by Location" },
+        { "label": "View details and Share business" },
+        { "label": "General Business Dashboard" },
+        { "label": "Top 8 businesses with most visits this month" },
+        { "label": "Business listing from Admin Panel" }
+      ],
+
+      "videoDemostration": {
+        "description": "Demo of main flow: welcome, listing, filters, detail and quick actions."
       }
     },
     "sica-system": {

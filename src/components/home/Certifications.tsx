@@ -43,7 +43,7 @@ export const Certifications = ({
                 threshold={0.2}
                 hiddenClass={`opacity-0 translate-x-12 contrast-0`}
                 visibleClass="opacity-100 translate-x-0  contrast-100"
-                className="flex flex-col items-center
+                className="flex flex-col justify-between
               bg-gray-800/50
               border border-cyan-600/30
               rounded-xl p-6
@@ -71,13 +71,15 @@ export const Certifications = ({
                   <h3 className="mt-4 text-lg font-semibold text-white text-center">
                     {cert.name}
                   </h3>
+                </Link>
+                <div>
                   <p className="text-sm text-cyan-300">{cert.issuer}</p>
                   {cert.dateIssued && (
                     <p className="mt-1 text-xs text-gray-400">
                       Emitido: {cert.dateIssued}
                     </p>
                   )}
-                </Link>
+                </div>
               </RevealOnScroll>
             );
           })}

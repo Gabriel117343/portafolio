@@ -42,6 +42,17 @@ import nasa_ap_02 from "@public/images/projects/nasa-app/nasa-app-02.png";
 import react_magic_search_params_01 from "@public/images/projects/react-magic-search-params/magic-params-01.jpg";
 import react_magic_search_params_02 from "@public/images/projects/react-magic-search-params/magic-params-02.png";
 
+// PuntoMatico App
+import puntomatico_01 from "@public/images/projects/puntomaticoapp/puntomaticoapp-01.jpeg";
+import puntomatico_02 from "@public/images/projects/puntomaticoapp/puntomaticoapp-02.jpeg";
+import puntomatico_04 from "@public/images/projects/puntomaticoapp/puntomaticoapp-04.png";
+import puntomatico_05 from "@public/images/projects/puntomaticoapp/puntomaticoapp-05.png";
+import puntomatico_06 from "@public/images/projects/puntomaticoapp/puntomaticoapp-06.png";
+import puntomatico_07 from "@public/images/projects/puntomaticoapp/puntomaticoapp-07.png";
+
+// Aplicación misteriosa 
+import app2025_01 from '@public/images/projects/app2025/app2025-01.png'
+
 // Mi portafolio
 
 import portfolio_01 from "@public/images/projects/portfolio/portfolio-01.jpeg";
@@ -85,6 +96,8 @@ export const SLUGS: Array<Slugs> = [
   "hotel-management",
   "bazaar-management",
   "portfolio",
+  "puntomatico-app",
+  "app-en-desarrollo"
 ];
 
 export type Slugs =
@@ -93,7 +106,9 @@ export type Slugs =
   | "react-magic-search-params"
   | "hotel-management"
   | "bazaar-management"
-  | "portfolio";
+  | "portfolio"
+  | "puntomatico-app"
+  | "app-en-desarrollo";
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
 
@@ -178,6 +193,136 @@ export interface Project {
 // y la que se mostrará en la vista de detalle del proyecto. El resto de imágenes son opcionales y se mostrarán en el slider de la vista de detalle del proyecto.
 
 export const PROJECTS: Project[] = [
+   {
+    slug: "app-en-desarrollo",
+    title: "App en Desarrollo",
+    shortDescription:
+      "Aplicación que agrupa comercios de todas las categorías de Chile en una sola plataforma móvil. Actualmente en desarrollo.",
+    details: {
+      overview:
+        "Proyecto en curso. La aplicación centraliza comercios de múltiples categorías dentro de un ecosistema móvil unificado. Se está construyendo con un stack orientado a escalabilidad y rendimiento. La información funcional detallada se mantiene reservada hasta un hito público.",
+      duration: "En desarrollo",
+      role: "Desarrollador Full Stack",
+      responsibilities: [
+        "Diseño y evolución incremental de la arquitectura",
+        "Definición de modelos y endpoints (Django REST Framework + JWT)",
+        "Integración móvil con React Native + Expo + expo-sqlite (caché/local data)",
+        "Optimización de consultas en PostgreSQL",
+        "Implementación UI con TailwindCSS / estilos utilitarios",
+        "Estrategia de modularización y tipado estricto con TypeScript",
+      ],
+    },
+    images: [
+      {
+        id: 1,
+        label: "Vista preliminar (borrosa) – Diseño sujeto a cambios",
+        platform: "mobile",
+        src: app2025_01,
+      },
+    ],
+    techs: [
+      { label: "React Native", Icon: ReactSvg, showInOverview: true },
+      { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
+      { label: "Django Rest Framework", Icon: DjangoSvg, showInOverview: true },
+      { label: "PostgresSQL", Icon: PostgresSqlSvg, showInOverview: true },
+      { label: "JWT Auth", Icon: JwtSvg, showInOverview: true },
+      { label: "TailwindCSS 4", Icon: TailwindSvg, showInOverview: true },
+      { label: "React 19", Icon: ReactSvg, showInOverview: false },
+    ],
+    sourceCode: "", // privado
+    liveDemo: "", // no disponible aún
+    dateFrom: undefined,
+    dateTo: undefined,
+  },
+  {
+    slug: "puntomatico-app",
+    title: "Aplicación Móvil PuntoMatico",
+    shortDescription:
+      "App móvil estilo catálogo para explorar comercios afiliados: búsqueda, filtros, horarios, servicios y acceso rápido a contacto y mapa.",
+    details: {
+      overview:
+        "Desarrollé una solución compuesta por una aplicación móvil (React Native + Expo) y un panel administrativo web (Django + Django REST Framework + PostgreSQL) donde se gestionan los comercios que luego se muestran en la app. La app permite a los usuarios buscar negocios por nombre, categoría, cercanía u horarios, visualizar servicios (delivery, reservas, carta QR, retiro en local) y acceder rápidamente a contacto telefónico o WhatsApp, además de abrir la ubicación en Google Maps.\n\nEl backend provee endpoints protegidos con autenticación JWT. Desde el panel se registran datos del comercio: logo, descripción, horarios estructurados, servicios, categoría y ubicación. La app consume estos datos y presenta una interfaz optimizada con tarjetas, soporte para modo oscuro y enfoque en accesibilidad básica. Se implementó prototipado en Figma y pruebas funcionales cruzadas entre el panel y la app para asegurar consistencia de datos.",
+      duration: "+2 meses",
+      role: "Desarrollador Full Stack",
+      responsibilities: [
+        "Diseñar y prototipar pantallas en Figma (flujo de bienvenida, listado, detalle)",
+        "Construir API REST con Django REST Framework y PostgreSQL",
+        "Implementar autenticación JWT para el panel administrativo",
+        "Modelar entidades: Comercios, Horarios y Servicios",
+        "Manejo de subida de logos e imágenes (optimización básica)",
+        "Consumir endpoints desde la app (fetch + normalización de datos)",
+        "Implementar búsqueda con la biblioteca de PostgreSql pg_vector y filtros dinámicos  (categoría, servicios, estado abierto)",
+        "Botones de acción rápida: llamar, WhatsApp y abrir en Google Maps",
+        "Gestión de estado ligero y renderizado eficiente en listas",
+        "Soporte de modo oscuro y accesibilidad básica (contraste y tamaños)",
+        "Pruebas manuales integradas panel ↔ app para validar consistencia",
+        "Uso de Git y buenas prácticas de versionado",
+      ],
+    },
+    dateFrom: "2025-07-20",
+    dateTo: "2025-09-25",
+    images: [
+      {
+        id: 1,
+        label: "Pantalla de bienvenida / General",
+        platform: "mobile",
+        src: puntomatico_01,
+      },
+      {
+        id: 2,
+        label: "Buscar comercio por Ubicación",
+        platform: "mobile",
+        src: puntomatico_02,
+      },
+      {
+        id: 3,
+        label: "Ver detalle y Compartir comercio",
+        platform: "mobile",
+        src: puntomatico_04,
+      },
+      {
+        id: 4,
+        label: "Dashboard General de Comercio",
+        platform: "mobile",
+        src: puntomatico_05,
+      },
+      {
+        id: 5,
+        label: "Top 8 comercios con más visitsa del més",
+        platform: "mobile",
+        src: puntomatico_06,
+      },
+      {
+        id: 6,
+        label: "Listado de comercios desde el Panel de Admin",
+        platform: "mobile",
+        src: puntomatico_07,
+      },
+    ],
+    techs: [
+      { label: "React Native", Icon: ReactSvg, showInOverview: true },
+      { label: "TypeScript", Icon: TypeScriptSvg, showInOverview: true },
+      { label: "Django Rest Framework", Icon: DjangoSvg, showInOverview: true },
+      { label: "PostgresSQL", Icon: PostgresSqlSvg, showInOverview: true },
+      { label: "JWT Auth", Icon: JwtSvg, showInOverview: true },
+      { label: "Python", Icon: PythonSvg, showInOverview: false },
+      { label: "Git", Icon: GitSvg, showInOverview: false },
+      { label: "GitHub", Icon: GitHubSvg, showInOverview: false },
+      {
+        label: "Visual Studio Code",
+        Icon: VisualStudioCodeSvg,
+        showInOverview: false,
+      },
+    ],
+    videoDemostration: {
+      src: "https://www.youtube.com/watch?v=LEfDFy4xR2w",
+      thumbnail: "https://img.youtube.com/vi/LEfDFy4xR2w/maxresdefault.jpg",
+      description:
+        "Demostración breve del flujo principal: bienvenida, listado de comercios, búsqueda, detalle y acciones rápidas.",
+    },
+    sourceCode: "", // Repositorio privado
+    liveDemo: "https://punto-matico-app.vercel.app/",
+  },
   {
     slug: "sica-system",
     title: "Sistema de Información Criminal SICA",

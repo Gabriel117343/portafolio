@@ -48,7 +48,7 @@
         }
       },
 
-       "note": "«La clave de un gran código no está en las herramientas, sino en la disciplina del programador.» — The Pragmatic Programmer"
+      "note": "«La clave de un gran código no está en las herramientas, sino en la disciplina del programador.» — The Pragmatic Programmer"
     },
     "projectsSection": {
       "title": "Proyectos Destacados",
@@ -171,6 +171,59 @@
         "title": "Video de Demostración"
       }
     },
+    "app-en-desarrollo": {
+      "title": "App en Desarrollo",
+      "shortDescription": "Aplicación que agrupa comercios de todas las categorías de Chile en una sola plataforma móvil. Actualmente en desarrollo.",
+      "details": {
+        "overview": "Proyecto en curso. La aplicación centraliza comercios de múltiples categorías dentro de un ecosistema móvil unificado. Se está construyendo con un stack orientado a escalabilidad y rendimiento. La información funcional detallada se mantiene reservada hasta un hito público.",
+        "duration": "En desarrollo",
+        "role": "Desarrollador Full Stack",
+        "responsibilities": [
+          "Diseño y evolución incremental de la arquitectura",
+          "Definición de modelos y endpoints (Django REST Framework + JWT)",
+          "Integración móvil (React Native + Expo + expo-sqlite para caché local)",
+          "Optimización de consultas en PostgreSQL",
+          "Implementación UI con TailwindCSS / utilidades",
+          "Estrategia de modularización y tipado estricto con TypeScript"
+        ]
+      },
+      "images": [
+        { "label": "Vista preliminar (borrosa) – Diseño sujeto a cambios" }
+      ]
+    },
+    "puntomatico-app": {
+      "title": "Aplicación Móvil PuntoMatico",
+      "shortDescription": "App móvil tipo catálogo para explorar comercios afiliados: búsqueda, filtros, horarios, servicios y contacto rápido.",
+      "details": {
+        "overview": "Desarrollé una solución compuesta por una aplicación móvil (React Native + Expo) y un panel administrativo web (Django REST Framework + PostgreSQL) donde se gestionan los comercios que luego se muestran en la app. La app permite buscar negocios por nombre, categoría, servicios y horarios, ver disponibilidad de atención, acceder a contacto por teléfono o WhatsApp y abrir la dirección en Google Maps. El panel permite administrar logo, descripción, ubicación, horarios estructurados y servicios (delivery, retiro, reservas, carta QR, WhatsApp). Se realizó prototipado en Figma y pruebas funcionales entre panel y app para asegurar consistencia.",
+        "duration": "+2 meses",
+        "role": "Desarrollador Full Stack",
+        "responsibilities": [
+          "Prototipado de pantallas en Figma (splash, listado, detalle)",
+          "API REST con Django REST Framework y PostgreSQL",
+          "Autenticación JWT para el panel",
+          "Modelo de datos para comercios, horarios y servicios",
+          "Subida y gestión de logos",
+          "Consumo de endpoints desde la app (normalización)",
+          "Búsqueda y filtros (categoría, servicios, abierto)",
+          "Acciones rápidas: llamada, WhatsApp, Google Maps",
+          "Soporte modo oscuro y accesibilidad básica",
+          "Pruebas manuales integradas panel ↔ app",
+          "Gestión de versiones con Git"
+        ]
+      },
+      "images": [
+        { "label": "Pantalla de bienvenida / General" },
+        { "label": "Buscar comercio por Ubicación" },
+        { "label": "Ver detalle y Compartir comercio" },
+        { "label": "Dashboard General de Comercio" },
+        { "label": "Top 8 comercios con más visitas del mes" },
+        { "label": "Listado de comercios desde el Panel de Admin." }
+      ],
+      "videoDemostration": {
+        "description": "Demostración del flujo principal: bienvenida, listado, filtros, detalle y acciones rápidas."
+      }
+    },
     "sica-system": {
       "title": "Sistema de Información Criminal SICA",
       "shortDescription": "Aplicación web full-stack para el registro, gestión y análisis en tiempo real de datos criminales.",
@@ -250,7 +303,7 @@
         }
       ],
       "videoDemostration": {
-        "description":  "A continuación una breve demostración de las partes más importantes del sistema SICA, incluyendo la autenticación, registro de delitos, gestión de investigaciones y visualización de mapas."
+        "description": "A continuación una breve demostración de las partes más importantes del sistema SICA, incluyendo la autenticación, registro de delitos, gestión de investigaciones y visualización de mapas."
       },
       "architecture": {
         "generalImage": {
