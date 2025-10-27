@@ -159,8 +159,8 @@
       },
       "images": [{ "label": "Preliminary blurred view – Subject to change" }]
     },
-    "puntomatico-app": {
-      "title": "PuntoMatico Mobile App",
+    "commerces-app": {
+      "title": "Commerces App",
       "shortDescription": "Catalog-style mobile app to explore affiliated businesses: search, filters, hours, services and quick contact.",
       "details": {
         "overview": "I built a two-part solution: a mobile application (React Native + Expo) and an administrative web panel (Django REST Framework + PostgreSQL) where businesses are managed and then displayed in the app. Users can search by name, category, services and hours, view whether the business is currently open, access quick actions (call, WhatsApp, open in Google Maps) and see structured service badges. The panel manages logo, description, location, structured weekly schedule and offered services (delivery, pickup, reservations, QR menu, WhatsApp). Figma prototyping and integrated functional tests ensured data consistency.",

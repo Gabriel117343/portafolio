@@ -18,7 +18,7 @@ import "./globals.css";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { ErrorWrapper } from "./error-wrapper";
-import { unstable_ViewTransition as ViewTransition } from "react";
+import {  ViewTransition } from "react";
 export const metadata: Metadata = {
   // Nota: por defecto en HomePage > Metadata se utilizará el titulo obtenido de la traducción por lo que tendrá prioridad sobre este título.
   title: {

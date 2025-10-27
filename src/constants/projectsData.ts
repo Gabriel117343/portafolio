@@ -96,7 +96,7 @@ export const SLUGS: Array<Slugs> = [
   "hotel-management",
   "bazaar-management",
   "portfolio",
-  "puntomatico-app",
+  "commerces-app",
   "app-en-desarrollo"
 ];
 
@@ -107,7 +107,7 @@ export type Slugs =
   | "hotel-management"
   | "bazaar-management"
   | "portfolio"
-  | "puntomatico-app"
+  | "commerces-app"
   | "app-en-desarrollo";
 
 type Date = `${number}${number}-${number}${number}-${number}${number}`;
@@ -235,8 +235,8 @@ export const PROJECTS: Project[] = [
     dateTo: undefined,
   },
   {
-    slug: "puntomatico-app",
-    title: "Aplicación Móvil PuntoMatico",
+    slug: "commerces-app",
+    title: "Aplicación de Comercios",
     shortDescription:
       "App móvil estilo catálogo para explorar comercios afiliados: búsqueda, filtros, horarios, servicios y acceso rápido a contacto y mapa.",
     details: {

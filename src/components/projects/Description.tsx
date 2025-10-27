@@ -1,4 +1,5 @@
 import React from "react";
+
 import { TypingAnimation } from "@components/magicui/typing-animation";
 import { type Project } from "@constants/projectsData";
 interface Props {

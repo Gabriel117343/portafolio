@@ -191,8 +191,8 @@
         { "label": "Vista preliminar (borrosa) – Diseño sujeto a cambios" }
       ]
     },
-    "puntomatico-app": {
-      "title": "Aplicación Móvil PuntoMatico",
+    "commerces-app": {
+      "title": "Aplicación de Comercios",
       "shortDescription": "App móvil tipo catálogo para explorar comercios afiliados: búsqueda, filtros, horarios, servicios y contacto rápido.",
       "details": {
         "overview": "Desarrollé una solución compuesta por una aplicación móvil (React Native + Expo) y un panel administrativo web (Django REST Framework + PostgreSQL) donde se gestionan los comercios que luego se muestran en la app. La app permite buscar negocios por nombre, categoría, servicios y horarios, ver disponibilidad de atención, acceder a contacto por teléfono o WhatsApp y abrir la dirección en Google Maps. El panel permite administrar logo, descripción, ubicación, horarios estructurados y servicios (delivery, retiro, reservas, carta QR, WhatsApp). Se realizó prototipado en Figma y pruebas funcionales entre panel y app para asegurar consistencia.",
