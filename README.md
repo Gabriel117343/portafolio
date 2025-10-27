@@ -5,7 +5,7 @@ Este es mi portafolio personal, en constante desarrollo, donde muestro mis proye
 
 ## 🛠️ Tecnologías
 
-- **Next.js 15**
+- **Next.js 16**
 - **Tailwind CSS** (última versión, v4)
 - **TypeScript** (última versión)
 
